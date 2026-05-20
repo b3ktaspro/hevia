@@ -30,7 +30,6 @@ export default function ExpertiseSection() {
         className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16 opacity-0 translate-y-10 transition-all duration-700"
       >
         
-        {/* TEXTE */}
         <div className="space-y-6">
           <h2 className="text-5xl md:text-6xl font-bold text-[#1E2A38] max-[768px]:text-3xl">
             L’expertise & l’innovation chez{" "}
@@ -53,17 +52,14 @@ export default function ExpertiseSection() {
           </p>
         </div>
 
-        {/* IMAGES */}
         <div className="relative flex justify-center md:justify-end mt-10 md:mt-0">
           
-          {/* image principale */}
           <img
             src={imgMain}
             alt="Expertise HEVIA"
             className="w-72 md:w-80 rounded-[30px] shadow-2xl object-cover -rotate-3 border-4 border-[#CBA18B] transition-transform duration-500 hover:rotate-0"
           />
 
-          {/* carte/logo */}
           <img
             src={logo}
             alt="Logo HEVIA"
