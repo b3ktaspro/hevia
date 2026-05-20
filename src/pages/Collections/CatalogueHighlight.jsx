@@ -30,8 +30,6 @@ export default function CatalogueHighlight() {
   return (
     <section id="hevia-catalogue-unique" className=" py-36 max-[768px]:py-20">
       <div ref={ref} className="max-w-[1400px] mx-auto px-6 space-y-36">
-
-        
         <div
           data-animate
           className="flex flex-col md:flex-row items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
@@ -59,7 +57,6 @@ export default function CatalogueHighlight() {
           </div>
         </div>
 
-        
         <div
           data-animate
           className="flex flex-col md:flex-row-reverse items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
@@ -85,8 +82,6 @@ export default function CatalogueHighlight() {
             </span>
           </div>
         </div>
-
-        
         <div
           data-animate
           className="flex flex-col md:flex-row items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
