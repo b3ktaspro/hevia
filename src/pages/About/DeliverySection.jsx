@@ -29,22 +29,18 @@ export default function DeliverySection() {
         className="max-w-[1000px] mx-auto px-6 text-center opacity-0 translate-y-10 transition-all duration-700"
       >
 
-        {/* titre */}
         <h2 className="text-5xl md:text-6xl font-bold text-[#1E2A38] mb-10 max-[768px]:text-3xl">
           Livraison & Disponibilité
         </h2>
 
-        {/* texte */}
         <p className="text-lg text-[#2B2B2B]/80 leading-relaxed mb-16 max-[768px]:text-sm">
           HEVIA assure la livraison dans toute la région{" "}
           <span className="font-semibold text-[#85796D]">Occitanie</span> et au-delà.
           Nous garantissons des délais rapides, un emballage soigné et un suivi personnalisé.
         </p>
 
-        {/* grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
 
-          {/* bloc 1 */}
           <div className="space-y-4">
             <div className="flex justify-center">
               <svg className="w-10 h-10 text-[#CBA18B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +55,6 @@ export default function DeliverySection() {
             </p>
           </div>
 
-          {/* bloc 2 */}
           <div className="space-y-4">
             <div className="flex justify-center">
               <svg className="w-10 h-10 text-[#CBA18B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,7 +69,6 @@ export default function DeliverySection() {
             </p>
           </div>
 
-          {/* bloc 3 */}
           <div className="space-y-4">
             <div className="flex justify-center">
               <svg className="w-10 h-10 text-[#CBA18B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
