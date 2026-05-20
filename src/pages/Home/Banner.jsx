@@ -39,7 +39,7 @@ export default function Banner() {
       <div className="relative z-10 text-center max-w-3xl px-6">
         
         <p className="uppercase tracking-[4px] text-white/70 text-sm mb-3">
-          HEVIA Béziers
+          HEVIA
         </p>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
