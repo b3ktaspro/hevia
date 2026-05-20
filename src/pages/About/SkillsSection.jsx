@@ -16,7 +16,7 @@ export default function SkillsSection() {
             setTimeout(() => {
               entry.target.classList.remove("opacity-0", "translate-y-10")
               entry.target.classList.add("opacity-100", "translate-y-0")
-            }, index * 150) // stagger animation
+            }, index * 150)
           }
         })
       },
@@ -31,7 +31,6 @@ export default function SkillsSection() {
     <section className="py-28 max-[768px]:py-14">
       <div ref={ref} className="max-w-[1200px] mx-auto px-6 text-center">
 
-        {/* titre */}
         <h2
           data-animate
           className="text-5xl md:text-6xl font-bold text-[#1E2A38] mb-16 max-[768px]:text-3xl max-[768px]:mb-10 opacity-0 translate-y-10 transition-all duration-700"
@@ -39,10 +38,8 @@ export default function SkillsSection() {
           Notre expertise & savoir-faire
         </h2>
 
-        {/* cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-[768px]:gap-8">
 
-          {/* card 1 */}
           <div
             data-animate
             className="bg-white rounded-3xl p-8 shadow-2xl transform -rotate-2 opacity-0 translate-y-10 transition-all duration-700 hover:rotate-0 hover:scale-105"
@@ -55,7 +52,6 @@ export default function SkillsSection() {
             </p>
           </div>
 
-          {/* card 2 */}
           <div
             data-animate
             className="bg-white rounded-3xl p-8 shadow-2xl transform rotate-2 opacity-0 translate-y-10 transition-all duration-700 hover:rotate-0 hover:scale-105"
@@ -68,7 +64,6 @@ export default function SkillsSection() {
             </p>
           </div>
 
-          {/* card 3 */}
           <div
             data-animate
             className="bg-white rounded-3xl p-8 shadow-2xl transform -rotate-1 opacity-0 translate-y-10 transition-all duration-700 hover:rotate-0 hover:scale-105"
