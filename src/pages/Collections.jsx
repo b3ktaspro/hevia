@@ -1,9 +1,6 @@
 import SurfacesSection from "./Collections/SurfacesSection";
 import CatalogueHighlight from "./Collections/CatalogueHighlight";
 
-
-
-
 export default function Collections() {
   return (
     <>
@@ -11,4 +8,4 @@ export default function Collections() {
     <CatalogueHighlight />
     </>
   );
-}x
+}
