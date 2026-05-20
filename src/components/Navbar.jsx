@@ -33,7 +33,6 @@ export default function Navbar() {
             : "bg-[#E4DED7]/80 backdrop-blur-md border-transparent"
         }`}
       >
-
         <div className="flex items-center justify-start w-1/3">
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -118,7 +117,7 @@ export default function Navbar() {
         >
           Collections
         </Link>
-
+        
         <Link
           to="/contact"
           onClick={() => setMenuOpen(false)}
