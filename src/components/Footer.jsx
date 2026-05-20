@@ -6,7 +6,6 @@ export default function Footer() {
       
       <div className="max-w-[1300px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         
-        
         <div>
           <h2 className="text-2xl font-bold mb-4">HEVIA</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
@@ -15,7 +14,6 @@ export default function Footer() {
           </p>
         </div>
 
-        
         <div>
           <h3 className="font-semibold mb-4 text-[#CBA18B]">Navigation</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -26,7 +24,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        
         <div>
           <h3 className="font-semibold mb-4 text-[#CBA18B]">Contact</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -36,13 +33,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        
         <div>
           <h3 className="font-semibold mb-4 text-[#CBA18B]">Suivez-nous</h3>
           
-          <div className="flex space-x-4">
-            
-           
+          <div className="flex space-x-4">  
             <a
               href="https://www.instagram.com"
               target="_blank"
@@ -53,8 +47,6 @@ export default function Footer() {
                 <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-4.25 1.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5z" />
               </svg>
             </a>
-
-            
             <a
               href=""
               target="_blank"
@@ -70,8 +62,7 @@ export default function Footer() {
         </div>
 
       </div>
-
-      
+  
       <div className="border-t border-white/10">
         <div className="max-w-[1300px] mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
 
