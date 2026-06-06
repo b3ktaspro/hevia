@@ -17,7 +17,6 @@ export default function Home() {
       <Hero />
       <Collections />
       <Intro />
-      <Reviews />
       <BestSellers />
       <Presentation />
       <Catalogue />
@@ -25,6 +24,7 @@ export default function Home() {
       <Faq />
       <Why />
       <Advice />
+      <Reviews />
       <Banner />
     </>
   );
