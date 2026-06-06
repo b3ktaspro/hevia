@@ -25,7 +25,7 @@ export default function AboutSection() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -38,8 +38,10 @@ export default function AboutSection() {
     <section
       ref={ref}
       className="
-        py-36
-        md:py-44
+        py-20
+        sm:py-24
+        md:py-32
+        lg:py-44
         bg-[#F8F5F1]
         opacity-0
         translate-y-12
@@ -48,13 +50,15 @@ export default function AboutSection() {
       "
     >
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div
           className="
             grid
             lg:grid-cols-2
-            gap-20
+            gap-10
+            md:gap-14
+            lg:gap-20
             items-center
           "
         >
@@ -63,18 +67,27 @@ export default function AboutSection() {
             className="
               relative
               overflow-hidden
-              rounded-[40px]
+              rounded-[24px]
+              sm:rounded-[30px]
+              lg:rounded-[40px]
               group
+              order-1
             "
           >
 
             <div
               className="
                 absolute
-                top-8
-                left-8
+                top-4
+                left-4
+                sm:top-6
+                sm:left-6
+                lg:top-8
+                lg:left-8
                 z-20
-                text-[90px]
+                text-[50px]
+                sm:text-[70px]
+                lg:text-[90px]
                 font-bold
                 text-white/15
               "
@@ -87,7 +100,10 @@ export default function AboutSection() {
               alt="HEVIA"
               className="
                 w-full
-                h-[720px]
+                h-[340px]
+                sm:h-[480px]
+                md:h-[600px]
+                lg:h-[720px]
                 object-cover
                 transition-all
                 duration-[1800ms]
@@ -101,13 +117,15 @@ export default function AboutSection() {
 
           </div>
 
-          <div>
+          <div className="order-2">
 
             <span
               className="
                 uppercase
-                tracking-[0.35em]
-                text-xs
+                tracking-[0.25em]
+                sm:tracking-[0.35em]
+                text-[10px]
+                sm:text-xs
                 text-[#CBA18B]
                 font-medium
               "
@@ -117,8 +135,10 @@ export default function AboutSection() {
 
             <h2
               className="
-                mt-6
-                text-4xl
+                mt-4
+                sm:mt-6
+                text-[32px]
+                sm:text-5xl
                 md:text-6xl
                 font-light
                 text-[#1E2A38]
@@ -133,8 +153,11 @@ export default function AboutSection() {
 
             <p
               className="
-                mt-8
-                text-lg
+                mt-6
+                sm:mt-8
+                text-sm
+                sm:text-base
+                lg:text-lg
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -146,7 +169,10 @@ export default function AboutSection() {
 
             <p
               className="
-                mt-6
+                mt-5
+                sm:mt-6
+                text-sm
+                sm:text-base
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -159,7 +185,10 @@ export default function AboutSection() {
 
             <p
               className="
-                mt-6
+                mt-5
+                sm:mt-6
+                text-sm
+                sm:text-base
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -171,10 +200,12 @@ export default function AboutSection() {
 
             <div
               className="
-                mt-12
+                mt-10
+                sm:mt-12
                 grid
                 grid-cols-3
-                gap-8
+                gap-4
+                sm:gap-8
               "
             >
 
@@ -182,7 +213,9 @@ export default function AboutSection() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-3xl
+                    lg:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -193,7 +226,8 @@ export default function AboutSection() {
                 <p
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -206,7 +240,9 @@ export default function AboutSection() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-3xl
+                    lg:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -217,7 +253,8 @@ export default function AboutSection() {
                 <p
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -230,7 +267,9 @@ export default function AboutSection() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-3xl
+                    lg:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -241,7 +280,8 @@ export default function AboutSection() {
                 <p
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -254,27 +294,34 @@ export default function AboutSection() {
 
             <div
               className="
-                mt-14
+                mt-10
+                sm:mt-14
                 flex
-                flex-wrap
-                gap-4
+                flex-col
+                sm:flex-row
+                gap-3
+                sm:gap-4
               "
             >
 
               <Link
                 to="/collections"
                 className="
-                  px-8
-                  py-4
+                  text-center
+                  px-6
+                  sm:px-8
+                  py-3
+                  sm:py-4
                   rounded-full
                   bg-[#1E2A38]
                   text-white
+                  text-sm
+                  sm:text-base
                   font-medium
                   transition-all
                   duration-500
                   hover:bg-[#CBA18B]
                   hover:text-[#1E2A38]
-                  hover:scale-105
                 "
               >
                 Découvrir les collections
@@ -283,12 +330,17 @@ export default function AboutSection() {
               <Link
                 to="/about"
                 className="
-                  px-8
-                  py-4
+                  text-center
+                  px-6
+                  sm:px-8
+                  py-3
+                  sm:py-4
                   rounded-full
                   border
                   border-[#1E2A38]/15
                   text-[#1E2A38]
+                  text-sm
+                  sm:text-base
                   transition-all
                   duration-500
                   hover:border-[#CBA18B]

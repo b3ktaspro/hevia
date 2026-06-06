@@ -4,18 +4,18 @@ const zones = [
   {
     number: "01",
     title: "Béziers & Montpellier",
-    text: "Livraisons rapides et accompagnement privilégié pour vos projets locaux."
+    text: "Livraisons rapides et accompagnement privilégié pour vos projets locaux.",
   },
   {
     number: "02",
     title: "Occitanie",
-    text: "Nous assurons la livraison de nos collections dans toute la région."
+    text: "Nous assurons la livraison de nos collections dans toute la région.",
   },
   {
     number: "03",
     title: "France",
-    text: "Expédition nationale sur demande avec étude personnalisée."
-  }
+    text: "Expédition nationale sur demande avec étude personnalisée.",
+  },
 ]
 
 export default function DeliverySection() {
@@ -41,7 +41,7 @@ export default function DeliverySection() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -51,14 +51,15 @@ export default function DeliverySection() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
 
       <div
         ref={ref}
         className="
           max-w-7xl
           mx-auto
-          px-6
+          px-4
+          sm:px-6
           opacity-0
           translate-y-12
           transition-all
@@ -71,8 +72,10 @@ export default function DeliverySection() {
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.25em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
               font-medium
             "
@@ -82,8 +85,10 @@ export default function DeliverySection() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
@@ -98,8 +103,11 @@ export default function DeliverySection() {
 
           <p
             className="
-              mt-8
-              text-lg
+              mt-6
+              sm:mt-8
+              text-sm
+              sm:text-base
+              lg:text-lg
               text-[#1E2A38]/70
               leading-relaxed
               max-w-3xl
@@ -115,10 +123,15 @@ export default function DeliverySection() {
 
         <div
           className="
-            mt-24
+            mt-12
+            sm:mt-16
+            lg:mt-24
             grid
+            grid-cols-1
             md:grid-cols-3
-            gap-8
+            gap-5
+            sm:gap-6
+            lg:gap-8
           "
         >
 
@@ -128,14 +141,19 @@ export default function DeliverySection() {
               className="
                 relative
                 bg-white
-                rounded-[36px]
-                p-10
+                rounded-[24px]
+                sm:rounded-[30px]
+                lg:rounded-[36px]
+                p-6
+                sm:p-8
+                lg:p-10
                 border
                 border-[#CBA18B]/10
                 shadow-[0_10px_40px_rgba(0,0,0,0.04)]
                 transition-all
                 duration-500
-                hover:-translate-y-2
+                hover:-translate-y-1
+                lg:hover:-translate-y-2
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
@@ -143,9 +161,13 @@ export default function DeliverySection() {
               <div
                 className="
                   absolute
-                  top-6
-                  right-6
-                  text-7xl
+                  top-4
+                  right-4
+                  sm:top-6
+                  sm:right-6
+                  text-5xl
+                  sm:text-6xl
+                  lg:text-7xl
                   font-bold
                   text-[#CBA18B]/10
                   select-none
@@ -156,15 +178,18 @@ export default function DeliverySection() {
 
               <div
                 className="
-                  w-14
-                  h-14
+                  w-12
+                  h-12
+                  sm:w-14
+                  sm:h-14
                   rounded-full
                   bg-[#CBA18B]
                   text-white
                   flex
                   items-center
                   justify-center
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                 "
               >
@@ -173,8 +198,10 @@ export default function DeliverySection() {
 
               <h3
                 className="
-                  mt-8
-                  text-2xl
+                  mt-6
+                  sm:mt-8
+                  text-xl
+                  sm:text-2xl
                   font-light
                   text-[#1E2A38]
                 "
@@ -184,7 +211,10 @@ export default function DeliverySection() {
 
               <p
                 className="
-                  mt-5
+                  mt-4
+                  sm:mt-5
+                  text-sm
+                  sm:text-base
                   text-[#1E2A38]/70
                   leading-relaxed
                 "
@@ -199,11 +229,19 @@ export default function DeliverySection() {
 
         <div
           className="
-            mt-24
-            bg-[#1E2A38]
-            rounded-[40px]
-            p-10
-            md:p-16
+            mt-14
+            sm:mt-20
+            lg:mt-24
+            bg-[#322D28]
+            rounded-[28px]
+            sm:rounded-[36px]
+            lg:rounded-[40px]
+            px-6
+            sm:px-10
+            md:px-14
+            py-10
+            sm:py-14
+            md:py-16
             text-center
           "
         >
@@ -211,8 +249,10 @@ export default function DeliverySection() {
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.25em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
             "
           >
@@ -221,23 +261,29 @@ export default function DeliverySection() {
 
           <h3
             className="
-              mt-6
-              text-3xl
+              mt-4
+              sm:mt-6
+              text-[28px]
+              sm:text-4xl
               md:text-5xl
               font-light
               text-white
+              leading-tight
             "
           >
             Une logistique pensée
-            <br />
+            <br className="hidden sm:block" />
             pour la sérénité
           </h3>
 
           <p
             className="
-              mt-8
+              mt-6
+              sm:mt-8
               max-w-3xl
               mx-auto
+              text-sm
+              sm:text-base
               text-white/70
               leading-relaxed
             "
