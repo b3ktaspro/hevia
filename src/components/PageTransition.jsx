@@ -17,19 +17,15 @@ export default function PageTransition({ children }) {
     <motion.div
       initial={{
         opacity: 0,
-        scale: 0.985,
       }}
       animate={{
         opacity: 1,
-        scale: 1,
       }}
       exit={{
         opacity: 0,
-        scale: 1.01,
       }}
       transition={{
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.35,
       }}
     >
       {children}
