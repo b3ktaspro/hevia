@@ -63,17 +63,19 @@ export default function CollectionsSection() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-16 sm:py-24 md:py-36 bg-[#F8F5F1]">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="text-center max-w-3xl mx-auto">
 
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.25em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
               font-medium
             "
@@ -83,8 +85,10 @@ export default function CollectionsSection() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
@@ -99,7 +103,10 @@ export default function CollectionsSection() {
 
           <p
             className="
-              mt-8
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
               text-[#1E2A38]/70
               leading-relaxed
             "
@@ -113,11 +120,15 @@ export default function CollectionsSection() {
         <div
           ref={ref}
           className="
-            mt-24
+            mt-10
+            sm:mt-16
+            md:mt-24
             grid
+            grid-cols-1
             md:grid-cols-2
             xl:grid-cols-4
-            gap-8
+            gap-5
+            sm:gap-8
             opacity-0
             translate-y-12
             transition-all
@@ -133,8 +144,12 @@ export default function CollectionsSection() {
                 group
                 relative
                 overflow-hidden
-                rounded-[36px]
-                h-[580px]
+                rounded-[24px]
+                sm:rounded-[30px]
+                md:rounded-[36px]
+                h-[380px]
+                sm:h-[460px]
+                lg:h-[580px]
               "
             >
 
@@ -160,9 +175,13 @@ export default function CollectionsSection() {
               <div
                 className="
                   absolute
-                  top-8
-                  left-8
-                  text-6xl
+                  top-5
+                  left-5
+                  sm:top-8
+                  sm:left-8
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
                   font-bold
                   text-white/15
                 "
@@ -176,16 +195,19 @@ export default function CollectionsSection() {
                   bottom-0
                   left-0
                   right-0
-                  p-8
+                  p-5
+                  sm:p-8
                 "
               >
 
                 <span
                   className="
                     text-[#CBA18B]
-                    text-xs
+                    text-[10px]
+                    sm:text-xs
                     uppercase
-                    tracking-[0.3em]
+                    tracking-[0.25em]
+                    sm:tracking-[0.3em]
                   "
                 >
                   Collection
@@ -193,8 +215,10 @@ export default function CollectionsSection() {
 
                 <h3
                   className="
-                    mt-4
-                    text-3xl
+                    mt-3
+                    sm:mt-4
+                    text-2xl
+                    sm:text-3xl
                     font-light
                     text-white
                     leading-tight
@@ -205,10 +229,12 @@ export default function CollectionsSection() {
 
                 <p
                   className="
-                    mt-4
+                    mt-3
+                    sm:mt-4
                     text-white/70
                     leading-relaxed
-                    text-sm
+                    text-xs
+                    sm:text-sm
                     max-h-0
                     opacity-0
                     overflow-hidden
@@ -223,12 +249,15 @@ export default function CollectionsSection() {
 
                 <div
                   className="
-                    mt-6
+                    mt-4
+                    sm:mt-6
                     flex
                     items-center
-                    gap-3
+                    gap-2
+                    sm:gap-3
                     text-[#CBA18B]
-                    text-sm
+                    text-xs
+                    sm:text-sm
                     tracking-wide
                   "
                 >
