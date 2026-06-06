@@ -23,7 +23,7 @@ export default function Intro() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -43,7 +43,7 @@ export default function Intro() {
             relative
             overflow-hidden
             rounded-[48px]
-            bg-[#1E2A38]
+            bg-[#322D28]
             opacity-0
             translate-y-12
             transition-all
@@ -59,7 +59,7 @@ export default function Intro() {
               text-[220px]
               leading-none
               font-bold
-              text-white/[0.03]
+              text-white/[0.02]
               select-none
               pointer-events-none
             "
@@ -72,8 +72,9 @@ export default function Intro() {
               absolute
               inset-0
               bg-gradient-to-br
-              from-white/[0.02]
-              to-transparent
+              from-white/[0.03]
+              via-transparent
+              to-black/10
             "
           />
 
@@ -133,7 +134,7 @@ export default function Intro() {
               Chez HEVIA, nous considérons chaque matériau comme un élément
               d’architecture à part entière. Nous sélectionnons des collections
               capables d’allier esthétique, durabilité et émotion afin de créer
-              des espaces qui traversent le temps.
+              des espaces élégants qui traversent le temps.
             </p>
 
             <div
@@ -150,7 +151,7 @@ export default function Intro() {
                 <div
                   className="
                     text-[#CBA18B]
-                    text-4xl
+                    text-5xl
                     font-light
                   "
                 >
@@ -174,7 +175,7 @@ export default function Intro() {
                 <div
                   className="
                     text-[#CBA18B]
-                    text-4xl
+                    text-5xl
                     font-light
                   "
                 >
@@ -198,7 +199,7 @@ export default function Intro() {
                 <div
                   className="
                     text-[#CBA18B]
-                    text-4xl
+                    text-5xl
                     font-light
                   "
                 >
@@ -222,7 +223,7 @@ export default function Intro() {
             <div
               className="
                 mt-16
-                w-32
+                w-40
                 h-px
                 bg-[#CBA18B]
               "

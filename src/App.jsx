@@ -1,4 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useEffect } from "react"
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom"
+
+import { AnimatePresence } from "framer-motion"
+import Lenis from "lenis"
 
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -13,32 +22,136 @@ import Legal from "./pages/legal/Legal"
 import Terms from "./pages/legal/Terms"
 import Privacy from "./pages/legal/Privacy"
 
-export default function App() {
+import PageTransition from "./components/PageTransition"
+
+export let lenisInstance = null
+
+function AnimatedRoutes() {
+  const location = useLocation()
+
   return (
-<BrowserRouter>
+    <AnimatePresence mode="wait">
 
-<ScrollToTop />
+      <Routes
+        location={location}
+        key={location.pathname}
+      >
 
-<div className="gradient-hevia min-h-screen">
+        <Route
+          path="/"
+          element={
+            <PageTransition>
+              <Home />
+            </PageTransition>
+          }
+        />
 
-  <Navbar />
+        <Route
+          path="/about"
+          element={
+            <PageTransition>
+              <About />
+            </PageTransition>
+          }
+        />
 
-  <main>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/collections" element={<Collections />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/legal" element={<Legal />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy" element={<Privacy />} />
-    </Routes>
-  </main>
+        <Route
+          path="/collections"
+          element={
+            <PageTransition>
+              <Collections />
+            </PageTransition>
+          }
+        />
 
-  <Footer />
+        <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <Contact />
+            </PageTransition>
+          }
+        />
 
-</div>
+        <Route
+          path="/legal"
+          element={
+            <PageTransition>
+              <Legal />
+            </PageTransition>
+          }
+        />
 
-</BrowserRouter>
+        <Route
+          path="/terms"
+          element={
+            <PageTransition>
+              <Terms />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/privacy"
+          element={
+            <PageTransition>
+              <Privacy />
+            </PageTransition>
+          }
+        />
+
+      </Routes>
+
+    </AnimatePresence>
+  )
+}
+
+export default function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.4,
+      smoothWheel: true,
+      syncTouch: true,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 0.9,
+      infinite: false,
+    })
+
+    lenisInstance = lenis
+
+    let rafId
+
+    function raf(time) {
+      lenis.raf(time)
+      rafId = requestAnimationFrame(raf)
+    }
+
+    rafId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+      lenisInstance = null
+    }
+  }, [])
+
+  return (
+    <BrowserRouter>
+
+      <ScrollToTop />
+
+      <div className="gradient-hevia min-h-screen">
+
+        <Navbar />
+
+        <main>
+          <AnimatedRoutes />
+        </main>
+
+        <Footer />
+
+      </div>
+
+    </BrowserRouter>
   )
 }

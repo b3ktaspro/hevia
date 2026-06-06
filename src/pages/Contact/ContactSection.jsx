@@ -57,7 +57,7 @@ export default function ContactSection() {
 
         <div
           className="
-            bg-[#1E2A38]
+            bg-[#322D28]
             rounded-[48px]
             overflow-hidden
           "
