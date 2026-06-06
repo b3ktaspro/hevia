@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 
 const items = [
@@ -41,30 +40,6 @@ const items = [
 ]
 
 export default function SurfacesSection() {
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const el = ref.current
-
-    if (!el) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
-        }
-      },
-      {
-        threshold: 0.15,
-      }
-    )
-
-    observer.observe(el)
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
 
@@ -122,7 +97,6 @@ export default function SurfacesSection() {
         </div>
 
         <div
-          ref={ref}
           className="
             mt-12
             sm:mt-16
@@ -134,10 +108,6 @@ export default function SurfacesSection() {
             gap-5
             sm:gap-6
             lg:gap-8
-            opacity-0
-            translate-y-12
-            transition-all
-            duration-1000
           "
         >
 
@@ -151,9 +121,9 @@ export default function SurfacesSection() {
                 rounded-[28px]
                 sm:rounded-[32px]
                 lg:rounded-[40px]
-                h-[380px]
-                sm:h-[460px]
-                lg:h-[620px]
+                h-[360px]
+                sm:h-[430px]
+                lg:h-[580px]
               "
             >
 
@@ -167,7 +137,7 @@ export default function SurfacesSection() {
                   h-full
                   object-cover
                   transition-all
-                  duration-[1800ms]
+                  duration-[1200ms]
                   group-hover:scale-110
                 "
               />
