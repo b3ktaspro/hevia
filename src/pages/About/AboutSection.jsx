@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
-import image from "/images/logo/logo_hevia.png"
+import image from "/images/logo/logo-hevia.jpg"
 
 export default function AboutSection() {
   const ref = useRef(null)
@@ -81,41 +81,28 @@ duration-1000
             "
           >
 
-            <div
-              className="
-                absolute
-                top-4
-                left-4
-                sm:top-6
-                sm:left-6
-                lg:top-8
-                lg:left-8
-                z-20
-                text-[50px]
-                sm:text-[70px]
-                lg:text-[90px]
-                font-bold
-                text-white/15
-              "
-            >
-              03
-            </div>
 
-            <img
-              src={image}
-              alt="HEVIA"
-              className="
-                w-full
-                h-[340px]
-                sm:h-[480px]
-                md:h-[600px]
-                lg:h-[720px]
-                object-cover
-                transition-all
-                duration-[1800ms]
-                group-hover:scale-105
-              "
-            />
+<div
+  className="
+    relative
+    overflow-hidden
+    rounded-[24px]
+    sm:rounded-[30px]
+    lg:rounded-[40px]
+    bg-[#ECE6DF]
+    order-1
+  "
+>
+  <img
+    src={image}
+    alt="HEVIA"
+    className="
+      w-full
+      h-auto
+      object-contain
+    "
+  />
+</div>
 
             <div className="absolute inset-0 bg-black/15" />
 
