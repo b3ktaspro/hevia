@@ -22,9 +22,9 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative min-h-[100svh] overflow-hidden">
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <motion.div
           key={current}
           initial={{ opacity: 0, scale: 1.08 }}
@@ -47,20 +47,31 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-      <div className="relative z-20 h-full max-w-7xl mx-auto px-6">
+      <div className="relative z-20 min-h-[100svh] max-w-7xl mx-auto px-5 sm:px-6">
 
-        <div className="h-full flex items-center">
+        <div className="min-h-[100svh] flex items-center">
 
-          <div className="max-w-3xl">
+          <div className="max-w-[650px]">
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="mb-8"
+              className="mb-5 sm:mb-8"
             >
-              <span className="inline-flex items-center gap-3 text-white/70 uppercase tracking-[0.35em] text-xs">
-                <span className="w-12 h-px bg-[#CBA18B]" />
+              <span
+                className="
+                inline-flex
+                items-center
+                gap-2
+                text-white/70
+                uppercase
+                tracking-[0.25em]
+                text-[10px]
+                sm:text-xs
+                "
+              >
+                <span className="w-8 sm:w-12 h-px bg-[#CBA18B]" />
                 Maison Hevia
               </span>
             </motion.div>
@@ -69,7 +80,14 @@ export default function Hero() {
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="text-white text-5xl md:text-7xl font-light leading-[0.95]"
+              className="
+              text-white
+              text-[42px]
+              sm:text-5xl
+              md:text-7xl
+              font-light
+              leading-[0.95]
+              "
             >
               L'élégance des
               <br />
@@ -83,7 +101,16 @@ export default function Hero() {
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.9 }}
-              className="mt-8 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl"
+              className="
+              mt-5
+              sm:mt-8
+              text-[15px]
+              sm:text-lg
+              md:text-xl
+              text-white/75
+              leading-relaxed
+              max-w-xl
+              "
             >
               Découvrez une sélection de carrelages et revêtements
               haut de gamme conçus pour donner caractère, élégance
@@ -94,21 +121,33 @@ export default function Hero() {
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.9 }}
-              className="mt-12 flex flex-wrap gap-4"
+              className="
+              mt-8
+              sm:mt-12
+              flex
+              flex-col
+              sm:flex-row
+              gap-3
+              sm:gap-4
+              "
             >
               <Link
                 to="/collections"
                 className="
-                group
                 bg-[#CBA18B]
                 text-black
-                px-8
-                py-4
+                px-6
+                sm:px-8
+                py-3
+                sm:py-4
                 rounded-full
+                text-sm
+                sm:text-base
                 font-medium
                 transition-all
                 duration-500
-                hover:scale-105
+                hover:scale-[1.03]
+                text-center
                 "
               >
                 Découvrir les collections
@@ -119,16 +158,21 @@ export default function Hero() {
                 className="
                 border
                 border-white/20
-                backdrop-blur-sm
                 bg-white/5
+                backdrop-blur-sm
                 text-white
-                px-8
-                py-4
+                px-6
+                sm:px-8
+                py-3
+                sm:py-4
                 rounded-full
+                text-sm
+                sm:text-base
                 font-medium
                 transition-all
                 duration-500
                 hover:bg-white/10
+                text-center
                 "
               >
                 Prendre rendez-vous
@@ -141,8 +185,18 @@ export default function Hero() {
 
       </div>
 
-      <div className="absolute left-8 bottom-10 z-30 flex items-center gap-3">
-
+      <div
+        className="
+        hidden
+        md:flex
+        absolute
+        left-8
+        bottom-10
+        z-30
+        items-center
+        gap-3
+        "
+      >
         <a
           href="https://www.instagram.com/maison.hevia/"
           target="_blank"
@@ -192,11 +246,23 @@ export default function Hero() {
         >
           <FaFacebookF />
         </a>
-
       </div>
 
-      <div className="absolute right-8 bottom-10 z-30 flex gap-3">
-
+      <div
+        className="
+        absolute
+        left-1/2
+        -translate-x-1/2
+        sm:left-auto
+        sm:right-8
+        sm:translate-x-0
+        bottom-6
+        sm:bottom-10
+        z-30
+        flex
+        gap-2
+        "
+      >
         {slides.map((_, index) => (
           <button
             key={index}
@@ -207,13 +273,12 @@ export default function Hero() {
               duration-500
               ${
                 current === index
-                  ? "w-14 bg-[#CBA18B]"
-                  : "w-6 bg-white/30"
+                  ? "w-10 sm:w-14 bg-[#CBA18B]"
+                  : "w-4 sm:w-6 bg-white/30"
               }
             `}
           />
         ))}
-
       </div>
 
     </section>
