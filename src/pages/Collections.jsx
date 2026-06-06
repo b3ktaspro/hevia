@@ -1,5 +1,4 @@
 import SurfacesSection from "./Collections/SurfacesSection";
-import Process from "./Home/Process";
 import Why from "./Home/Why";
 
 export default function Collections() {
@@ -7,7 +6,6 @@ export default function Collections() {
     <>
     <SurfacesSection />
     <Why />
-    <Process />
     </>
   );
 }
