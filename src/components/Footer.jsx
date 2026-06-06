@@ -7,15 +7,17 @@ export default function Footer() {
 
       <div className="border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
 
           <div className="max-w-4xl">
 
             <span
               className="
                 uppercase
-                tracking-[0.35em]
-                text-xs
+                tracking-[0.25em]
+                sm:tracking-[0.35em]
+                text-[10px]
+                sm:text-xs
                 text-[#CBA18B]
               "
             >
@@ -24,8 +26,10 @@ export default function Footer() {
 
             <h2
               className="
-                mt-6
-                text-4xl
+                mt-4
+                sm:mt-6
+                text-[32px]
+                sm:text-5xl
                 md:text-6xl
                 font-light
                 leading-tight
@@ -39,7 +43,10 @@ export default function Footer() {
 
             <p
               className="
-                mt-8
+                mt-5
+                sm:mt-8
+                text-sm
+                sm:text-base
                 text-white/60
                 leading-relaxed
                 max-w-2xl
@@ -54,16 +61,21 @@ export default function Footer() {
               to="/contact"
               className="
                 inline-flex
-                mt-10
-                px-8
-                py-4
+                mt-8
+                sm:mt-10
+                px-6
+                sm:px-8
+                py-3
+                sm:py-4
                 rounded-full
                 bg-[#CBA18B]
                 text-[#1E2A38]
+                text-sm
+                sm:text-base
                 font-medium
                 transition-all
                 duration-500
-                hover:scale-105
+                hover:scale-[1.03]
               "
             >
               Nous contacter
@@ -75,17 +87,28 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
 
-        <div className="grid lg:grid-cols-4 gap-14">
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-10
+            md:gap-14
+          "
+        >
 
           <div>
 
             <h3
               className="
-                text-2xl
+                text-xl
+                sm:text-2xl
                 font-medium
-                tracking-[0.25em]
+                tracking-[0.18em]
+                sm:tracking-[0.25em]
                 uppercase
               "
             >
@@ -94,7 +117,10 @@ export default function Footer() {
 
             <p
               className="
-                mt-6
+                mt-4
+                sm:mt-6
+                text-sm
+                sm:text-base
                 text-white/60
                 leading-relaxed
               "
@@ -113,15 +139,18 @@ export default function Footer() {
               className="
                 text-[#CBA18B]
                 uppercase
-                tracking-[0.25em]
-                text-xs
-                mb-6
+                tracking-[0.2em]
+                sm:tracking-[0.25em]
+                text-[10px]
+                sm:text-xs
+                mb-4
+                sm:mb-6
               "
             >
               Navigation
             </h4>
 
-            <ul className="space-y-4 text-white/60">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/60">
 
               <li>
                 <Link
@@ -169,15 +198,18 @@ export default function Footer() {
               className="
                 text-[#CBA18B]
                 uppercase
-                tracking-[0.25em]
-                text-xs
-                mb-6
+                tracking-[0.2em]
+                sm:tracking-[0.25em]
+                text-[10px]
+                sm:text-xs
+                mb-4
+                sm:mb-6
               "
             >
               Contact
             </h4>
 
-            <div className="space-y-4 text-white/60">
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/60">
 
               <p>Béziers • France</p>
 
@@ -195,9 +227,12 @@ export default function Footer() {
               className="
                 text-[#CBA18B]
                 uppercase
-                tracking-[0.25em]
-                text-xs
-                mb-6
+                tracking-[0.2em]
+                sm:tracking-[0.25em]
+                text-[10px]
+                sm:text-xs
+                mb-4
+                sm:mb-6
               "
             >
               Réseaux
@@ -210,8 +245,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  w-11
-                  h-11
+                  w-10
+                  h-10
+                  sm:w-11
+                  sm:h-11
                   rounded-full
                   border
                   border-white/10
@@ -234,8 +271,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  w-11
-                  h-11
+                  w-10
+                  h-10
+                  sm:w-11
+                  sm:h-11
                   rounded-full
                   border
                   border-white/10
@@ -267,18 +306,27 @@ export default function Footer() {
           className="
             max-w-7xl
             mx-auto
-            px-6
-            py-8
+            px-4
+            sm:px-6
+            py-6
+            sm:py-8
             flex
             flex-col
-            md:flex-row
+            lg:flex-row
             items-center
             justify-between
-            gap-6
+            gap-5
           "
         >
 
-          <p className="text-white/40 text-sm">
+          <p
+            className="
+              text-white/40
+              text-xs
+              sm:text-sm
+              text-center
+            "
+          >
             © {new Date().getFullYear()} HEVIA — Tous droits réservés
           </p>
 
@@ -287,8 +335,10 @@ export default function Footer() {
               flex
               flex-wrap
               justify-center
-              gap-8
-              text-sm
+              gap-4
+              sm:gap-8
+              text-xs
+              sm:text-sm
               text-white/40
             "
           >
