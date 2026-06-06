@@ -33,16 +33,17 @@ export default function Intro() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-16 sm:py-24 md:py-36 bg-[#F8F5F1]">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div
           ref={ref}
           className="
             relative
             overflow-hidden
-            rounded-[48px]
+            rounded-[28px]
+            md:rounded-[48px]
             bg-[#322D28]
             opacity-0
             translate-y-12
@@ -56,7 +57,9 @@ export default function Intro() {
               absolute
               top-0
               right-0
-              text-[220px]
+              text-[80px]
+              sm:text-[140px]
+              md:text-[220px]
               leading-none
               font-bold
               text-white/[0.02]
@@ -82,10 +85,12 @@ export default function Intro() {
             className="
               relative
               z-10
-              px-8
+              px-5
+              sm:px-8
               md:px-16
               lg:px-20
-              py-20
+              py-12
+              sm:py-16
               md:py-24
             "
           >
@@ -93,8 +98,10 @@ export default function Intro() {
             <span
               className="
                 uppercase
-                tracking-[0.35em]
-                text-xs
+                tracking-[0.25em]
+                sm:tracking-[0.35em]
+                text-[10px]
+                sm:text-xs
                 text-[#CBA18B]
                 font-medium
               "
@@ -104,8 +111,10 @@ export default function Intro() {
 
             <h2
               className="
-                mt-8
-                text-4xl
+                mt-5
+                sm:mt-8
+                text-[32px]
+                sm:text-5xl
                 md:text-6xl
                 lg:text-7xl
                 font-light
@@ -124,10 +133,13 @@ export default function Intro() {
 
             <p
               className="
-                mt-10
+                mt-6
+                sm:mt-10
                 max-w-3xl
                 text-white/70
-                text-lg
+                text-[15px]
+                sm:text-base
+                md:text-lg
                 leading-relaxed
               "
             >
@@ -139,19 +151,23 @@ export default function Intro() {
 
             <div
               className="
-                mt-16
+                mt-10
+                sm:mt-16
                 grid
-                md:grid-cols-3
-                gap-10
+                grid-cols-1
+                sm:grid-cols-3
+                gap-8
+                sm:gap-10
               "
             >
 
               <div>
-
                 <div
                   className="
                     text-[#CBA18B]
-                    text-5xl
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
                     font-light
                   "
                 >
@@ -160,22 +176,24 @@ export default function Intro() {
 
                 <p
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     text-white/60
-                    text-sm
+                    text-xs
+                    sm:text-sm
                   "
                 >
                   Références sélectionnées
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-[#CBA18B]
-                    text-5xl
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
                     font-light
                   "
                 >
@@ -184,22 +202,24 @@ export default function Intro() {
 
                 <p
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     text-white/60
-                    text-sm
+                    text-xs
+                    sm:text-sm
                   "
                 >
                   Collections haut de gamme
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-[#CBA18B]
-                    text-5xl
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
                     font-light
                   "
                 >
@@ -208,22 +228,25 @@ export default function Intro() {
 
                 <p
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     text-white/60
-                    text-sm
+                    text-xs
+                    sm:text-sm
                   "
                 >
                   Accompagnement personnalisé
                 </p>
-
               </div>
 
             </div>
 
             <div
               className="
-                mt-16
-                w-40
+                mt-10
+                sm:mt-16
+                w-24
+                sm:w-40
                 h-px
                 bg-[#CBA18B]
               "
