@@ -6,52 +6,135 @@ export default function Banner() {
 
   useEffect(() => {
     const el = ref.current
+
     if (!el) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
+          el.classList.remove("opacity-0", "translate-y-12")
           el.classList.add("opacity-100", "translate-y-0")
         }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15
+      }
     )
 
     observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
     <section
       ref={ref}
-      className="relative h-[60vh] flex items-center justify-center text-white overflow-hidden opacity-0 translate-y-10 transition-all duration-700"
+      className="
+        relative
+        h-[75vh]
+        min-h-[600px]
+        overflow-hidden
+        flex
+        items-center
+        justify-center
+        opacity-0
+        translate-y-12
+        transition-all
+        duration-1000
+      "
     >
-      
+
       <img
         src={img}
-        alt="Carrelage"
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.65]"
+        alt="HEVIA"
+        className="
+          absolute
+          inset-0
+          w-full
+          h-full
+          object-cover
+          scale-110
+        "
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-black/45" />
 
-      <div className="relative z-10 text-center max-w-3xl px-6">
-        
-        <p className="uppercase tracking-[4px] text-white/70 text-sm mb-3">
-          HEVIA
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+        <span
+          className="
+            inline-block
+            text-[#CBA18B]
+            uppercase
+            tracking-[0.35em]
+            text-xs
+            font-medium
+          "
+        >
+          Maison HEVIA
+        </span>
+
+        <h2
+          className="
+            mt-8
+            text-5xl
+            md:text-7xl
+            font-light
+            text-white
+            leading-[1]
+            max-w-5xl
+            mx-auto
+          "
+        >
+          Des matériaux conçus
+          <br />
+
+          <span className="text-[#CBA18B]">
+            pour traverser le temps
+          </span>
+
+        </h2>
+
+        <p
+          className="
+            mt-10
+            max-w-3xl
+            mx-auto
+            text-lg
+            md:text-xl
+            text-white/75
+            leading-relaxed
+          "
+        >
+          Chaque collection est sélectionnée pour son esthétique,
+          sa durabilité et sa capacité à sublimer les espaces
+          contemporains comme les projets les plus ambitieux.
         </p>
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          L’art du carrelage haut de gamme
-        </h1>
+        <div
+          className="
+            mt-14
+            flex
+            justify-center
+          "
+        >
 
-        <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-2xl mx-auto">
-          Des matériaux d’exception, un savoir-faire unique et une passion
-          pour le détail au service de vos espaces.
-        </p>
+          <div
+            className="
+              w-24
+              h-px
+              bg-[#CBA18B]
+            "
+          />
+
+        </div>
 
       </div>
+
     </section>
   )
 }

@@ -8,26 +8,30 @@ import img4 from "/images/home/acceuil_home_4.jpg"
 
 const collections = [
   {
+    number: "01",
     title: "Tous nos carrelages",
-    desc: "L’élégance naturelle sous vos pas.",
+    desc: "Découvrez l'ensemble de nos collections sélectionnées pour leur qualité et leur élégance.",
     img: img1,
     link: "/",
   },
   {
-    title: "Carrelage salle de bain",
-    desc: "Structurez vos murs avec raffinement.",
+    number: "02",
+    title: "Salle de bain",
+    desc: "Des matériaux conçus pour créer des espaces raffinés et intemporels.",
     img: img2,
     link: "/",
   },
   {
-    title: "Carrelage extérieur",
-    desc: "Confort et solidité en plein air.",
+    number: "03",
+    title: "Extérieur",
+    desc: "Résistance, esthétique et durabilité pour vos projets en plein air.",
     img: img3,
     link: "/",
   },
   {
-    title: "Carrelage Piscine",
-    desc: "L’art du détail pour vos espaces raffinés.",
+    number: "04",
+    title: "Piscine",
+    desc: "Des finitions haut de gamme pensées pour les environnements les plus exigeants.",
     img: img4,
     link: "/",
   },
@@ -38,58 +42,209 @@ export default function CollectionsSection() {
 
   useEffect(() => {
     const el = ref.current
+
     if (!el) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
+          el.classList.remove("opacity-0", "translate-y-12")
           el.classList.add("opacity-100", "translate-y-0")
         }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15,
+      }
     )
 
     observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="py-32 max-[768px]:py-16">
-      
-      <div className="max-w-[1500px] mx-auto px-6">
-        
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-20 text-[#1E2A38] max-[768px]:text-3xl max-[768px]:mb-10">
-          Nos Collections
-        </h2>
+    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="text-center max-w-3xl mx-auto">
+
+          <span
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-xs
+              text-[#CBA18B]
+              font-medium
+            "
+          >
+            Collections
+          </span>
+
+          <h2
+            className="
+              mt-6
+              text-4xl
+              md:text-6xl
+              font-light
+              text-[#1E2A38]
+              leading-tight
+            "
+          >
+            Explorez nos
+            <span className="text-[#CBA18B]">
+              {" "}collections
+            </span>
+          </h2>
+
+          <p
+            className="
+              mt-8
+              text-[#1E2A38]/70
+              leading-relaxed
+            "
+          >
+            Une sélection pensée pour répondre aux projets les plus exigeants,
+            entre design contemporain et qualité durable.
+          </p>
+
+        </div>
 
         <div
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 opacity-0 translate-y-10 transition-all duration-700 max-[768px]:gap-6"
+          className="
+            mt-24
+            grid
+            md:grid-cols-2
+            xl:grid-cols-4
+            gap-8
+            opacity-0
+            translate-y-12
+            transition-all
+            duration-1000
+          "
         >
-          
-          {collections.map((item, index) => (
+
+          {collections.map((item) => (
             <Link
-              key={index}
+              key={item.number}
               to={item.link}
-              className="relative group rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_15px_40px_rgba(0,0,0,0.25)] transition-all duration-700 block"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[36px]
+                h-[580px]
+              "
             >
-              
+
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-[420px] object-cover group-hover:scale-110 transition-transform duration-700 max-[768px]:h-[260px]"
+                className="
+                  absolute
+                  inset-0
+                  w-full
+                  h-full
+                  object-cover
+                  transition-all
+                  duration-[1800ms]
+                  group-hover:scale-110
+                "
               />
 
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-500 flex flex-col items-center justify-center text-center text-white px-6">
-                
-                <h3 className="text-2xl md:text-3xl font-semibold mb-2">
+              <div className="absolute inset-0 bg-black/25" />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+
+              <div
+                className="
+                  absolute
+                  top-8
+                  left-8
+                  text-6xl
+                  font-bold
+                  text-white/15
+                "
+              >
+                {item.number}
+              </div>
+
+              <div
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  right-0
+                  p-8
+                "
+              >
+
+                <span
+                  className="
+                    text-[#CBA18B]
+                    text-xs
+                    uppercase
+                    tracking-[0.3em]
+                  "
+                >
+                  Collection
+                </span>
+
+                <h3
+                  className="
+                    mt-4
+                    text-3xl
+                    font-light
+                    text-white
+                    leading-tight
+                  "
+                >
                   {item.title}
                 </h3>
 
-                <p className="text-sm md:text-base text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p
+                  className="
+                    mt-4
+                    text-white/70
+                    leading-relaxed
+                    text-sm
+                    max-h-0
+                    opacity-0
+                    overflow-hidden
+                    transition-all
+                    duration-500
+                    group-hover:max-h-32
+                    group-hover:opacity-100
+                  "
+                >
                   {item.desc}
                 </p>
+
+                <div
+                  className="
+                    mt-6
+                    flex
+                    items-center
+                    gap-3
+                    text-[#CBA18B]
+                    text-sm
+                    tracking-wide
+                  "
+                >
+                  Découvrir
+
+                  <span
+                    className="
+                      transition-transform
+                      duration-500
+                      group-hover:translate-x-2
+                    "
+                  >
+                    →
+                  </span>
+
+                </div>
 
               </div>
 
@@ -99,6 +254,7 @@ export default function CollectionsSection() {
         </div>
 
       </div>
+
     </section>
   )
 }

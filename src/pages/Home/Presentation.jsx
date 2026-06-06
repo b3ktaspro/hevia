@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 import img from "/images/home/acceuil_home4.jpg"
 
 export default function Presentation() {
@@ -6,62 +7,263 @@ export default function Presentation() {
 
   useEffect(() => {
     const el = ref.current
+
     if (!el) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
+          el.classList.remove("opacity-0", "translate-y-12")
           el.classList.add("opacity-100", "translate-y-0")
         }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15
+      }
     )
 
     observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
     <section
       ref={ref}
-      className="py-32 md:py-36 opacity-0 translate-y-10 transition-all duration-700"
+      className="
+        py-36
+        md:py-44
+        bg-[#F8F5F1]
+        opacity-0
+        translate-y-12
+        transition-all
+        duration-1000
+      "
     >
-      <div className="max-w-[1300px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
-        
-        <div className="overflow-hidden rounded-3xl shadow-2xl">
-          <img
-            src={img}
-            alt="Présentation"
-            className="w-full h-[500px] object-cover rounded-3xl hover:scale-105 transition-transform duration-700 max-[768px]:h-[300px]"
-          />
-        </div>
 
-        <div className="text-[#1E2A38]">
-          
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 max-[768px]:text-3xl">
-            Sublimez Vos Espaces{" "}
-            <span className="text-[#CBA18B]">Avec HEVIA</span>
-          </h2>
+      <div className="max-w-7xl mx-auto px-6">
 
-          <p className="text-[#2B2B2B]/80 text-lg leading-relaxed mb-6 max-[768px]:text-sm">
-            HEVIA transforme vos sols et murs en véritables œuvres d’art grâce
-            à des matériaux de qualité et un savoir-faire unique. Du choix des
-            carrelages à la pose, nous vous accompagnons pas à pas.
-          </p>
+        <div
+          className="
+            grid
+            lg:grid-cols-2
+            gap-16
+            items-center
+          "
+        >
 
-          <p className="text-[#85796D] font-medium mb-10 max-[768px]:text-sm">
-            Des matériaux triés sur le volet, des finitions haut de gamme, et
-            un accompagnement personnalisé pour chaque projet.
-          </p>
+          <div
+            className="
+              relative
+              overflow-hidden
+              rounded-[40px]
+              group
+            "
+          >
 
-          <a className="inline-block bg-[#2B2B2B] text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:bg-[#CBA18B] hover:text-[#2B2B2B] transition-all duration-300 max-[768px]:px-4 max-[768px]:py-2 max-[768px]:text-sm">
-            En Savoir Plus
-          </a>
+            <div
+              className="
+                absolute
+                top-8
+                left-8
+                z-20
+                text-[90px]
+                font-bold
+                text-white/15
+              "
+            >
+              01
+            </div>
+
+            <img
+              src={img}
+              alt="Présentation HEVIA"
+              className="
+                w-full
+                h-[700px]
+                object-cover
+                transition-all
+                duration-[1800ms]
+                group-hover:scale-110
+              "
+            />
+
+            <div className="absolute inset-0 bg-black/20" />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+          </div>
+
+          <div>
+
+            <span
+              className="
+                uppercase
+                tracking-[0.35em]
+                text-xs
+                text-[#CBA18B]
+                font-medium
+              "
+            >
+              À propos de HEVIA
+            </span>
+
+            <h2
+              className="
+                mt-6
+                text-4xl
+                md:text-6xl
+                font-light
+                text-[#1E2A38]
+                leading-tight
+              "
+            >
+              Sublimer les espaces
+              <span className="text-[#CBA18B]">
+                {" "}par la matière
+              </span>
+            </h2>
+
+            <p
+              className="
+                mt-8
+                text-lg
+                text-[#1E2A38]/70
+                leading-relaxed
+              "
+            >
+              Chez HEVIA, nous sélectionnons des matériaux capables
+              de transformer un simple espace en un lieu de caractère.
+              Chaque collection est choisie pour son esthétique,
+              sa durabilité et sa capacité à traverser le temps.
+            </p>
+
+            <p
+              className="
+                mt-6
+                text-[#1E2A38]/70
+                leading-relaxed
+              "
+            >
+              Notre mission est d'accompagner chaque projet avec
+              exigence, sens du détail et passion des belles matières.
+            </p>
+
+            <div
+              className="
+                mt-12
+                grid
+                grid-cols-3
+                gap-8
+              "
+            >
+
+              <div>
+
+                <div
+                  className="
+                    text-4xl
+                    font-light
+                    text-[#1E2A38]
+                  "
+                >
+                  100+
+                </div>
+
+                <div
+                  className="
+                    mt-2
+                    text-sm
+                    text-[#1E2A38]/60
+                  "
+                >
+                  Références
+                </div>
+
+              </div>
+
+              <div>
+
+                <div
+                  className="
+                    text-4xl
+                    font-light
+                    text-[#1E2A38]
+                  "
+                >
+                  10+
+                </div>
+
+                <div
+                  className="
+                    mt-2
+                    text-sm
+                    text-[#1E2A38]/60
+                  "
+                >
+                  Collections
+                </div>
+
+              </div>
+
+              <div>
+
+                <div
+                  className="
+                    text-4xl
+                    font-light
+                    text-[#1E2A38]
+                  "
+                >
+                  100%
+                </div>
+
+                <div
+                  className="
+                    mt-2
+                    text-sm
+                    text-[#1E2A38]/60
+                  "
+                >
+                  Sélectionnées
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="mt-12">
+
+              <Link
+                to="/about"
+                className="
+                  inline-flex
+                  items-center
+                  gap-3
+                  px-8
+                  py-4
+                  rounded-full
+                  bg-[#1E2A38]
+                  text-white
+                  font-medium
+                  transition-all
+                  duration-500
+                  hover:bg-[#CBA18B]
+                  hover:text-[#1E2A38]
+                  hover:scale-105
+                "
+              >
+                Découvrir HEVIA
+              </Link>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
+
     </section>
   )
 }

@@ -3,53 +3,40 @@ import { Link } from "react-router-dom"
 
 const items = [
   {
-    id: "pierre",
-    title: "Carrelage Imitation Pierre",
-    desc: "L’imitation pierre apporte un charme naturel et intemporel à vos espaces.",
+    number: "01",
+    title: "Imitation Pierre",
+    desc: "L’authenticité de la pierre naturelle alliée aux performances des matériaux modernes.",
     img: "/images/home/acceuil_home_1.jpg",
-    reverse: false,
   },
   {
-    id: "beton",
-    title: "Carrelage Imitation Béton",
-    desc: "Le béton s’impose comme la référence des intérieurs modernes et minimalistes.",
+    number: "02",
+    title: "Imitation Béton",
+    desc: "Des surfaces contemporaines inspirées de l’architecture moderne.",
     img: "/images/home/catalogue_home2.jpg",
-    reverse: true,
   },
   {
-    id: "bois",
-    title: "Carrelage Imitation Bois",
-    desc: "Le charme du bois sans ses contraintes, avec une résistance optimale.",
+    number: "03",
+    title: "Imitation Bois",
+    desc: "La chaleur du bois avec la résistance et la simplicité d’entretien du carrelage.",
     img: "/images/home/catalogue_home2.jpg",
-    reverse: false,
   },
   {
-    id: "marbre",
-    title: "Carrelage Imitation Marbre",
-    desc: "Élégance absolue avec des finitions luxueuses et intemporelles.",
+    number: "04",
+    title: "Imitation Marbre",
+    desc: "Des collections élégantes inspirées des marbres les plus prestigieux.",
     img: "/images/home/catalogue_home1.jpg",
-    reverse: true,
   },
   {
-    id: "salle-de-bain",
-    title: "Carrelage Salle de Bain",
-    desc: "Pensé pour résister à l’humidité tout en restant esthétique.",
+    number: "05",
+    title: "Salle de Bain",
+    desc: "Pensé pour les espaces de bien-être et les environnements humides.",
     img: "/images/home/acceuil_home_2.png",
-    reverse: false,
   },
   {
-    id: "exterieur",
-    title: "Carrelage Extérieur",
-    desc: "Robustesse et sécurité pour vos espaces extérieurs.",
+    number: "06",
+    title: "Extérieur",
+    desc: "Des matériaux conçus pour résister durablement aux conditions extérieures.",
     img: "/images/home/acceuil_home3.jpg",
-    reverse: true,
-  },
-  {
-    id: "piscine",
-    title: "Carrelage Piscine",
-    desc: "Antidérapant et résistant, idéal pour les environnements aquatiques.",
-    img: "/images/home/acceuil_home_4.jpg",
-    reverse: false,
   },
 ]
 
@@ -57,75 +44,206 @@ export default function SurfacesSection() {
   const ref = useRef(null)
 
   useEffect(() => {
-    const elements = ref.current.querySelectorAll("[data-animate]")
+    const el = ref.current
+
+    if (!el) return
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.remove("opacity-0", "translate-y-10")
-              entry.target.classList.add("opacity-100", "translate-y-0")
-            }, index * 120)
-          }
-        })
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.remove("opacity-0", "translate-y-12")
+          el.classList.add("opacity-100", "translate-y-0")
+        }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15,
+      }
     )
 
-    elements.forEach((el) => observer.observe(el))
+    observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="py-36 max-[768px]:py-20">
-      <div ref={ref} className="max-w-[1400px] mx-auto px-6 space-y-32">
+    <section className="py-36 md:py-44 bg-[#F8F5F1]">
 
-        {items.map((item, i) => (
-          <div
-            key={i}
-            data-animate
-            className={`flex flex-col ${
-              item.reverse ? "md:flex-row-reverse" : "md:flex-row"
-            } items-center gap-12 opacity-0 translate-y-10 transition-all duration-700`}
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="text-center max-w-4xl mx-auto">
+
+          <span
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-xs
+              text-[#CBA18B]
+            "
           >
+            Univers HEVIA
+          </span>
 
-            <div className="md:w-1/2 relative group overflow-hidden rounded-3xl">
-              
+          <h2
+            className="
+              mt-6
+              text-4xl
+              md:text-6xl
+              font-light
+              text-[#1E2A38]
+            "
+          >
+            Des collections pour
+            <span className="text-[#CBA18B]">
+              {" "}chaque projet
+            </span>
+          </h2>
+
+          <p
+            className="
+              mt-8
+              text-[#1E2A38]/70
+              leading-relaxed
+            "
+          >
+            Découvrez les différentes matières qui composent notre sélection.
+          </p>
+
+        </div>
+
+        <div
+          ref={ref}
+          className="
+            mt-24
+            grid
+            md:grid-cols-2
+            xl:grid-cols-3
+            gap-8
+            opacity-0
+            translate-y-12
+            transition-all
+            duration-1000
+          "
+        >
+
+          {items.map((item) => (
+            <article
+              key={item.number}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[40px]
+                h-[620px]
+              "
+            >
+
               <img
                 src={item.img}
-                className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
+                alt={item.title}
+                className="
+                  absolute
+                  inset-0
+                  w-full
+                  h-full
+                  object-cover
+                  transition-all
+                  duration-[1800ms]
+                  group-hover:scale-110
+                "
               />
 
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <div className="absolute inset-0 bg-black/25" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-            </div>
-
-            <div className="md:w-1/2 text-center md:text-left">
-              <h3 className="text-4xl font-bold text-[#1E2A38] mb-4 max-[768px]:text-3xl">
-                {item.title}
-              </h3>
-
-              <p className="text-[#2B2B2B] leading-relaxed mb-6 max-[768px]:text-sm">
-                {item.desc}
-              </p>
-
-              <Link
-                to="/collections"
-                className="inline-block bg-[#2B2B2B] text-white font-semibold px-8 py-3 rounded-2xl shadow-lg
-                hover:bg-[#CBA18B] hover:text-[#2B2B2B] transition-all duration-300
-                max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm"
+              <div
+                className="
+                  absolute
+                  top-8
+                  left-8
+                  text-7xl
+                  font-bold
+                  text-white/15
+                "
               >
-                Voir la collection
-              </Link>
-            </div>
+                {item.number}
+              </div>
 
-          </div>
-        ))}
+              <div
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  right-0
+                  p-8
+                "
+              >
+
+                <span
+                  className="
+                    uppercase
+                    tracking-[0.3em]
+                    text-xs
+                    text-[#CBA18B]
+                  "
+                >
+                  Collection
+                </span>
+
+                <h3
+                  className="
+                    mt-4
+                    text-3xl
+                    font-light
+                    text-white
+                  "
+                >
+                  {item.title}
+                </h3>
+
+                <p
+                  className="
+                    mt-4
+                    text-white/70
+                    leading-relaxed
+                  "
+                >
+                  {item.desc}
+                </p>
+
+                <Link
+                  to="/collections"
+                  className="
+                    inline-flex
+                    mt-8
+                    items-center
+                    gap-3
+                    text-[#CBA18B]
+                  "
+                >
+                  Découvrir
+
+                  <span
+                    className="
+                      transition-transform
+                      duration-500
+                      group-hover:translate-x-2
+                    "
+                  >
+                    →
+                  </span>
+
+                </Link>
+
+              </div>
+
+            </article>
+          ))}
+
+        </div>
 
       </div>
+
     </section>
   )
 }

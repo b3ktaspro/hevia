@@ -1,114 +1,201 @@
 import { useEffect, useRef } from "react"
 
+const collections = [
+  {
+    number: "01",
+    title: "Sélection Premium",
+    description:
+      "Des collections sélectionnées pour leur qualité exceptionnelle et leur capacité à valoriser durablement les espaces contemporains.",
+    image: "/images/home/acceuil_home_2.png",
+  },
+  {
+    number: "02",
+    title: "Matières & Inspirations",
+    description:
+      "Bois, pierre, marbre ou béton : chaque finition possède sa personnalité et répond à une vision architecturale unique.",
+    image: "/images/home/catalogue_home2.jpg",
+  },
+  {
+    number: "03",
+    title: "Projets d'Exception",
+    description:
+      "Des matériaux conçus pour accompagner les projets résidentiels et professionnels les plus ambitieux.",
+    image: "/images/home/catalogue_home1.jpg",
+  },
+]
+
 export default function CatalogueHighlight() {
   const ref = useRef(null)
 
   useEffect(() => {
     const el = ref.current
+
     if (!el) return
 
-    const items = el.querySelectorAll("[data-animate]")
-
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.remove("opacity-0", "translate-y-10")
-              entry.target.classList.add("opacity-100", "translate-y-0")
-            }, index * 150)
-          }
-        })
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.remove(
+            "opacity-0",
+            "translate-y-12"
+          )
+
+          el.classList.add(
+            "opacity-100",
+            "translate-y-0"
+          )
+        }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15,
+      }
     )
 
-    items.forEach((item) => observer.observe(item))
+    observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section id="hevia-catalogue-unique" className=" py-36 max-[768px]:py-20">
-      <div ref={ref} className="max-w-[1400px] mx-auto px-6 space-y-36">
-        <div
-          data-animate
-          className="flex flex-col md:flex-row items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
-        >
-          <div className="md:w-1/2 relative group">
-            <img
-              src="/images/home/acceuil_home_2.png"
-              className="w-full h-96 object-cover rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/30 via-transparent"></div>
-          </div>
+    <section className="py-36 md:py-44 bg-[#F8F5F1]">
 
-          <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-[#1E2A38] mb-4 max-[768px]:text-3xl">
-              Notre Sélection Premium
-            </h3>
-            <p className="text-[#2B2B2B] mb-6 max-[768px]:text-sm">
-              Découvrez nos carreaux haut de gamme pour tous vos projets.
-              Alliant qualité, durabilité et design, ils s’adaptent parfaitement
-              à chaque intérieur et extérieur.
-            </p>
-            <span className="text-[#CBA18B] font-bold text-lg">
-              À partir de 38€/m²
+      <div
+        ref={ref}
+        className="
+          max-w-7xl
+          mx-auto
+          px-6
+          opacity-0
+          translate-y-12
+          transition-all
+          duration-1000
+        "
+      >
+
+        <div className="text-center max-w-4xl mx-auto">
+
+          <span
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-xs
+              text-[#CBA18B]
+            "
+          >
+            Sélection HEVIA
+          </span>
+
+          <h2
+            className="
+              mt-6
+              text-4xl
+              md:text-6xl
+              font-light
+              text-[#1E2A38]
+            "
+          >
+            Des collections pensées
+            <span className="text-[#CBA18B]">
+              {" "}pour durer
             </span>
-          </div>
+          </h2>
+
         </div>
 
-        <div
-          data-animate
-          className="flex flex-col md:flex-row-reverse items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
-        >
-          <div className="md:w-1/2 relative group">
-            <img
-              src="/images/home/catalogue_home2.jpg"
-              className="w-full h-96 object-cover rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/20 via-transparent"></div>
-          </div>
+        <div className="mt-24 space-y-24">
 
-          <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-[#1E2A38] mb-4 max-[768px]:text-3xl">
-              Variété et Style
-            </h3>
-            <p className="text-[#2B2B2B] mb-6 max-[768px]:text-sm">
-              Explorez notre gamme : bois, marbre, pierre et béton.
-              Chaque modèle est sélectionné pour sa qualité et son esthétisme unique.
-            </p>
-            <span className="text-[#CBA18B] font-bold text-lg">
-              À partir de 32€/m²
-            </span>
-          </div>
-        </div>
-        <div
-          data-animate
-          className="flex flex-col md:flex-row items-center gap-12 opacity-0 translate-y-10 transition-all duration-700"
-        >
-          <div className="md:w-1/2 relative group">
-            <img
-              src="/images/home/catalogue_home1.jpg"
-              className="w-full h-96 object-cover rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/25 via-transparent"></div>
-          </div>
+          {collections.map((item, index) => (
+            <div
+              key={item.number}
+              className={`
+                grid
+                lg:grid-cols-2
+                gap-12
+                items-center
+                ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}
+              `}
+            >
 
-          <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-[#1E2A38] mb-4 max-[768px]:text-3xl">
-              Inspirez vos Projets
-            </h3>
-            <p className="text-[#2B2B2B] mb-6 max-[768px]:text-sm">
-              Parcourez nos inspirations et trouvez le carrelage parfait.
-              Du classique au contemporain, nous avons ce qu’il vous faut.
-            </p>
-            <span className="text-[#CBA18B] font-bold text-lg">
-              À partir de 40€/m²
-            </span>
-          </div>
+              <div
+                className="
+                  relative
+                  overflow-hidden
+                  rounded-[40px]
+                  group
+                "
+              >
+
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="
+                    w-full
+                    h-[600px]
+                    object-cover
+                    transition-all
+                    duration-[1800ms]
+                    group-hover:scale-110
+                  "
+                />
+
+                <div className="absolute inset-0 bg-black/20" />
+
+              </div>
+
+              <div>
+
+                <div
+                  className="
+                    text-7xl
+                    font-bold
+                    text-[#CBA18B]/15
+                  "
+                >
+                  {item.number}
+                </div>
+
+                <h3
+                  className="
+                    mt-4
+                    text-4xl
+                    md:text-5xl
+                    font-light
+                    text-[#1E2A38]
+                  "
+                >
+                  {item.title}
+                </h3>
+
+                <p
+                  className="
+                    mt-8
+                    text-[#1E2A38]/70
+                    text-lg
+                    leading-relaxed
+                    max-w-xl
+                  "
+                >
+                  {item.description}
+                </p>
+
+                <div
+                  className="
+                    mt-10
+                    w-24
+                    h-px
+                    bg-[#CBA18B]
+                  "
+                />
+
+              </div>
+
+            </div>
+          ))}
+
         </div>
 
       </div>
+
     </section>
   )
 }

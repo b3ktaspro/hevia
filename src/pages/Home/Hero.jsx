@@ -16,116 +16,206 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 7000)
 
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
 
-      <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={current}
+      <AnimatePresence>
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.8 }}
+          className="absolute inset-0"
+        >
+          <img
             src={slides[current]}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
-            transition={{ duration: 1.6, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
+            alt=""
+            className="w-full h-full object-cover"
           />
-        </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="absolute inset-0 bg-black/35" />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+      <div className="relative z-20 h-full max-w-7xl mx-auto px-6">
+
+        <div className="h-full flex items-center">
+
+          <div className="max-w-3xl">
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="mb-8"
+            >
+              <span className="inline-flex items-center gap-3 text-white/70 uppercase tracking-[0.35em] text-xs">
+                <span className="w-12 h-px bg-[#CBA18B]" />
+                Maison Hevia
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              className="text-white text-5xl md:text-7xl font-light leading-[0.95]"
+            >
+              L'élégance des
+              <br />
+
+              <span className="text-[#CBA18B] font-medium">
+                matériaux nobles
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.9 }}
+              className="mt-8 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl"
+            >
+              Découvrez une sélection de carrelages et revêtements
+              haut de gamme conçus pour donner caractère, élégance
+              et durabilité à chaque espace.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.9 }}
+              className="mt-12 flex flex-wrap gap-4"
+            >
+              <Link
+                to="/collections"
+                className="
+                group
+                bg-[#CBA18B]
+                text-black
+                px-8
+                py-4
+                rounded-full
+                font-medium
+                transition-all
+                duration-500
+                hover:scale-105
+                "
+              >
+                Découvrir les collections
+              </Link>
+
+              <Link
+                to="/contact"
+                className="
+                border
+                border-white/20
+                backdrop-blur-sm
+                bg-white/5
+                text-white
+                px-8
+                py-4
+                rounded-full
+                font-medium
+                transition-all
+                duration-500
+                hover:bg-white/10
+                "
+              >
+                Prendre rendez-vous
+              </Link>
+            </motion.div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+      <div className="absolute left-8 bottom-10 z-30 flex items-center gap-3">
 
-      <div className="relative z-10 max-w-4xl w-full px-6 text-center">
-
-        <motion.p
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="uppercase tracking-[4px] text-white/80 text-sm mb-4 max-[768px]:text-xs"
+        <a
+          href="https://www.instagram.com/maison.hevia/"
+          target="_blank"
+          rel="noreferrer"
+          className="
+          w-11
+          h-11
+          rounded-full
+          border
+          border-white/15
+          bg-white/5
+          backdrop-blur-sm
+          flex
+          items-center
+          justify-center
+          text-white
+          transition-all
+          duration-300
+          hover:bg-[#CBA18B]
+          hover:text-black
+          "
         >
-          Explorez l’univers HEVIA
-        </motion.p>
+          <FaInstagram />
+        </a>
 
-        <motion.h1
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, delay: 0.1 }}
-          className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg tracking-tight max-[768px]:text-4xl"
+        <a
+          href="https://www.facebook.com/profile.php?id=61580245243798"
+          target="_blank"
+          rel="noreferrer"
+          className="
+          w-11
+          h-11
+          rounded-full
+          border
+          border-white/15
+          bg-white/5
+          backdrop-blur-sm
+          flex
+          items-center
+          justify-center
+          text-white
+          transition-all
+          duration-300
+          hover:bg-[#CBA18B]
+          hover:text-black
+          "
         >
-          Transformez vos espaces avec élégance
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="text-lg text-gray-100 mb-10 leading-relaxed drop-shadow-md max-[768px]:text-sm"
-        >
-          Découvrez notre sélection de{" "}
-          <span className="font-semibold text-white">
-            carrelages, faïences et mosaïques haut de gamme
-          </span>{" "}
-          pour sublimer chaque pièce.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-
-          <Link
-            to="/collections"
-            className="bg-[#2B2B2B] text-white font-semibold px-8 py-3 rounded-2xl shadow-lg
-            hover:bg-[#CBA18B] hover:text-[#2B22B] transition-all duration-300
-            max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm"
-          >
-            Parcourir le catalogue
-          </Link>
-
-          <Link
-            to="/contact"
-            className="border border-white/40 text-white px-8 py-3 rounded-2xl font-semibold
-            hover:bg-white/20 transition-all duration-300
-            max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm"
-          >
-            Prendre contact
-          </Link>
-
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.4 }}
-          className="flex gap-4 mt-6 justify-center"
-        >
-
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            className="p-3 rounded-full bg-white/10 hover:bg-[#CBA18B] transition"
-          >
-            <FaInstagram className="text-white" />
-          </a>
-
-          <a
-            href=""
-            target="_blank"
-            className="p-3 rounded-full bg-white/10 hover:bg-[#CBA18B] transition"
-          >
-            <FaFacebookF className="text-white" />
-          </a>
-
-        </motion.div>
+          <FaFacebookF />
+        </a>
 
       </div>
+
+      <div className="absolute right-8 bottom-10 z-30 flex gap-3">
+
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`
+              h-[3px]
+              transition-all
+              duration-500
+              ${
+                current === index
+                  ? "w-14 bg-[#CBA18B]"
+                  : "w-6 bg-white/30"
+              }
+            `}
+          />
+        ))}
+
+      </div>
+
     </section>
   )
 }

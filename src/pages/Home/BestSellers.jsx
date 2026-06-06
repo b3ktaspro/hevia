@@ -1,109 +1,335 @@
 import { useState } from "react"
-
-import img1 from "/images/carrelage/carrelage_1.jpg"
-import img2 from "/images/carrelage/carrelage_2.jpg"
-import img3 from "/images/carrelage/carrelage_3.jpg"
-import img4 from "/images/carrelage/carrelage_4.jpg"
-import img5 from "/images/carrelage/carrelage_5.jpg"
-import img6 from "/images/carrelage/carrelage_6.jpg"
-import img7 from "/images/carrelage/carrelage_7.jpg"
-import img8 from "/images/carrelage/carrelage_8.jpg"
-import img9 from "/images/carrelage/carrelage_9.jpg"
-import img10 from "/images/carrelage/carrelage_10.jpg"
-import img11 from "/images/carrelage/carrelage_11.jpg"
+import { AnimatePresence, motion } from "framer-motion"
 
 const categories = [
-  { id: "salle-bain", label: "Salle de bain" },
-  { id: "exterieur", label: "Extérieur" },
-  { id: "piscine", label: "Piscine" },
-  { id: "pierre", label: "Pierre" },
-  { id: "bois", label: "Bois" },
-  { id: "beton", label: "Béton" },
-  { id: "marbre", label: "Marbre" },
+  {
+    id: "salle-bain",
+    label: "Salle de bain"
+  },
+  {
+    id: "exterieur",
+    label: "Extérieur"
+  },
+  {
+    id: "piscine",
+    label: "Piscine"
+  },
+  {
+    id: "pierre",
+    label: "Pierre"
+  },
+  {
+    id: "bois",
+    label: "Bois"
+  },
+  {
+    id: "beton",
+    label: "Béton"
+  },
+  {
+    id: "marbre",
+    label: "Marbre"
+  }
 ]
 
-const products = [
-  { name: "SDB Classic", price: "25€/m²", category: "salle-bain", img: img1 },
-  { name: "SDB Épure", price: "28€/m²", category: "salle-bain", img: img2 },
-  { name: "SDB Modern", price: "30€/m²", category: "salle-bain", img: img3 },
+const collections = {
+  "salle-bain": {
+    title: "Salle de bain",
+    subtitle: "Des espaces pensés pour le bien-être",
+    image: "/images/carrelage/carrelage_1.jpg",
+    description:
+      "Des matériaux élégants et durables qui transforment la salle de bain en un véritable espace de détente."
+  },
 
-  { name: "EXT Nature", price: "22€/m²", category: "exterieur", img: img4 },
-  { name: "EXT Zen", price: "24€/m²", category: "exterieur", img: img5 },
+  exterieur: {
+    title: "Extérieur",
+    subtitle: "Résistance et élégance",
+    image: "/images/carrelage/carrelage_4.jpg",
+    description:
+      "Des collections conçues pour sublimer terrasses, jardins et espaces de vie extérieurs."
+  },
 
-  { name: "Piscine Bleu", price: "35€/m²", category: "piscine", img: img6 },
-  { name: "Piscine Blanc", price: "38€/m²", category: "piscine", img: img7 },
+  piscine: {
+    title: "Piscine",
+    subtitle: "Le détail qui change tout",
+    image: "/images/carrelage/carrelage_6.jpg",
+    description:
+      "Des finitions haut de gamme adaptées aux environnements les plus exigeants."
+  },
 
-  { name: "Pierre Rustique", price: "32€/m²", category: "pierre", img: img8 },
-  { name: "Bois Chêne", price: "29€/m²", category: "bois", img: img9 },
-  { name: "Béton Gris", price: "27€/m²", category: "beton", img: img10 },
-  { name: "Marbre Blanc", price: "45€/m²", category: "marbre", img: img11 },
-]
+  pierre: {
+    title: "Pierre",
+    subtitle: "Authenticité minérale",
+    image: "/images/carrelage/carrelage_8.jpg",
+    description:
+      "La beauté naturelle de la pierre associée aux performances des matériaux modernes."
+  },
+
+  bois: {
+    title: "Bois",
+    subtitle: "Chaleur naturelle",
+    image: "/images/carrelage/carrelage_9.jpg",
+    description:
+      "Toute l’élégance du bois avec la résistance et la simplicité d’entretien du carrelage."
+  },
+
+  beton: {
+    title: "Béton",
+    subtitle: "Minimalisme contemporain",
+    image: "/images/carrelage/carrelage_10.jpg",
+    description:
+      "Des surfaces épurées idéales pour les projets architecturaux modernes."
+  },
+
+  marbre: {
+    title: "Marbre",
+    subtitle: "L'excellence intemporelle",
+    image: "/images/carrelage/carrelage_11.jpg",
+    description:
+      "Des collections inspirées des marbres les plus prestigieux pour des espaces raffinés."
+  }
+}
 
 export default function BestSellers() {
   const [active, setActive] = useState("salle-bain")
 
-  const filtered = products.filter(p => p.category === active)
+  const current = collections[active]
 
   return (
-    <section className="py-28 max-[768px]:py-14">
+    <section className="py-36 md:py-44 bg-[#F8F5F1]">
 
-      <div className="max-w-[1400px] mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-5xl md:text-6xl font-bold text-[#1E2A38] mb-6 text-center md:text-left">
-          Nos best-sellers
-        </h2>
+        <div className="text-center max-w-3xl mx-auto">
 
-        <p className="text-[#2B2B2B]/80 text-lg mb-16 text-center md:text-left">
-          Des collections sélectionnées pour sublimer chaque espace.
-        </p>
+          <span
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-xs
+              text-[#CBA18B]
+              font-medium
+            "
+          >
+            Collections Signature
+          </span>
 
-        <div className="flex flex-wrap gap-4 mb-16 justify-center md:justify-start">
-          {categories.map(cat => (
+          <h2
+            className="
+              mt-6
+              text-4xl
+              md:text-6xl
+              font-light
+              text-[#1E2A38]
+            "
+          >
+            Nos collections
+            <span className="text-[#CBA18B]">
+              {" "}les plus appréciées
+            </span>
+          </h2>
+
+          <p
+            className="
+              mt-8
+              text-[#1E2A38]/70
+              leading-relaxed
+            "
+          >
+            Découvrez les univers qui inspirent
+            les architectes, décorateurs et particuliers.
+          </p>
+
+        </div>
+
+        <div
+          className="
+            mt-16
+            flex
+            flex-wrap
+            justify-center
+            gap-3
+          "
+        >
+
+          {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActive(cat.id)}
-              className={`px-5 py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300
-              ${
-                active === cat.id
-                  ? "bg-[#2B2B2B] text-white shadow-lg"
-                  : "bg-white text-[#1E2A38] hover:bg-[#CBA18B] hover:text-[#1E2A38]"
-              }`}
+              className={`
+                px-6
+                py-3
+                rounded-full
+                text-sm
+                transition-all
+                duration-500
+                ${
+                  active === cat.id
+                    ? "bg-[#1E2A38] text-white"
+                    : "bg-white border border-[#1E2A38]/10 text-[#1E2A38] hover:border-[#CBA18B]"
+                }
+              `}
             >
               {cat.label}
             </button>
           ))}
+
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <AnimatePresence mode="wait">
 
-          {filtered.map((item, i) => (
+          <motion.div
+            key={active}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            exit={{
+              opacity: 0,
+              y: -20
+            }}
+            transition={{
+              duration: 0.4
+            }}
+            className="
+              mt-16
+              grid
+              lg:grid-cols-2
+              gap-10
+              items-center
+            "
+          >
+
             <div
-              key={i}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg
-              transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="
+                relative
+                overflow-hidden
+                rounded-[40px]
+                h-[650px]
+                group
+              "
             >
-              <div className="overflow-hidden">
-                <img
-                  src={item.img}
-                  className="w-full h-56 object-cover
-                  transition-transform duration-700 group-hover:scale-110"
-                />
+
+              <img
+                src={current.image}
+                alt={current.title}
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                  transition-all
+                  duration-[1800ms]
+                  group-hover:scale-110
+                "
+              />
+
+              <div className="absolute inset-0 bg-black/25" />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+              <div
+                className="
+                  absolute
+                  bottom-10
+                  left-10
+                  right-10
+                "
+              >
+
+                <span
+                  className="
+                    uppercase
+                    tracking-[0.3em]
+                    text-xs
+                    text-[#CBA18B]
+                  "
+                >
+                  Collection
+                </span>
+
+                <h3
+                  className="
+                    mt-4
+                    text-5xl
+                    font-light
+                    text-white
+                  "
+                >
+                  {current.title}
+                </h3>
+
               </div>
 
-              <div className="p-5 space-y-2">
-                <p className="font-semibold text-[#2B2B2B]">
-                  {item.name}
-                </p>
-                <p className="text-[#85796D] font-medium">
-                  {item.price}
-                </p>
-              </div>
             </div>
-          ))}
 
-        </div>
+            <div>
+
+              <span
+                className="
+                  uppercase
+                  tracking-[0.35em]
+                  text-xs
+                  text-[#CBA18B]
+                "
+              >
+                Signature
+              </span>
+
+              <h3
+                className="
+                  mt-6
+                  text-4xl
+                  md:text-5xl
+                  font-light
+                  text-[#1E2A38]
+                "
+              >
+                {current.subtitle}
+              </h3>
+
+              <p
+                className="
+                  mt-8
+                  text-[#1E2A38]/70
+                  leading-relaxed
+                  text-lg
+                "
+              >
+                {current.description}
+              </p>
+
+              <div className="mt-10">
+
+                <button
+                  className="
+                    px-8
+                    py-4
+                    rounded-full
+                    bg-[#CBA18B]
+                    text-[#1E2A38]
+                    font-medium
+                    transition-all
+                    duration-500
+                    hover:scale-105
+                  "
+                >
+                  Découvrir la collection
+                </button>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </AnimatePresence>
 
       </div>
+
     </section>
   )
 }
