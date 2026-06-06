@@ -249,7 +249,7 @@ export default function Reviews() {
         <div className="flex justify-center mt-14">
 
         <a
-  href="https://www.google.com/maps/place/HEVIA+B%C3%A9ziers+-+Maison,+Vie+%26+Ext%C3%A9rieur/"
+  href="https://www.google.com/maps/place/HEVIA+B%C3%A9ziers+-+Maison,+Vie+%26+Ext%C3%A9rieur/@43.3293116,3.2491368,15z/data=!4m8!3m7!1s0x12b10f31c4f3b415:0xd51acd6459037621!8m2!3d43.3293116!4d3.2491368!9m1!1b1!16s%2Fg%2F11zjv5vfkf?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
   target="_blank"
   rel="noopener noreferrer"
   className="
