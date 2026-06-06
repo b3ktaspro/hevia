@@ -66,17 +66,19 @@ export default function SurfacesSection() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="text-center max-w-4xl mx-auto">
 
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.25em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
             "
           >
@@ -85,11 +87,14 @@ export default function SurfacesSection() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
+              leading-tight
             "
           >
             Des collections pour
@@ -100,9 +105,15 @@ export default function SurfacesSection() {
 
           <p
             className="
-              mt-8
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
+              lg:text-lg
               text-[#1E2A38]/70
               leading-relaxed
+              max-w-2xl
+              mx-auto
             "
           >
             Découvrez les différentes matières qui composent notre sélection.
@@ -113,11 +124,16 @@ export default function SurfacesSection() {
         <div
           ref={ref}
           className="
-            mt-24
+            mt-12
+            sm:mt-16
+            md:mt-20
+            lg:mt-24
             grid
-            md:grid-cols-2
+            sm:grid-cols-2
             xl:grid-cols-3
-            gap-8
+            gap-5
+            sm:gap-6
+            lg:gap-8
             opacity-0
             translate-y-12
             transition-all
@@ -132,8 +148,12 @@ export default function SurfacesSection() {
                 group
                 relative
                 overflow-hidden
-                rounded-[40px]
-                h-[620px]
+                rounded-[28px]
+                sm:rounded-[32px]
+                lg:rounded-[40px]
+                h-[380px]
+                sm:h-[460px]
+                lg:h-[620px]
               "
             >
 
@@ -159,9 +179,13 @@ export default function SurfacesSection() {
               <div
                 className="
                   absolute
-                  top-8
-                  left-8
-                  text-7xl
+                  top-5
+                  left-5
+                  sm:top-8
+                  sm:left-8
+                  text-5xl
+                  sm:text-6xl
+                  lg:text-7xl
                   font-bold
                   text-white/15
                 "
@@ -175,15 +199,19 @@ export default function SurfacesSection() {
                   bottom-0
                   left-0
                   right-0
-                  p-8
+                  p-5
+                  sm:p-7
+                  lg:p-8
                 "
               >
 
                 <span
                   className="
                     uppercase
-                    tracking-[0.3em]
-                    text-xs
+                    tracking-[0.25em]
+                    sm:tracking-[0.3em]
+                    text-[10px]
+                    sm:text-xs
                     text-[#CBA18B]
                   "
                 >
@@ -192,10 +220,13 @@ export default function SurfacesSection() {
 
                 <h3
                   className="
-                    mt-4
-                    text-3xl
+                    mt-3
+                    sm:mt-4
+                    text-2xl
+                    sm:text-3xl
                     font-light
                     text-white
+                    leading-tight
                   "
                 >
                   {item.title}
@@ -203,9 +234,12 @@ export default function SurfacesSection() {
 
                 <p
                   className="
-                    mt-4
+                    mt-3
+                    sm:mt-4
                     text-white/70
                     leading-relaxed
+                    text-sm
+                    sm:text-base
                   "
                 >
                   {item.desc}
@@ -215,9 +249,12 @@ export default function SurfacesSection() {
                   to="/collections"
                   className="
                     inline-flex
-                    mt-8
+                    mt-6
+                    sm:mt-8
                     items-center
                     gap-3
+                    text-sm
+                    sm:text-base
                     text-[#CBA18B]
                   "
                 >

@@ -5,6 +5,7 @@ export default function Privacy() {
 
   useEffect(() => {
     const el = ref.current
+
     if (!el) return
 
     const observer = new IntersectionObserver(
@@ -14,149 +15,310 @@ export default function Privacy() {
           el.classList.add("opacity-100", "translate-y-0")
         }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.15,
+      }
     )
 
     observer.observe(el)
+
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="pt-48 pb-40 max-[768px]:pt-36 max-[768px]:pb-20">
+    <section className="pt-28 sm:pt-36 lg:pt-44 pb-20 sm:pb-28 lg:pb-40 bg-[#F8F5F1]">
+
       <div
         ref={ref}
-        className="max-w-[1000px] mx-auto px-6 text-center opacity-0 translate-y-10 transition-all duration-700"
+        className="
+          max-w-5xl
+          mx-auto
+          px-4
+          sm:px-6
+          opacity-0
+          translate-y-10
+          transition-all
+          duration-700
+        "
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-[#1E2A38] mb-14 max-[768px]:text-3xl">
-          Politique de <span className="text-[#CBA18B]">confidentialité</span>
-        </h1>
 
-        <p className="text-lg text-[#2B2B2B]/80 mb-10 leading-relaxed max-[768px]:text-sm">
-          Cette politique explique comment{" "}
-          <span className="font-semibold text-[#85796D]">
-            HEVIA– Maison, Vie & Extérieur
-          </span>{" "}
-          collecte, utilise et protège vos données personnelles conformément au{" "}
-          <span className="font-semibold">
-            Règlement Général sur la Protection des Données (RGPD)
-          </span>{" "}
-          et à la législation française en vigueur.
-        </p>
+        <div className="text-center">
 
-        <div className="text-left space-y-10">
+          <span
+            className="
+              uppercase
+              tracking-[0.22em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
+              text-[#CBA18B]
+              font-medium
+            "
+          >
+            Protection des données
+          </span>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <h1
+            className="
+              mt-4
+              sm:mt-6
+              text-[34px]
+              sm:text-5xl
+              lg:text-6xl
+              font-light
+              text-[#1E2A38]
+            "
+          >
+            Politique de
+            <span className="text-[#CBA18B]">
+              {" "}confidentialité
+            </span>
+          </h1>
+
+          <p
+            className="
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
+              lg:text-lg
+              text-[#2B2B2B]/80
+              leading-relaxed
+              max-w-3xl
+              mx-auto
+            "
+          >
+            Cette politique explique comment HEVIA collecte,
+            utilise et protège vos données personnelles conformément
+            au RGPD et à la législation française en vigueur.
+          </p>
+
+        </div>
+
+        <div className="mt-10 sm:mt-16 space-y-5 sm:space-y-8">
+
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               1. Données collectées
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
               Lorsque vous nous contactez via notre site, nous pouvons recueillir :
             </p>
-            <ul className="list-disc pl-6 text-[#2B2B2B]/80 mt-3 space-y-1">
-              <li>Nom, prénom</li>
+
+            <ul className="mt-4 pl-5 space-y-2 list-disc text-sm sm:text-base text-[#2B2B2B]/80">
+              <li>Nom et prénom</li>
               <li>Adresse e-mail et numéro de téléphone</li>
-              <li>Message ou informations relatives à votre demande</li>
+              <li>Message et informations liées à votre demande</li>
               <li>Données techniques anonymes (cookies, IP, navigateur)</li>
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               2. Finalité du traitement
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
-              Vos données sont utilisées pour :
-            </p>
-            <ul className="list-disc pl-6 text-[#2B2B2B]/80 mt-3 space-y-1">
-              <li>Répondre à vos demandes (contact / devis)</li>
+
+            <ul className="mt-4 pl-5 space-y-2 list-disc text-sm sm:text-base text-[#2B2B2B]/80">
+              <li>Répondre aux demandes de contact et devis</li>
               <li>Assurer le suivi client</li>
               <li>Améliorer l’expérience utilisateur</li>
               <li>Garantir la sécurité du site</li>
             </ul>
           </div>
 
-
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               3. Durée de conservation
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
-              Les données sont conservées uniquement le temps nécessaire.  
-              Les demandes de contact sont conservées jusqu’à{" "}
-              <span className="font-semibold">3 ans</span>.
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Les données sont conservées uniquement pendant la durée nécessaire
+              au traitement de votre demande. Les demandes de contact peuvent
+              être conservées jusqu’à 3 ans.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               4. Cookies et traceurs
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed mb-2">
-              Le site peut utiliser des cookies techniques et analytiques.
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Le site peut utiliser des cookies techniques et analytiques
+              nécessaires à son bon fonctionnement.
             </p>
-            <p className="text-[#85796D] text-sm">
+
+            <p className="mt-3 text-xs sm:text-sm text-[#85796D]">
               Aucun cookie publicitaire tiers n’est utilisé.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               5. Partage des données
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
-              Vos données ne sont <span className="font-semibold">jamais revendues</span>.  
-              Elles peuvent être transmises uniquement à des prestataires techniques.
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Vos données personnelles ne sont jamais revendues.
+              Elles peuvent être transmises uniquement aux prestataires
+              techniques nécessaires au fonctionnement du site.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               6. Vos droits
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed mb-3">
-              Conformément au RGPD :
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Conformément au RGPD, vous disposez des droits suivants :
             </p>
-            <ul className="list-disc pl-6 text-[#2B2B2B]/80 space-y-1">
-              <li>Droit d’accès, rectification, suppression</li>
+
+            <ul className="mt-4 pl-5 space-y-2 list-disc text-sm sm:text-base text-[#2B2B2B]/80">
+              <li>Droit d’accès</li>
+              <li>Droit de rectification</li>
+              <li>Droit à l’effacement</li>
               <li>Droit à la portabilité</li>
               <li>Droit d’opposition</li>
             </ul>
-            <p className="mt-3 text-[#85796D] text-sm">
+
+            <p className="mt-4 text-sm text-[#85796D]">
               Contact :{" "}
               <a
-                href="mailto:maison.hevia@gmail.com"
-                className="text-[#CBA18B] font-semibold hover:underline"
+                href="mailto:contact@gmail.com"
+                className="text-[#CBA18B] hover:underline"
               >
                 contact@gmail.com
               </a>
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               7. Hébergement
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
-              Le site est hébergé sur des serveurs sécurisés en Europe via{" "}
-              <span className="font-semibold">Netlify</span>.
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Le site est hébergé sur une infrastructure sécurisée via Netlify.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[#1E2A38] mb-3">
+          <div
+            className="
+              bg-white
+              rounded-[24px]
+              sm:rounded-[30px]
+              p-5
+              sm:p-8
+              lg:p-10
+              border
+              border-[#CBA18B]/10
+              shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+            "
+          >
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-[#1E2A38]">
               8. Mise à jour
             </h2>
-            <p className="text-[#2B2B2B]/80 leading-relaxed">
-              Cette politique peut évoluer selon la législation.  
-              Dernière mise à jour :{" "}
-              <span className="font-semibold text-[#CBA18B]">
-                Octobre 2025
-              </span>
+
+            <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
+              Cette politique peut évoluer en fonction des évolutions
+              législatives ou techniques.
+            </p>
+
+            <p className="mt-3 text-sm text-[#CBA18B] font-medium">
+              Dernière mise à jour : Juin 2026
             </p>
           </div>
 
         </div>
+
       </div>
+
     </section>
   )
 }

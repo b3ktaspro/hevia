@@ -4,18 +4,18 @@ const features = [
   {
     number: "01",
     title: "Qualité supérieure",
-    text: "Nous sélectionnons exclusivement des collections issues de fabricants reconnus pour leur savoir-faire, leur durabilité et l'excellence de leurs finitions."
+    text: "Nous sélectionnons exclusivement des collections issues de fabricants reconnus pour leur savoir-faire, leur durabilité et l'excellence de leurs finitions.",
   },
   {
     number: "02",
     title: "Design & Élégance",
-    text: "Des matériaux inspirés de l'architecture contemporaine, pensés pour traverser les tendances et valoriser durablement chaque espace."
+    text: "Des matériaux inspirés de l'architecture contemporaine, pensés pour traverser les tendances et valoriser durablement chaque espace.",
   },
   {
     number: "03",
     title: "Accompagnement sur mesure",
-    text: "De la sélection des matériaux jusqu'à la concrétisation de votre projet, nous vous accompagnons avec attention et expertise."
-  }
+    text: "De la sélection des matériaux jusqu'à la concrétisation de votre projet, nous vous accompagnons avec attention et expertise.",
+  },
 ]
 
 export default function Why() {
@@ -34,7 +34,7 @@ export default function Why() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -44,14 +44,15 @@ export default function Why() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
 
       <div
         ref={ref}
         className="
           max-w-7xl
           mx-auto
-          px-6
+          px-4
+          sm:px-6
           opacity-0
           translate-y-12
           transition-all
@@ -64,8 +65,10 @@ export default function Why() {
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.22em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
               font-medium
             "
@@ -75,25 +78,31 @@ export default function Why() {
 
           <h2
             className="
-              mt-6
-              text-4xl
-              md:text-6xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
+              lg:text-6xl
               font-light
               text-[#1E2A38]
               leading-tight
             "
           >
             Plus qu'un simple
+
             <span className="text-[#CBA18B]">
               {" "}carrelage
             </span>
+
           </h2>
 
           <p
             className="
-              mt-8
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-lg
               text-[#1E2A38]/70
-              text-lg
               leading-relaxed
               max-w-3xl
               mx-auto
@@ -108,10 +117,16 @@ export default function Why() {
 
         <div
           className="
-            mt-24
+            mt-10
+            sm:mt-16
+            lg:mt-24
             grid
-            md:grid-cols-3
-            gap-8
+            grid-cols-1
+            md:grid-cols-2
+            xl:grid-cols-3
+            gap-5
+            sm:gap-6
+            lg:gap-8
           "
         >
 
@@ -121,8 +136,12 @@ export default function Why() {
               className="
                 relative
                 bg-white
-                rounded-[36px]
-                p-10
+                rounded-[24px]
+                sm:rounded-[30px]
+                lg:rounded-[36px]
+                p-5
+                sm:p-8
+                lg:p-10
                 border
                 border-[#CBA18B]/10
                 shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -136,9 +155,13 @@ export default function Why() {
               <div
                 className="
                   absolute
-                  top-6
-                  right-6
-                  text-7xl
+                  top-4
+                  right-4
+                  sm:top-6
+                  sm:right-6
+                  text-5xl
+                  sm:text-6xl
+                  lg:text-7xl
                   font-bold
                   text-[#CBA18B]/10
                   select-none
@@ -149,15 +172,18 @@ export default function Why() {
 
               <div
                 className="
-                  w-14
-                  h-14
+                  w-12
+                  h-12
+                  sm:w-14
+                  sm:h-14
                   rounded-full
                   bg-[#CBA18B]
                   text-white
                   flex
                   items-center
                   justify-center
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                 "
               >
@@ -166,8 +192,10 @@ export default function Why() {
 
               <h3
                 className="
-                  mt-8
-                  text-2xl
+                  mt-5
+                  sm:mt-8
+                  text-xl
+                  sm:text-2xl
                   font-light
                   text-[#1E2A38]
                 "
@@ -177,7 +205,10 @@ export default function Why() {
 
               <p
                 className="
-                  mt-5
+                  mt-4
+                  sm:mt-5
+                  text-sm
+                  sm:text-base
                   text-[#1E2A38]/70
                   leading-relaxed
                 "
@@ -192,7 +223,9 @@ export default function Why() {
 
         <div
           className="
-            mt-24
+            mt-12
+            sm:mt-20
+            lg:mt-24
             flex
             justify-center
           "
@@ -202,8 +235,9 @@ export default function Why() {
             className="
               grid
               grid-cols-3
-              gap-10
-              md:gap-20
+              gap-6
+              sm:gap-12
+              lg:gap-20
               text-center
             "
           >
@@ -212,7 +246,9 @@ export default function Why() {
 
               <div
                 className="
-                  text-5xl
+                  text-3xl
+                  sm:text-4xl
+                  lg:text-5xl
                   font-light
                   text-[#1E2A38]
                 "
@@ -223,7 +259,8 @@ export default function Why() {
               <p
                 className="
                   mt-2
-                  text-sm
+                  text-[11px]
+                  sm:text-sm
                   text-[#1E2A38]/60
                 "
               >
@@ -236,7 +273,9 @@ export default function Why() {
 
               <div
                 className="
-                  text-5xl
+                  text-3xl
+                  sm:text-4xl
+                  lg:text-5xl
                   font-light
                   text-[#1E2A38]
                 "
@@ -247,7 +286,8 @@ export default function Why() {
               <p
                 className="
                   mt-2
-                  text-sm
+                  text-[11px]
+                  sm:text-sm
                   text-[#1E2A38]/60
                 "
               >
@@ -260,7 +300,9 @@ export default function Why() {
 
               <div
                 className="
-                  text-5xl
+                  text-3xl
+                  sm:text-4xl
+                  lg:text-5xl
                   font-light
                   text-[#1E2A38]
                 "
@@ -271,7 +313,8 @@ export default function Why() {
               <p
                 className="
                   mt-2
-                  text-sm
+                  text-[11px]
+                  sm:text-sm
                   text-[#1E2A38]/60
                 "
               >

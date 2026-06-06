@@ -18,7 +18,7 @@ export default function Catalogue() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -31,8 +31,9 @@ export default function Catalogue() {
     <section
       ref={ref}
       className="
-        py-36
-        md:py-44
+        py-20
+        sm:py-28
+        lg:py-40
         bg-[#F8F5F1]
         opacity-0
         translate-y-12
@@ -41,15 +42,17 @@ export default function Catalogue() {
       "
     >
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="text-center max-w-3xl mx-auto">
 
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.22em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
               font-medium
             "
@@ -59,8 +62,10 @@ export default function Catalogue() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
@@ -68,14 +73,19 @@ export default function Catalogue() {
             "
           >
             Explorez notre
+
             <span className="text-[#CBA18B]">
               {" "}univers carrelage
             </span>
+
           </h2>
 
           <p
             className="
-              mt-8
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
               text-[#1E2A38]/70
               leading-relaxed
             "
@@ -88,10 +98,13 @@ export default function Catalogue() {
 
         <div
           className="
-            mt-24
+            mt-10
+            sm:mt-16
+            lg:mt-24
             grid
-            lg:grid-cols-[1.5fr_0.9fr]
-            gap-10
+            xl:grid-cols-[1.45fr_0.85fr]
+            gap-6
+            lg:gap-10
             items-stretch
           "
         >
@@ -100,9 +113,12 @@ export default function Catalogue() {
             className="
               relative
               overflow-hidden
-              rounded-[40px]
+              rounded-[28px]
+              sm:rounded-[40px]
               group
-              min-h-[650px]
+              min-h-[420px]
+              sm:min-h-[550px]
+              lg:min-h-[650px]
             "
           >
 
@@ -133,17 +149,20 @@ export default function Catalogue() {
                 flex
                 flex-col
                 justify-end
-                p-8
-                md:p-12
+                p-6
+                sm:p-10
+                lg:p-12
               "
             >
 
               <span
                 className="
                   uppercase
-                  tracking-[0.3em]
+                  tracking-[0.22em]
+                  sm:tracking-[0.3em]
+                  text-[10px]
+                  sm:text-xs
                   text-[#CBA18B]
-                  text-xs
                 "
               >
                 Signature Collection
@@ -151,9 +170,11 @@ export default function Catalogue() {
 
               <h3
                 className="
-                  mt-5
-                  text-4xl
-                  md:text-6xl
+                  mt-4
+                  sm:mt-5
+                  text-3xl
+                  sm:text-5xl
+                  lg:text-6xl
                   font-light
                   text-white
                   leading-[1]
@@ -167,7 +188,10 @@ export default function Catalogue() {
 
               <p
                 className="
-                  mt-6
+                  mt-4
+                  sm:mt-6
+                  text-sm
+                  sm:text-base
                   text-white/75
                   max-w-xl
                   leading-relaxed
@@ -178,19 +202,25 @@ export default function Catalogue() {
                 naturelles les plus élégantes.
               </p>
 
-              <div className="mt-10">
+              <div className="mt-6 sm:mt-10">
 
                 <Link
                   to="/collections"
                   className="
                     inline-flex
                     items-center
-                    gap-3
-                    px-8
-                    py-4
+                    justify-center
+                    w-full
+                    sm:w-auto
+                    px-6
+                    sm:px-8
+                    py-3.5
+                    sm:py-4
                     rounded-full
                     bg-[#CBA18B]
                     text-[#1E2A38]
+                    text-sm
+                    sm:text-base
                     font-medium
                     transition-all
                     duration-500
@@ -209,9 +239,11 @@ export default function Catalogue() {
           <div
             className="
               bg-white
-              rounded-[40px]
-              p-10
-              md:p-12
+              rounded-[28px]
+              sm:rounded-[40px]
+              p-6
+              sm:p-8
+              lg:p-12
               border
               border-[#CBA18B]/10
               shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -225,8 +257,10 @@ export default function Catalogue() {
               className="
                 text-[#CBA18B]
                 uppercase
-                tracking-[0.3em]
-                text-xs
+                tracking-[0.22em]
+                sm:tracking-[0.3em]
+                text-[10px]
+                sm:text-xs
                 font-medium
               "
             >
@@ -235,9 +269,11 @@ export default function Catalogue() {
 
             <h4
               className="
-                mt-6
-                text-3xl
-                md:text-4xl
+                mt-4
+                sm:mt-6
+                text-2xl
+                sm:text-3xl
+                lg:text-4xl
                 font-light
                 text-[#1E2A38]
                 leading-tight
@@ -249,7 +285,10 @@ export default function Catalogue() {
 
             <p
               className="
-                mt-6
+                mt-4
+                sm:mt-6
+                text-sm
+                sm:text-base
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -260,7 +299,7 @@ export default function Catalogue() {
               vos espaces.
             </p>
 
-            <div className="mt-10 space-y-5">
+            <div className="mt-8 sm:mt-10 space-y-4 sm:space-y-5">
 
               {[
                 "Carrelages intérieurs & extérieurs",
@@ -269,14 +308,15 @@ export default function Catalogue() {
                 "Solutions pour cuisines & salles de bain",
                 "Terrasses, piscines et extérieurs",
                 "Conseils personnalisés",
-                "Produits durables et faciles d’entretien"
+                "Produits durables et faciles d’entretien",
               ].map((item) => (
                 <div
                   key={item}
                   className="
                     flex
-                    items-center
-                    gap-4
+                    items-start
+                    gap-3
+                    sm:gap-4
                   "
                 >
 
@@ -286,11 +326,19 @@ export default function Catalogue() {
                       h-2
                       rounded-full
                       bg-[#CBA18B]
+                      mt-2
                       shrink-0
                     "
                   />
 
-                  <span className="text-[#1E2A38]/80">
+                  <span
+                    className="
+                      text-sm
+                      sm:text-base
+                      text-[#1E2A38]/80
+                      leading-relaxed
+                    "
+                  >
                     {item}
                   </span>
 

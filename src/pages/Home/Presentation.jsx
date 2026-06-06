@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+
 import img from "/images/home/acceuil_home4.jpg"
 
 export default function Presentation() {
@@ -18,7 +19,7 @@ export default function Presentation() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -31,8 +32,9 @@ export default function Presentation() {
     <section
       ref={ref}
       className="
-        py-36
-        md:py-44
+        py-20
+        sm:py-28
+        lg:py-40
         bg-[#F8F5F1]
         opacity-0
         translate-y-12
@@ -41,13 +43,14 @@ export default function Presentation() {
       "
     >
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div
           className="
             grid
             lg:grid-cols-2
-            gap-16
+            gap-10
+            lg:gap-16
             items-center
           "
         >
@@ -56,7 +59,9 @@ export default function Presentation() {
             className="
               relative
               overflow-hidden
-              rounded-[40px]
+              rounded-[24px]
+              sm:rounded-[32px]
+              lg:rounded-[40px]
               group
             "
           >
@@ -64,10 +69,14 @@ export default function Presentation() {
             <div
               className="
                 absolute
-                top-8
-                left-8
+                top-5
+                left-5
+                sm:top-8
+                sm:left-8
                 z-20
-                text-[90px]
+                text-[50px]
+                sm:text-[70px]
+                lg:text-[90px]
                 font-bold
                 text-white/15
               "
@@ -80,7 +89,9 @@ export default function Presentation() {
               alt="Présentation HEVIA"
               className="
                 w-full
-                h-[700px]
+                h-[340px]
+                sm:h-[500px]
+                lg:h-[700px]
                 object-cover
                 transition-all
                 duration-[1800ms]
@@ -99,8 +110,10 @@ export default function Presentation() {
             <span
               className="
                 uppercase
-                tracking-[0.35em]
-                text-xs
+                tracking-[0.22em]
+                sm:tracking-[0.35em]
+                text-[10px]
+                sm:text-xs
                 text-[#CBA18B]
                 font-medium
               "
@@ -110,24 +123,30 @@ export default function Presentation() {
 
             <h2
               className="
-                mt-6
-                text-4xl
-                md:text-6xl
+                mt-4
+                sm:mt-6
+                text-[32px]
+                sm:text-5xl
+                lg:text-6xl
                 font-light
                 text-[#1E2A38]
                 leading-tight
               "
             >
               Sublimer les espaces
+
               <span className="text-[#CBA18B]">
                 {" "}par la matière
               </span>
+
             </h2>
 
             <p
               className="
-                mt-8
-                text-lg
+                mt-5
+                sm:mt-8
+                text-sm
+                sm:text-lg
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -140,7 +159,10 @@ export default function Presentation() {
 
             <p
               className="
-                mt-6
+                mt-4
+                sm:mt-6
+                text-sm
+                sm:text-base
                 text-[#1E2A38]/70
                 leading-relaxed
               "
@@ -151,10 +173,12 @@ export default function Presentation() {
 
             <div
               className="
-                mt-12
+                mt-8
+                sm:mt-12
                 grid
                 grid-cols-3
-                gap-8
+                gap-4
+                sm:gap-8
               "
             >
 
@@ -162,7 +186,8 @@ export default function Presentation() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -173,7 +198,8 @@ export default function Presentation() {
                 <div
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -186,7 +212,8 @@ export default function Presentation() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -197,7 +224,8 @@ export default function Presentation() {
                 <div
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -210,7 +238,8 @@ export default function Presentation() {
 
                 <div
                   className="
-                    text-4xl
+                    text-2xl
+                    sm:text-4xl
                     font-light
                     text-[#1E2A38]
                   "
@@ -221,7 +250,8 @@ export default function Presentation() {
                 <div
                   className="
                     mt-2
-                    text-sm
+                    text-[11px]
+                    sm:text-sm
                     text-[#1E2A38]/60
                   "
                 >
@@ -232,19 +262,26 @@ export default function Presentation() {
 
             </div>
 
-            <div className="mt-12">
+            <div className="mt-8 sm:mt-12">
 
               <Link
                 to="/about"
                 className="
                   inline-flex
                   items-center
+                  justify-center
+                  w-full
+                  sm:w-auto
                   gap-3
-                  px-8
-                  py-4
+                  px-6
+                  sm:px-8
+                  py-3.5
+                  sm:py-4
                   rounded-full
                   bg-[#1E2A38]
                   text-white
+                  text-sm
+                  sm:text-base
                   font-medium
                   transition-all
                   duration-500

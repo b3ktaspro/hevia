@@ -40,14 +40,15 @@ export default function ContactSection() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
 
       <div
         ref={ref}
         className="
           max-w-7xl
           mx-auto
-          px-6
+          px-4
+          sm:px-6
           opacity-0
           translate-y-12
           transition-all
@@ -58,7 +59,9 @@ export default function ContactSection() {
         <div
           className="
             bg-[#322D28]
-            rounded-[48px]
+            rounded-[28px]
+            sm:rounded-[36px]
+            lg:rounded-[48px]
             overflow-hidden
           "
         >
@@ -70,13 +73,22 @@ export default function ContactSection() {
             "
           >
 
-            <div className="p-10 md:p-16 lg:p-20">
+            <div
+              className="
+                p-6
+                sm:p-8
+                md:p-12
+                lg:p-20
+              "
+            >
 
               <span
                 className="
                   uppercase
-                  tracking-[0.35em]
-                  text-xs
+                  tracking-[0.25em]
+                  sm:tracking-[0.35em]
+                  text-[10px]
+                  sm:text-xs
                   text-[#CBA18B]
                 "
               >
@@ -85,12 +97,14 @@ export default function ContactSection() {
 
               <h2
                 className="
-                  mt-6
-                  text-4xl
+                  mt-4
+                  sm:mt-6
+                  text-[34px]
+                  sm:text-5xl
                   md:text-6xl
                   font-light
                   text-white
-                  leading-tight
+                  leading-[1.05]
                 "
               >
                 Parlons de votre
@@ -101,7 +115,11 @@ export default function ContactSection() {
 
               <p
                 className="
-                  mt-8
+                  mt-6
+                  sm:mt-8
+                  text-sm
+                  sm:text-base
+                  lg:text-lg
                   text-white/70
                   leading-relaxed
                   max-w-xl
@@ -112,114 +130,161 @@ export default function ContactSection() {
                 pour vous accompagner dans le choix de vos matériaux.
               </p>
 
-              <div className="mt-14 space-y-8">
+              <div
+                className="
+                  mt-10
+                  sm:mt-14
+                  space-y-6
+                  sm:space-y-8
+                "
+              >
 
-                <div className="flex gap-5">
+                <div className="flex gap-4 sm:gap-5">
 
                   <div
                     className="
-                      w-14
-                      h-14
+                      w-12
+                      h-12
+                      sm:w-14
+                      sm:h-14
                       rounded-full
                       bg-[#CBA18B]
                       flex
                       items-center
                       justify-center
                       text-[#1E2A38]
+                      shrink-0
                     "
                   >
-                    <FaPhoneAlt />
+                    <FaPhoneAlt className="text-sm sm:text-base" />
                   </div>
 
                   <div>
-                    <p className="text-white/50 text-sm">
+
+                    <p className="text-white/50 text-xs sm:text-sm">
                       Téléphone
                     </p>
 
                     <a
                       href="tel:"
-                      className="text-white text-lg"
+                      className="
+                        text-white
+                        text-base
+                        sm:text-lg
+                      "
                     >
                       07 XX XX XX XX
                     </a>
+
                   </div>
 
                 </div>
 
-                <div className="flex gap-5">
+                <div className="flex gap-4 sm:gap-5">
 
                   <div
                     className="
-                      w-14
-                      h-14
+                      w-12
+                      h-12
+                      sm:w-14
+                      sm:h-14
                       rounded-full
                       bg-[#CBA18B]
                       flex
                       items-center
                       justify-center
                       text-[#1E2A38]
+                      shrink-0
                     "
                   >
-                    <FaEnvelope />
+                    <FaEnvelope className="text-sm sm:text-base" />
                   </div>
 
                   <div>
-                    <p className="text-white/50 text-sm">
+
+                    <p className="text-white/50 text-xs sm:text-sm">
                       Email
                     </p>
 
                     <a
                       href="mailto:contact@hevia.fr"
-                      className="text-white text-lg"
+                      className="
+                        text-white
+                        text-sm
+                        sm:text-lg
+                        break-all
+                      "
                     >
                       contact@hevia.fr
                     </a>
+
                   </div>
 
                 </div>
 
-                <div className="flex gap-5">
+                <div className="flex gap-4 sm:gap-5">
 
                   <div
                     className="
-                      w-14
-                      h-14
+                      w-12
+                      h-12
+                      sm:w-14
+                      sm:h-14
                       rounded-full
                       bg-[#CBA18B]
                       flex
                       items-center
                       justify-center
                       text-[#1E2A38]
+                      shrink-0
                     "
                   >
-                    <FaMapMarkerAlt />
+                    <FaMapMarkerAlt className="text-sm sm:text-base" />
                   </div>
 
                   <div>
-                    <p className="text-white/50 text-sm">
+
+                    <p className="text-white/50 text-xs sm:text-sm">
                       Adresse
                     </p>
 
-                    <p className="text-white leading-relaxed">
+                    <p
+                      className="
+                        text-white
+                        text-sm
+                        sm:text-base
+                        leading-relaxed
+                      "
+                    >
                       Béziers
                       <br />
                       Occitanie, France
                     </p>
+
                   </div>
 
                 </div>
 
               </div>
 
-              <div className="flex gap-3 mt-12">
+              <div
+                className="
+                  flex
+                  gap-3
+                  mt-10
+                  sm:mt-12
+                "
+              >
 
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noreferrer"
                   className="
-                    w-12
-                    h-12
+                    w-11
+                    h-11
+                    sm:w-12
+                    sm:h-12
                     rounded-full
                     border
                     border-white/10
@@ -242,8 +307,10 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="
-                    w-12
-                    h-12
+                    w-11
+                    h-11
+                    sm:w-12
+                    sm:h-12
                     rounded-full
                     border
                     border-white/10
@@ -265,7 +332,14 @@ export default function ContactSection() {
 
             </div>
 
-            <div className="min-h-[700px]">
+            <div
+              className="
+                h-[320px]
+                sm:h-[420px]
+                md:h-[520px]
+                lg:min-h-[700px]
+              "
+            >
 
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92442.5267766341!2d3.791596750833308!3d43.61010273155888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1776973329149!5m2!1sfr!2sfr"

@@ -57,14 +57,15 @@ export default function CatalogueHighlight() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
 
       <div
         ref={ref}
         className="
           max-w-7xl
           mx-auto
-          px-6
+          px-4
+          sm:px-6
           opacity-0
           translate-y-12
           transition-all
@@ -77,9 +78,12 @@ export default function CatalogueHighlight() {
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.25em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
+              font-medium
             "
           >
             Sélection HEVIA
@@ -87,11 +91,14 @@ export default function CatalogueHighlight() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
+              leading-tight
             "
           >
             Des collections pensées
@@ -100,9 +107,27 @@ export default function CatalogueHighlight() {
             </span>
           </h2>
 
+          <p
+            className="
+              mt-6
+              sm:mt-8
+              max-w-3xl
+              mx-auto
+              text-sm
+              sm:text-base
+              lg:text-lg
+              text-[#1E2A38]/70
+              leading-relaxed
+            "
+          >
+            Une sélection de matériaux conçus pour répondre aux exigences
+            architecturales les plus modernes tout en conservant leur élégance
+            au fil du temps.
+          </p>
+
         </div>
 
-        <div className="mt-24 space-y-24">
+        <div className="mt-14 sm:mt-20 md:mt-24 space-y-14 sm:space-y-20 md:space-y-24">
 
           {collections.map((item, index) => (
             <div
@@ -110,9 +135,15 @@ export default function CatalogueHighlight() {
               className={`
                 grid
                 lg:grid-cols-2
-                gap-12
+                gap-8
+                md:gap-12
+                lg:gap-16
                 items-center
-                ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}
+                ${
+                  index % 2 !== 0
+                    ? "lg:[&>*:first-child]:order-2"
+                    : ""
+                }
               `}
             >
 
@@ -120,7 +151,9 @@ export default function CatalogueHighlight() {
                 className="
                   relative
                   overflow-hidden
-                  rounded-[40px]
+                  rounded-[28px]
+                  sm:rounded-[36px]
+                  lg:rounded-[40px]
                   group
                 "
               >
@@ -130,7 +163,10 @@ export default function CatalogueHighlight() {
                   alt={item.title}
                   className="
                     w-full
-                    h-[600px]
+                    h-[260px]
+                    sm:h-[420px]
+                    md:h-[500px]
+                    lg:h-[600px]
                     object-cover
                     transition-all
                     duration-[1800ms]
@@ -140,13 +176,17 @@ export default function CatalogueHighlight() {
 
                 <div className="absolute inset-0 bg-black/20" />
 
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+
               </div>
 
-              <div>
+              <div className="text-center lg:text-left">
 
                 <div
                   className="
-                    text-7xl
+                    text-5xl
+                    sm:text-6xl
+                    md:text-7xl
                     font-bold
                     text-[#CBA18B]/15
                   "
@@ -156,11 +196,14 @@ export default function CatalogueHighlight() {
 
                 <h3
                   className="
-                    mt-4
-                    text-4xl
+                    mt-3
+                    sm:mt-4
+                    text-2xl
+                    sm:text-4xl
                     md:text-5xl
                     font-light
                     text-[#1E2A38]
+                    leading-tight
                   "
                 >
                   {item.title}
@@ -168,11 +211,16 @@ export default function CatalogueHighlight() {
 
                 <p
                   className="
-                    mt-8
+                    mt-5
+                    sm:mt-8
+                    text-sm
+                    sm:text-base
+                    lg:text-lg
                     text-[#1E2A38]/70
-                    text-lg
                     leading-relaxed
                     max-w-xl
+                    mx-auto
+                    lg:mx-0
                   "
                 >
                   {item.description}
@@ -180,10 +228,14 @@ export default function CatalogueHighlight() {
 
                 <div
                   className="
-                    mt-10
-                    w-24
+                    mt-8
+                    sm:mt-10
+                    w-16
+                    sm:w-24
                     h-px
                     bg-[#CBA18B]
+                    mx-auto
+                    lg:mx-0
                   "
                 />
 

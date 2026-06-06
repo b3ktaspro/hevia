@@ -4,23 +4,23 @@ const steps = [
   {
     number: "01",
     title: "Conseil & Écoute",
-    text: "Nous analysons votre projet afin de comprendre vos besoins, vos contraintes et l’ambiance recherchée."
+    text: "Nous analysons votre projet afin de comprendre vos besoins, vos contraintes et l’ambiance recherchée.",
   },
   {
     number: "02",
     title: "Sélection & Qualité",
-    text: "Nous vous accompagnons dans le choix de matériaux haut de gamme issus des meilleurs fabricants européens."
+    text: "Nous vous accompagnons dans le choix de matériaux haut de gamme issus des meilleurs fabricants européens.",
   },
   {
     number: "03",
     title: "Préparation & Logistique",
-    text: "Chaque commande est contrôlée, préparée et suivie avec précision pour garantir une expérience sans compromis."
+    text: "Chaque commande est contrôlée, préparée et suivie avec précision pour garantir une expérience sans compromis.",
   },
   {
     number: "04",
     title: "Livraison & Pose",
-    text: "Nous coordonnons la livraison et pouvons vous orienter vers des artisans qualifiés pour une finition irréprochable."
-  }
+    text: "Nous coordonnons la livraison et pouvons vous orienter vers des artisans qualifiés pour une finition irréprochable.",
+  },
 ]
 
 export default function Process() {
@@ -45,7 +45,7 @@ export default function Process() {
         })
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -55,37 +55,82 @@ export default function Process() {
   }, [])
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
 
       <div
         ref={ref}
-        className="max-w-7xl mx-auto px-6"
+        className="max-w-7xl mx-auto px-4 sm:px-6"
       >
 
         <div className="text-center max-w-3xl mx-auto">
 
-          <span className="uppercase tracking-[0.35em] text-xs text-[#CBA18B] font-medium">
+          <span
+            className="
+              uppercase
+              tracking-[0.22em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
+              text-[#CBA18B]
+              font-medium
+            "
+          >
             Processus
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-6xl font-light text-[#1E2A38] leading-tight">
+          <h2
+            className="
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
+              lg:text-6xl
+              font-light
+              text-[#1E2A38]
+              leading-tight
+            "
+          >
             Notre
-            <span className="text-[#CBA18B]"> procédure </span>
+
+            <span className="text-[#CBA18B]">
+              {" "}procédure{" "}
+            </span>
+
             d'accompagnement
           </h2>
 
-          <p className="mt-8 text-[#1E2A38]/70 leading-relaxed">
-            Chaque projet suit une méthode rigoureuse afin de garantir une expérience fluide,
-            un accompagnement personnalisé et un résultat à la hauteur de vos attentes.
+          <p
+            className="
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
+              text-[#1E2A38]/70
+              leading-relaxed
+            "
+          >
+            Chaque projet suit une méthode rigoureuse afin de garantir
+            une expérience fluide, un accompagnement personnalisé et
+            un résultat à la hauteur de vos attentes.
           </p>
 
         </div>
 
-        <div className="relative mt-24">
+        <div className="relative mt-10 sm:mt-16 lg:mt-24">
 
           <div className="hidden lg:block absolute top-12 left-0 w-full h-px bg-[#CBA18B]/25" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              xl:grid-cols-4
+              gap-5
+              sm:gap-6
+              lg:gap-8
+            "
+          >
 
             {steps.map((step) => (
               <div
@@ -94,8 +139,12 @@ export default function Process() {
                   process-card
                   relative
                   bg-white
-                  rounded-[32px]
-                  p-8
+                  rounded-[24px]
+                  sm:rounded-[28px]
+                  lg:rounded-[32px]
+                  p-5
+                  sm:p-7
+                  lg:p-8
                   border
                   border-[#CBA18B]/10
                   shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -111,9 +160,13 @@ export default function Process() {
                 <div
                   className="
                     absolute
-                    top-4
-                    right-5
-                    text-6xl
+                    top-3
+                    right-4
+                    sm:top-4
+                    sm:right-5
+                    text-4xl
+                    sm:text-5xl
+                    lg:text-6xl
                     font-bold
                     text-[#CBA18B]/10
                     pointer-events-none
@@ -127,15 +180,21 @@ export default function Process() {
                   className="
                     relative
                     z-10
-                    w-16
-                    h-16
+                    w-12
+                    h-12
+                    sm:w-14
+                    sm:h-14
+                    lg:w-16
+                    lg:h-16
                     rounded-full
                     bg-[#CBA18B]
                     text-white
                     flex
                     items-center
                     justify-center
-                    text-lg
+                    text-sm
+                    sm:text-base
+                    lg:text-lg
                     font-semibold
                     shadow-lg
                   "
@@ -145,8 +204,11 @@ export default function Process() {
 
                 <h3
                   className="
-                    mt-8
-                    text-xl
+                    mt-5
+                    sm:mt-6
+                    lg:mt-8
+                    text-lg
+                    sm:text-xl
                     font-semibold
                     text-[#1E2A38]
                   "
@@ -156,10 +218,12 @@ export default function Process() {
 
                 <p
                   className="
-                    mt-4
+                    mt-3
+                    sm:mt-4
                     text-[#1E2A38]/70
                     leading-relaxed
-                    text-sm
+                    text-xs
+                    sm:text-sm
                   "
                 >
                   {step.text}

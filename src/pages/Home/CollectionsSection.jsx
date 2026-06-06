@@ -48,8 +48,15 @@ export default function CollectionsSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove(
+            "opacity-0",
+            "translate-y-12"
+          )
+
+          el.classList.add(
+            "opacity-100",
+            "translate-y-0"
+          )
         }
       },
       {
@@ -63,7 +70,7 @@ export default function CollectionsSection() {
   }, [])
 
   return (
-    <section className="py-16 sm:py-24 md:py-36 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
@@ -72,7 +79,7 @@ export default function CollectionsSection() {
           <span
             className="
               uppercase
-              tracking-[0.25em]
+              tracking-[0.22em]
               sm:tracking-[0.35em]
               text-[10px]
               sm:text-xs
@@ -96,9 +103,11 @@ export default function CollectionsSection() {
             "
           >
             Explorez nos
+
             <span className="text-[#CBA18B]">
               {" "}collections
             </span>
+
           </h2>
 
           <p
@@ -109,6 +118,8 @@ export default function CollectionsSection() {
               sm:text-base
               text-[#1E2A38]/70
               leading-relaxed
+              max-w-2xl
+              mx-auto
             "
           >
             Une sélection pensée pour répondre aux projets les plus exigeants,
@@ -122,13 +133,14 @@ export default function CollectionsSection() {
           className="
             mt-10
             sm:mt-16
-            md:mt-24
+            lg:mt-24
             grid
             grid-cols-1
-            md:grid-cols-2
+            sm:grid-cols-2
             xl:grid-cols-4
             gap-5
-            sm:gap-8
+            sm:gap-6
+            lg:gap-8
             opacity-0
             translate-y-12
             transition-all
@@ -144,12 +156,12 @@ export default function CollectionsSection() {
                 group
                 relative
                 overflow-hidden
-                rounded-[24px]
-                sm:rounded-[30px]
-                md:rounded-[36px]
-                h-[380px]
-                sm:h-[460px]
-                lg:h-[580px]
+                rounded-[26px]
+                sm:rounded-[32px]
+                lg:rounded-[36px]
+                h-[340px]
+                sm:h-[430px]
+                lg:h-[520px]
               "
             >
 
@@ -168,22 +180,23 @@ export default function CollectionsSection() {
                 "
               />
 
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-black/30" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
               <div
                 className="
                   absolute
                   top-5
                   left-5
-                  sm:top-8
-                  sm:left-8
+                  sm:top-7
+                  sm:left-7
                   text-4xl
                   sm:text-5xl
-                  md:text-6xl
+                  lg:text-6xl
                   font-bold
-                  text-white/15
+                  text-white/10
+                  select-none
                 "
               >
                 {item.number}
@@ -196,7 +209,8 @@ export default function CollectionsSection() {
                   left-0
                   right-0
                   p-5
-                  sm:p-8
+                  sm:p-6
+                  lg:p-8
                 "
               >
 
@@ -206,7 +220,7 @@ export default function CollectionsSection() {
                     text-[10px]
                     sm:text-xs
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.22em]
                     sm:tracking-[0.3em]
                   "
                 >
@@ -216,9 +230,9 @@ export default function CollectionsSection() {
                 <h3
                   className="
                     mt-3
-                    sm:mt-4
                     text-2xl
-                    sm:text-3xl
+                    sm:text-[28px]
+                    lg:text-3xl
                     font-light
                     text-white
                     leading-tight
@@ -230,18 +244,19 @@ export default function CollectionsSection() {
                 <p
                   className="
                     mt-3
-                    sm:mt-4
                     text-white/70
                     leading-relaxed
                     text-xs
                     sm:text-sm
-                    max-h-0
-                    opacity-0
+                    max-h-[80px]
+                    sm:max-h-0
+                    opacity-100
+                    sm:opacity-0
                     overflow-hidden
                     transition-all
                     duration-500
-                    group-hover:max-h-32
-                    group-hover:opacity-100
+                    sm:group-hover:max-h-32
+                    sm:group-hover:opacity-100
                   "
                 >
                   {item.desc}

@@ -2,34 +2,13 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 const categories = [
-  {
-    id: "salle-bain",
-    label: "Salle de bain"
-  },
-  {
-    id: "exterieur",
-    label: "Extérieur"
-  },
-  {
-    id: "piscine",
-    label: "Piscine"
-  },
-  {
-    id: "pierre",
-    label: "Pierre"
-  },
-  {
-    id: "bois",
-    label: "Bois"
-  },
-  {
-    id: "beton",
-    label: "Béton"
-  },
-  {
-    id: "marbre",
-    label: "Marbre"
-  }
+  { id: "salle-bain", label: "Salle de bain" },
+  { id: "exterieur", label: "Extérieur" },
+  { id: "piscine", label: "Piscine" },
+  { id: "pierre", label: "Pierre" },
+  { id: "bois", label: "Bois" },
+  { id: "beton", label: "Béton" },
+  { id: "marbre", label: "Marbre" },
 ]
 
 const collections = {
@@ -38,7 +17,7 @@ const collections = {
     subtitle: "Des espaces pensés pour le bien-être",
     image: "/images/carrelage/carrelage_1.jpg",
     description:
-      "Des matériaux élégants et durables qui transforment la salle de bain en un véritable espace de détente."
+      "Des matériaux élégants et durables qui transforment la salle de bain en un véritable espace de détente.",
   },
 
   exterieur: {
@@ -46,7 +25,7 @@ const collections = {
     subtitle: "Résistance et élégance",
     image: "/images/carrelage/carrelage_4.jpg",
     description:
-      "Des collections conçues pour sublimer terrasses, jardins et espaces de vie extérieurs."
+      "Des collections conçues pour sublimer terrasses, jardins et espaces de vie extérieurs.",
   },
 
   piscine: {
@@ -54,7 +33,7 @@ const collections = {
     subtitle: "Le détail qui change tout",
     image: "/images/carrelage/carrelage_6.jpg",
     description:
-      "Des finitions haut de gamme adaptées aux environnements les plus exigeants."
+      "Des finitions haut de gamme adaptées aux environnements les plus exigeants.",
   },
 
   pierre: {
@@ -62,7 +41,7 @@ const collections = {
     subtitle: "Authenticité minérale",
     image: "/images/carrelage/carrelage_8.jpg",
     description:
-      "La beauté naturelle de la pierre associée aux performances des matériaux modernes."
+      "La beauté naturelle de la pierre associée aux performances des matériaux modernes.",
   },
 
   bois: {
@@ -70,7 +49,7 @@ const collections = {
     subtitle: "Chaleur naturelle",
     image: "/images/carrelage/carrelage_9.jpg",
     description:
-      "Toute l’élégance du bois avec la résistance et la simplicité d’entretien du carrelage."
+      "Toute l’élégance du bois avec la résistance et la simplicité d’entretien du carrelage.",
   },
 
   beton: {
@@ -78,7 +57,7 @@ const collections = {
     subtitle: "Minimalisme contemporain",
     image: "/images/carrelage/carrelage_10.jpg",
     description:
-      "Des surfaces épurées idéales pour les projets architecturaux modernes."
+      "Des surfaces épurées idéales pour les projets architecturaux modernes.",
   },
 
   marbre: {
@@ -86,8 +65,8 @@ const collections = {
     subtitle: "L'excellence intemporelle",
     image: "/images/carrelage/carrelage_11.jpg",
     description:
-      "Des collections inspirées des marbres les plus prestigieux pour des espaces raffinés."
-  }
+      "Des collections inspirées des marbres les plus prestigieux pour des espaces raffinés.",
+  },
 }
 
 export default function BestSellers() {
@@ -96,17 +75,19 @@ export default function BestSellers() {
   const current = collections[active]
 
   return (
-    <section className="py-36 md:py-44 bg-[#F8F5F1]">
+    <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="text-center max-w-3xl mx-auto">
 
           <span
             className="
               uppercase
-              tracking-[0.35em]
-              text-xs
+              tracking-[0.22em]
+              sm:tracking-[0.35em]
+              text-[10px]
+              sm:text-xs
               text-[#CBA18B]
               font-medium
             "
@@ -116,22 +97,30 @@ export default function BestSellers() {
 
           <h2
             className="
-              mt-6
-              text-4xl
+              mt-4
+              sm:mt-6
+              text-[32px]
+              sm:text-5xl
               md:text-6xl
               font-light
               text-[#1E2A38]
+              leading-tight
             "
           >
             Nos collections
+
             <span className="text-[#CBA18B]">
               {" "}les plus appréciées
             </span>
+
           </h2>
 
           <p
             className="
-              mt-8
+              mt-5
+              sm:mt-8
+              text-sm
+              sm:text-base
               text-[#1E2A38]/70
               leading-relaxed
             "
@@ -144,11 +133,13 @@ export default function BestSellers() {
 
         <div
           className="
-            mt-16
+            mt-10
+            sm:mt-16
             flex
             flex-wrap
             justify-center
-            gap-3
+            gap-2
+            sm:gap-3
           "
         >
 
@@ -157,15 +148,19 @@ export default function BestSellers() {
               key={cat.id}
               onClick={() => setActive(cat.id)}
               className={`
-                px-6
-                py-3
+                px-4
+                sm:px-6
+                py-2.5
+                sm:py-3
                 rounded-full
-                text-sm
+                text-xs
+                sm:text-sm
+                whitespace-nowrap
                 transition-all
                 duration-500
                 ${
                   active === cat.id
-                    ? "bg-[#1E2A38] text-white"
+                    ? "bg-[#322D28] text-white"
                     : "bg-white border border-[#1E2A38]/10 text-[#1E2A38] hover:border-[#CBA18B]"
                 }
               `}
@@ -182,24 +177,26 @@ export default function BestSellers() {
             key={active}
             initial={{
               opacity: 0,
-              y: 30
+              y: 30,
             }}
             animate={{
               opacity: 1,
-              y: 0
+              y: 0,
             }}
             exit={{
               opacity: 0,
-              y: -20
+              y: -20,
             }}
             transition={{
-              duration: 0.4
+              duration: 0.4,
             }}
             className="
-              mt-16
+              mt-10
+              sm:mt-16
               grid
               lg:grid-cols-2
-              gap-10
+              gap-8
+              lg:gap-12
               items-center
             "
           >
@@ -208,8 +205,11 @@ export default function BestSellers() {
               className="
                 relative
                 overflow-hidden
-                rounded-[40px]
-                h-[650px]
+                rounded-[26px]
+                sm:rounded-[40px]
+                h-[340px]
+                sm:h-[500px]
+                lg:h-[650px]
                 group
               "
             >
@@ -234,17 +234,21 @@ export default function BestSellers() {
               <div
                 className="
                   absolute
-                  bottom-10
-                  left-10
-                  right-10
+                  bottom-6
+                  sm:bottom-10
+                  left-6
+                  sm:left-10
+                  right-6
+                  sm:right-10
                 "
               >
 
                 <span
                   className="
                     uppercase
-                    tracking-[0.3em]
-                    text-xs
+                    tracking-[0.25em]
+                    text-[10px]
+                    sm:text-xs
                     text-[#CBA18B]
                   "
                 >
@@ -253,8 +257,11 @@ export default function BestSellers() {
 
                 <h3
                   className="
-                    mt-4
-                    text-5xl
+                    mt-3
+                    sm:mt-4
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
                     font-light
                     text-white
                   "
@@ -266,13 +273,15 @@ export default function BestSellers() {
 
             </div>
 
-            <div>
+            <div className="text-center lg:text-left">
 
               <span
                 className="
                   uppercase
-                  tracking-[0.35em]
-                  text-xs
+                  tracking-[0.25em]
+                  sm:tracking-[0.35em]
+                  text-[10px]
+                  sm:text-xs
                   text-[#CBA18B]
                 "
               >
@@ -281,11 +290,14 @@ export default function BestSellers() {
 
               <h3
                 className="
-                  mt-6
-                  text-4xl
-                  md:text-5xl
+                  mt-4
+                  sm:mt-6
+                  text-3xl
+                  sm:text-4xl
+                  lg:text-5xl
                   font-light
                   text-[#1E2A38]
+                  leading-tight
                 "
               >
                 {current.subtitle}
@@ -293,24 +305,36 @@ export default function BestSellers() {
 
               <p
                 className="
-                  mt-8
+                  mt-5
+                  sm:mt-8
+                  text-sm
+                  sm:text-base
+                  lg:text-lg
                   text-[#1E2A38]/70
                   leading-relaxed
-                  text-lg
+                  max-w-xl
+                  mx-auto
+                  lg:mx-0
                 "
               >
                 {current.description}
               </p>
 
-              <div className="mt-10">
+              <div className="mt-8 sm:mt-10">
 
                 <button
                   className="
-                    px-8
-                    py-4
+                    w-full
+                    sm:w-auto
+                    px-7
+                    sm:px-8
+                    py-3.5
+                    sm:py-4
                     rounded-full
                     bg-[#CBA18B]
                     text-[#1E2A38]
+                    text-sm
+                    sm:text-base
                     font-medium
                     transition-all
                     duration-500

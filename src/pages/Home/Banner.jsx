@@ -17,7 +17,7 @@ export default function Banner() {
         }
       },
       {
-        threshold: 0.15
+        threshold: 0.15,
       }
     )
 
@@ -31,8 +31,12 @@ export default function Banner() {
       ref={ref}
       className="
         relative
-        h-[75vh]
-        min-h-[600px]
+        h-[55vh]
+        sm:h-[60vh]
+        lg:h-[75vh]
+        min-h-[420px]
+        sm:min-h-[500px]
+        lg:min-h-[600px]
         overflow-hidden
         flex
         items-center
@@ -63,15 +67,17 @@ export default function Banner() {
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
         <span
           className="
             inline-block
             text-[#CBA18B]
             uppercase
-            tracking-[0.35em]
-            text-xs
+            tracking-[0.25em]
+            sm:tracking-[0.35em]
+            text-[10px]
+            sm:text-xs
             font-medium
           "
         >
@@ -80,17 +86,21 @@ export default function Banner() {
 
         <h2
           className="
-            mt-8
-            text-5xl
-            md:text-7xl
+            mt-5
+            sm:mt-8
+            text-[34px]
+            sm:text-5xl
+            md:text-6xl
+            lg:text-7xl
             font-light
             text-white
-            leading-[1]
+            leading-[1.05]
             max-w-5xl
             mx-auto
           "
         >
           Des matériaux conçus
+
           <br />
 
           <span className="text-[#CBA18B]">
@@ -101,11 +111,14 @@ export default function Banner() {
 
         <p
           className="
-            mt-10
+            mt-6
+            sm:mt-8
+            lg:mt-10
             max-w-3xl
             mx-auto
-            text-lg
-            md:text-xl
+            text-sm
+            sm:text-base
+            lg:text-xl
             text-white/75
             leading-relaxed
           "
@@ -117,7 +130,9 @@ export default function Banner() {
 
         <div
           className="
-            mt-14
+            mt-8
+            sm:mt-10
+            lg:mt-14
             flex
             justify-center
           "
@@ -125,7 +140,9 @@ export default function Banner() {
 
           <div
             className="
-              w-24
+              w-16
+              sm:w-20
+              lg:w-24
               h-px
               bg-[#CBA18B]
             "
