@@ -40,12 +40,12 @@ export default function ContactSection() {
   }, [])
 
   return (
-    <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
+    <section className="pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-24 lg:pb-32 bg-[#F8F5F1]">
 
       <div
         ref={ref}
         className="
-          max-w-7xl
+          max-w-6xl
           mx-auto
           px-4
           sm:px-6
@@ -59,9 +59,9 @@ export default function ContactSection() {
         <div
           className="
             bg-[#322D28]
-            rounded-[28px]
-            sm:rounded-[36px]
-            lg:rounded-[48px]
+            rounded-[24px]
+            sm:rounded-[30px]
+            lg:rounded-[40px]
             overflow-hidden
           "
         >
@@ -77,8 +77,8 @@ export default function ContactSection() {
               className="
                 p-6
                 sm:p-8
-                md:p-12
-                lg:p-20
+                md:p-10
+                lg:p-14
               "
             >
 
@@ -98,10 +98,10 @@ export default function ContactSection() {
               <h2
                 className="
                   mt-4
-                  sm:mt-6
-                  text-[34px]
-                  sm:text-5xl
-                  md:text-6xl
+                  sm:mt-5
+                  text-[32px]
+                  sm:text-4xl
+                  md:text-5xl
                   font-light
                   text-white
                   leading-[1.05]
@@ -115,14 +115,13 @@ export default function ContactSection() {
 
               <p
                 className="
-                  mt-6
-                  sm:mt-8
+                  mt-5
+                  sm:mt-6
                   text-sm
                   sm:text-base
-                  lg:text-lg
                   text-white/70
                   leading-relaxed
-                  max-w-xl
+                  max-w-lg
                 "
               >
                 Une question, une demande de devis ou un projet
@@ -132,21 +131,21 @@ export default function ContactSection() {
 
               <div
                 className="
-                  mt-10
-                  sm:mt-14
-                  space-y-6
-                  sm:space-y-8
+                  mt-8
+                  sm:mt-10
+                  space-y-5
+                  sm:space-y-6
                 "
               >
 
-                <div className="flex gap-4 sm:gap-5">
+                <div className="flex gap-4">
 
                   <div
                     className="
-                      w-12
-                      h-12
-                      sm:w-14
-                      sm:h-14
+                      w-11
+                      h-11
+                      sm:w-12
+                      sm:h-12
                       rounded-full
                       bg-[#CBA18B]
                       flex
@@ -156,7 +155,7 @@ export default function ContactSection() {
                       shrink-0
                     "
                   >
-                    <FaPhoneAlt className="text-sm sm:text-base" />
+                    <FaPhoneAlt />
                   </div>
 
                   <div>
@@ -169,8 +168,8 @@ export default function ContactSection() {
                       href="tel:"
                       className="
                         text-white
-                        text-base
-                        sm:text-lg
+                        text-sm
+                        sm:text-base
                       "
                     >
                       07 XX XX XX XX
@@ -180,14 +179,14 @@ export default function ContactSection() {
 
                 </div>
 
-                <div className="flex gap-4 sm:gap-5">
+                <div className="flex gap-4">
 
                   <div
                     className="
-                      w-12
-                      h-12
-                      sm:w-14
-                      sm:h-14
+                      w-11
+                      h-11
+                      sm:w-12
+                      sm:h-12
                       rounded-full
                       bg-[#CBA18B]
                       flex
@@ -197,7 +196,7 @@ export default function ContactSection() {
                       shrink-0
                     "
                   >
-                    <FaEnvelope className="text-sm sm:text-base" />
+                    <FaEnvelope />
                   </div>
 
                   <div>
@@ -211,7 +210,7 @@ export default function ContactSection() {
                       className="
                         text-white
                         text-sm
-                        sm:text-lg
+                        sm:text-base
                         break-all
                       "
                     >
@@ -222,14 +221,14 @@ export default function ContactSection() {
 
                 </div>
 
-                <div className="flex gap-4 sm:gap-5">
+                <div className="flex gap-4">
 
                   <div
                     className="
-                      w-12
-                      h-12
-                      sm:w-14
-                      sm:h-14
+                      w-11
+                      h-11
+                      sm:w-12
+                      sm:h-12
                       rounded-full
                       bg-[#CBA18B]
                       flex
@@ -239,7 +238,7 @@ export default function ContactSection() {
                       shrink-0
                     "
                   >
-                    <FaMapMarkerAlt className="text-sm sm:text-base" />
+                    <FaMapMarkerAlt />
                   </div>
 
                   <div>
@@ -271,8 +270,8 @@ export default function ContactSection() {
                 className="
                   flex
                   gap-3
-                  mt-10
-                  sm:mt-12
+                  mt-8
+                  sm:mt-10
                 "
               >
 
@@ -281,10 +280,10 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="
-                    w-11
-                    h-11
-                    sm:w-12
-                    sm:h-12
+                    w-10
+                    h-10
+                    sm:w-11
+                    sm:h-11
                     rounded-full
                     border
                     border-white/10
@@ -307,10 +306,10 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="
-                    w-11
-                    h-11
-                    sm:w-12
-                    sm:h-12
+                    w-10
+                    h-10
+                    sm:w-11
+                    sm:h-11
                     rounded-full
                     border
                     border-white/10
@@ -333,25 +332,31 @@ export default function ContactSection() {
             </div>
 
             <div
-              className="
-                h-[320px]
-                sm:h-[420px]
-                md:h-[520px]
-                lg:min-h-[700px]
-              "
-            >
+  className="
+    h-[280px]
+    sm:h-[360px]
+    md:h-[450px]
+    lg:min-h-[620px]
+    bg-[#2B2622]
+    relative
+    overflow-hidden
+  "
+>
 
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92442.5267766341!2d3.791596750833308!3d43.61010273155888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1776973329149!5m2!1sfr!2sfr"
-                className="
-                  w-full
-                  h-full
-                  border-0
-                "
-                loading="lazy"
-              />
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92442.5267766341!2d3.791596750833308!3d43.61010273155888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1776973329149!5m2!1sfr!2sfr"
+    className="
+      absolute
+      inset-0
+      w-full
+      h-full
+      border-0
+    "
+    loading="eager"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
 
-            </div>
+</div>
 
           </div>
 
