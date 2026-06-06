@@ -24,6 +24,9 @@ import Privacy from "./pages/legal/Privacy"
 
 import PageTransition from "./components/PageTransition"
 
+import Inspiration from "./pages/Inspiration"
+import Realisations from "./pages/Realisations"
+
 export let lenisInstance = null
 
 function AnimatedRoutes() {
@@ -63,6 +66,42 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
+
+<Route
+  path="/collections"
+  element={
+    <PageTransition>
+      <Collections />
+    </PageTransition>
+  }
+/>
+
+<Route
+  path="/inspiration"
+  element={
+    <PageTransition>
+      <Inspiration />
+    </PageTransition>
+  }
+/>
+
+<Route
+  path="/realisations"
+  element={
+    <PageTransition>
+      <Realisations />
+    </PageTransition>
+  }
+/>
+
+<Route
+  path="/contact"
+  element={
+    <PageTransition>
+      <Contact />
+    </PageTransition>
+  }
+/>
 
         <Route
           path="/contact"
