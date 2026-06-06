@@ -131,45 +131,72 @@ export default function BestSellers() {
 
         </div>
 
+        
         <div
-          className="
-            mt-10
-            sm:mt-16
-            flex
-            flex-wrap
-            justify-center
-            gap-2
-            sm:gap-3
-          "
-        >
+  className="
+    mt-10
+    sm:mt-14
+    flex
+    flex-wrap
+    justify-center
+    gap-x-8
+    gap-y-4
+  "
+>
 
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActive(cat.id)}
-              className={`
-                px-4
-                sm:px-6
-                py-2.5
-                sm:py-3
-                rounded-full
-                text-xs
-                sm:text-sm
-                whitespace-nowrap
-                transition-all
-                duration-500
-                ${
-                  active === cat.id
-                    ? "bg-[#322D28] text-white"
-                    : "bg-white border border-[#1E2A38]/10 text-[#1E2A38] hover:border-[#CBA18B]"
-                }
-              `}
-            >
-              {cat.label}
-            </button>
-          ))}
+  {categories.map((cat) => (
 
-        </div>
+    <button
+      key={cat.id}
+      onClick={() => setActive(cat.id)}
+      className="
+        relative
+        pb-2
+        text-sm
+        sm:text-base
+        transition-all
+        duration-300
+      "
+    >
+
+      <span
+        className={`
+          transition-colors
+          duration-300
+
+          ${
+            active === cat.id
+              ? "text-[#1E2A38]"
+              : "text-[#1E2A38]/40 hover:text-[#1E2A38]/80"
+          }
+        `}
+      >
+        {cat.label}
+      </span>
+
+      <span
+        className={`
+          absolute
+          left-0
+          -bottom-[2px]
+          h-px
+          bg-[#CBA18B]
+          transition-all
+          duration-500
+
+          ${
+            active === cat.id
+              ? "w-full"
+              : "w-0"
+          }
+        `}
+      />
+
+    </button>
+
+  ))}
+
+</div>
 
         <AnimatePresence mode="wait">
 
