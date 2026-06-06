@@ -344,7 +344,7 @@ export default function ContactSection() {
 >
 
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92442.5267766341!2d3.791596750833308!3d43.61010273155888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1776973329149!5m2!1sfr!2sfr"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.2808593245772!2d3.2491368!3d43.3293116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b10f31c4f3b415%3A0xd51acd6459037621!2sHEVIA%20B%C3%A9ziers%20-%20Maison%2C%20Vie%20%26%20Ext%C3%A9rieur!5e0!3m2!1sfr!2sfr!4v1780756872315!5m2!1sfr!2sfr"
     className="
       absolute
       inset-0
