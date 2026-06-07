@@ -114,8 +114,8 @@ export default function Navbar() {
               src={logo}
               alt="HEVIA"
               className="
-                w-10
-                h-10
+                w-12
+                h-12
                 rounded-xl
                 object-cover
               "
@@ -143,7 +143,7 @@ export default function Navbar() {
                   text-[#1E2A38]/50
                 "
               >
-                Béziers
+                Béziers - Maison, Vie & Extérieur
               </p>
 
             </div>
@@ -337,8 +337,8 @@ export default function Navbar() {
               src={logo}
               alt="HEVIA"
               className="
-                w-10
-                h-10
+                w-12
+                h-12
                 rounded-xl
                 object-cover
               "
