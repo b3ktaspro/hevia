@@ -59,7 +59,7 @@ export default function Navbar() {
     <>
       <header
   className={`
-    fixed
+    sticky
     top-0
     left-0
     w-full
@@ -75,217 +75,196 @@ export default function Navbar() {
     }
   `}
 >
+<nav
+  className={`
+    w-full
+    h-[90px]
 
-        <nav
+    px-6
+    lg:px-10
+
+    flex
+    items-center
+    justify-between
+
+    transition-all
+    duration-500
+
+    ${
+      scrolled
+        ? "bg-[#F4EEE8] shadow-md border-b border-[#CBA18B]/10"
+        : "bg-[#F8F5F1] border-b border-[#CBA18B]/10"
+    }
+  `}
+>
+  <Link
+    to="/"
+    className="flex items-center gap-4"
+  >
+    <img
+      src={logo}
+      alt="HEVIA"
+      className="
+        w-14
+        h-14
+        rounded-xl
+        object-cover
+      "
+    />
+
+    <div>
+      <p
+        className="
+          text-sm
+          uppercase
+          tracking-[0.28em]
+          font-medium
+          text-[#1E2A38]
+        "
+      >
+        HEVIA
+      </p>
+
+      <p
+        className="
+          text-[11px]
+          uppercase
+          tracking-[0.15em]
+          text-[#1E2A38]/50
+        "
+      >
+        Béziers - Maison, Vie & Extérieur
+      </p>
+    </div>
+  </Link>
+
+  <ul
+    className="
+      hidden
+      xl:flex
+      items-center
+      gap-10
+      text-[15px]
+    "
+  >
+    {links.map((link) => (
+      <li key={link.path}>
+        <Link
+          to={link.path}
           className={`
-            mx-auto
-            mt-3
-
-            w-[96%]
-            max-w-7xl
-
-            h-[64px]
-
-            px-4
-            sm:px-6
-
-            rounded-[18px]
-
-            flex
-            items-center
-            justify-between
-
-            transition-all
-            duration-500
+            transition-colors
+            duration-300
 
             ${
-              scrolled
-                ? "bg-[#F4EEE8] shadow-lg border border-[#CBA18B]/10"
-                : "bg-[#F8F5F1] border border-[#CBA18B]/10"
+              location.pathname === link.path
+                ? "text-[#CBA18B]"
+                : "text-[#1E2A38] hover:text-[#CBA18B]"
             }
           `}
         >
+          {link.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
 
-          <Link
-            to="/"
-            className="flex items-center gap-3"
-          >
-            <img
-              src={logo}
-              alt="HEVIA"
-              className="
-                w-12
-                h-12
-                rounded-xl
-                object-cover
-              "
-            />
+  <div
+    className="
+      hidden
+      xl:flex
+      items-center
+      gap-4
+    "
+  >
+    <a
+      href="https://www.instagram.com/maison.hevia/"
+      target="_blank"
+      rel="noreferrer"
+      className="
+        w-9
+        h-9
 
-            <div>
+        rounded-full
 
-              <p
-                className="
-                  text-xs
-                  uppercase
-                  tracking-[0.28em]
-                  font-medium
-                  text-[#1E2A38]
-                "
-              >
-                HEVIA
-              </p>
+        border
+        border-[#1E2A38]/10
 
-              <p
-                className="
-                  text-[10px]
-                  uppercase
-                  tracking-[0.15em]
-                  text-[#1E2A38]/50
-                "
-              >
-                Béziers - Maison, Vie & Extérieur
-              </p>
+        flex
+        items-center
+        justify-center
 
-            </div>
+        transition-all
+        duration-300
 
-          </Link>
+        hover:bg-[#CBA18B]
+      "
+    >
+      <FaInstagram size={14} />
+    </a>
 
-          <ul
-            className="
-              hidden
-              xl:flex
-              items-center
-              gap-8
-              text-sm
-            "
-          >
+    <a
+      href="https://www.facebook.com/profile.php?id=61580245243798"
+      target="_blank"
+      rel="noreferrer"
+      className="
+        w-9
+        h-9
 
-            {links.map((link) => (
+        rounded-full
 
-              <li key={link.path}>
+        border
+        border-[#1E2A38]/10
 
-                <Link
-                  to={link.path}
-                  className={`
-                    transition-colors
-                    duration-300
+        flex
+        items-center
+        justify-center
 
-                    ${
-                      location.pathname === link.path
-                        ? "text-[#CBA18B]"
-                        : "text-[#1E2A38] hover:text-[#CBA18B]"
-                    }
-                  `}
-                >
-                  {link.name}
-                </Link>
+        transition-all
+        duration-300
 
-              </li>
+        hover:bg-[#CBA18B]
+      "
+    >
+      <FaFacebookF size={13} />
+    </a>
 
-            ))}
+    <Link
+      to="/contact"
+      className="
+        px-6
+        py-3
 
-          </ul>
+        rounded-full
 
-          <div
-            className="
-              hidden
-              xl:flex
-              items-center
-              gap-3
-            "
-          >
+        bg-[#CBA18B]
+        text-[#1E2A38]
 
-            <a
-              href="https://www.instagram.com/maison.hevia/"
-              target="_blank"
-              rel="noreferrer"
-              className="
-                w-8
-                h-8
+        text-sm
+        font-medium
 
-                rounded-full
+        transition-all
+        duration-500
 
-                border
-                border-[#1E2A38]/10
+        hover:scale-[1.03]
+      "
+    >
+      Demander un devis
+    </Link>
+  </div>
 
-                flex
-                items-center
-                justify-center
+  <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="
+      xl:hidden
 
-                transition-all
-                duration-300
+      text-[#1E2A38]
 
-                hover:bg-[#CBA18B]
-              "
-            >
-              <FaInstagram size={13} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/profile.php?id=61580245243798"
-              target="_blank"
-              rel="noreferrer"
-              className="
-                w-8
-                h-8
-
-                rounded-full
-
-                border
-                border-[#1E2A38]/10
-
-                flex
-                items-center
-                justify-center
-
-                transition-all
-                duration-300
-
-                hover:bg-[#CBA18B]
-              "
-            >
-              <FaFacebookF size={12} />
-            </a>
-
-            <Link
-              to="/contact"
-              className="
-                px-5
-                py-2.5
-
-                rounded-full
-
-                bg-[#CBA18B]
-                text-[#1E2A38]
-
-                text-sm
-                font-medium
-
-                transition-all
-                duration-500
-
-                hover:scale-[1.03]
-              "
-            >
-              Demander un devis
-            </Link>
-
-          </div>
-
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="
-              xl:hidden
-
-              text-[#1E2A38]
-
-              text-2xl
-            "
-          >
-            {menuOpen ? "×" : "☰"}
-          </button>
-
-        </nav>
+      text-3xl
+    "
+  >
+    {menuOpen ? "×" : "☰"}
+  </button>
+</nav>
 
       </header>
 
