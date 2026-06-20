@@ -412,30 +412,34 @@ export default function Navbar() {
             transition={{ delay: 0.35 }}
           >
 
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="
-                mb-12
-                flex
-                w-full
-                items-center
-                justify-center
-                rounded-2xl
-                bg-[#1E2A38]
-                px-6
-                py-4
-                text-base
-                font-medium
-                text-white
-                transition-all
-                duration-300
-                hover:bg-[#CBA18B]
-                hover:text-[#1E2A38]
-              "
-            >
-              Demander un devis
-            </Link>
+<Link
+  to="/contact"
+  onClick={() => setMenuOpen(false)}
+  className="
+    mb-12
+    flex
+    w-full
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#CBA18B]
+    px-6
+    py-4
+
+    text-base
+    font-medium
+    text-[#1E2A38]
+
+    transition-all
+    duration-300
+
+    hover:scale-[1.02]
+  "
+>
+  Demander un devis
+</Link>
 
             <div className="flex gap-3 mb-8">
 
