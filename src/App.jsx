@@ -213,7 +213,7 @@ export default function App() {
     const lenis = new Lenis({
       duration: 1.4,
       smoothWheel: true,
-      syncTouch: true,
+      syncTouch: false,
       wheelMultiplier: 0.9,
       touchMultiplier: 0.9,
       infinite: false,
