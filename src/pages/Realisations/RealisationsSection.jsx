@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -25,43 +25,36 @@ const projects = [
     title: "Projet résidentiel",
     image: "/images/home/acceuil_home3.jpg",
   },
-]
+];
 
 export default function RealisationsSection() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const el = sectionRef.current
+    const el = sectionRef.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-10"
-          )
+          el.classList.remove("opacity-0", "translate-y-10");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.1,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="bg-[#F8F5F1]">
-
       <div
         ref={sectionRef}
         className="
@@ -86,9 +79,7 @@ export default function RealisationsSection() {
           duration-1000
         "
       >
-
         <div className="max-w-4xl mx-auto text-center">
-
           <span
             className="
               uppercase
@@ -115,9 +106,7 @@ export default function RealisationsSection() {
             "
           >
             Des projets qui
-            <span className="text-[#CBA18B]">
-              {" "}inspirent
-            </span>
+            <span className="text-[#CBA18B]"> inspirent</span>
           </h1>
 
           <p
@@ -134,11 +123,9 @@ export default function RealisationsSection() {
               leading-relaxed
             "
           >
-            Chaque projet est unique. Découvrez quelques
-            réalisations qui illustrent l'élégance et le
-            caractère de nos collections.
+            Chaque projet est unique. Découvrez quelques réalisations qui
+            illustrent l'élégance et le caractère de nos collections.
           </p>
-
         </div>
 
         <div
@@ -154,7 +141,6 @@ export default function RealisationsSection() {
             sm:gap-6
           "
         >
-
           <div
             className="
               lg:col-span-7
@@ -171,7 +157,6 @@ export default function RealisationsSection() {
               group
             "
           >
-
             <img
               src={projects[0].image}
               alt={projects[0].title}
@@ -193,7 +178,6 @@ export default function RealisationsSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
             <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 right-6 sm:right-8">
-
               <span
                 className="
                   uppercase
@@ -220,9 +204,7 @@ export default function RealisationsSection() {
               >
                 {projects[0].title}
               </h2>
-
             </div>
-
           </div>
 
           <div
@@ -235,9 +217,7 @@ export default function RealisationsSection() {
               sm:gap-6
             "
           >
-
             {projects.slice(1, 3).map((project) => (
-
               <div
                 key={project.title}
                 className="
@@ -253,7 +233,6 @@ export default function RealisationsSection() {
                   group
                 "
               >
-
                 <img
                   src={project.image}
                   alt={project.title}
@@ -275,7 +254,6 @@ export default function RealisationsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                 <div className="absolute bottom-5 left-5 right-5">
-
                   <h3
                     className="
                       text-xl
@@ -287,15 +265,10 @@ export default function RealisationsSection() {
                   >
                     {project.title}
                   </h3>
-
                 </div>
-
               </div>
-
             ))}
-
           </div>
-
         </div>
 
         <div
@@ -311,9 +284,7 @@ export default function RealisationsSection() {
             sm:gap-6
           "
         >
-
           {projects.slice(3).map((project) => (
-
             <div
               key={project.title}
               className="
@@ -329,7 +300,6 @@ export default function RealisationsSection() {
                 group
               "
             >
-
               <img
                 src={project.image}
                 alt={project.title}
@@ -351,7 +321,6 @@ export default function RealisationsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
               <div className="absolute bottom-5 left-5 right-5">
-
                 <h3
                   className="
                     text-lg
@@ -363,17 +332,11 @@ export default function RealisationsSection() {
                 >
                   {project.title}
                 </h3>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

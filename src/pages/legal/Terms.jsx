@@ -1,33 +1,32 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export default function Terms() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-10");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="pt-28 sm:pt-36 lg:pt-44 pb-20 sm:pb-28 lg:pb-40 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -41,9 +40,7 @@ export default function Terms() {
           duration-700
         "
       >
-
         <div className="text-center">
-
           <span
             className="
               uppercase
@@ -70,9 +67,7 @@ export default function Terms() {
             "
           >
             Conditions Générales de
-            <span className="text-[#CBA18B]">
-              {" "}Vente
-            </span>
+            <span className="text-[#CBA18B]"> Vente</span>
           </h1>
 
           <p
@@ -88,15 +83,13 @@ export default function Terms() {
               mx-auto
             "
           >
-            Les présentes Conditions Générales de Vente régissent
-            les commandes effectuées auprès de HEVIA. Elles définissent
-            les droits et obligations du vendeur et du client.
+            Les présentes Conditions Générales de Vente régissent les commandes
+            effectuées auprès de HEVIA. Elles définissent les droits et
+            obligations du vendeur et du client.
           </p>
-
         </div>
 
         <div className="mt-10 sm:mt-16 space-y-5 sm:space-y-8">
-
           <div
             className="
               bg-white
@@ -139,8 +132,8 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Les prix sont exprimés en euros TTC. HEVIA se réserve le droit
-              de modifier ses tarifs à tout moment sans préavis.
+              Les prix sont exprimés en euros TTC. HEVIA se réserve le droit de
+              modifier ses tarifs à tout moment sans préavis.
             </p>
           </div>
 
@@ -162,8 +155,8 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Toute commande devient ferme et définitive après validation.
-              Le client garantit l’exactitude des informations communiquées.
+              Toute commande devient ferme et définitive après validation. Le
+              client garantit l’exactitude des informations communiquées.
             </p>
           </div>
 
@@ -185,9 +178,9 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Le règlement de la commande valide définitivement l’achat.
-              Les modalités de paiement sont précisées lors de l’établissement
-              du devis ou de la commande.
+              Le règlement de la commande valide définitivement l’achat. Les
+              modalités de paiement sont précisées lors de l’établissement du
+              devis ou de la commande.
             </p>
           </div>
 
@@ -209,8 +202,8 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Les délais de livraison sont communiqués à titre indicatif.
-              Ils peuvent varier selon la disponibilité des produits et les
+              Les délais de livraison sont communiqués à titre indicatif. Ils
+              peuvent varier selon la disponibilité des produits et les
               contraintes logistiques.
             </p>
           </div>
@@ -238,7 +231,8 @@ export default function Terms() {
             </p>
 
             <p className="mt-3 text-xs sm:text-sm text-[#85796D]">
-              Certains produits commandés sur mesure ne sont ni repris ni échangés.
+              Certains produits commandés sur mesure ne sont ni repris ni
+              échangés.
             </p>
           </div>
 
@@ -260,13 +254,12 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Les produits bénéficient des garanties légales prévues
-              par la réglementation française.
+              Les produits bénéficient des garanties légales prévues par la
+              réglementation française.
             </p>
 
             <p className="mt-4 text-sm">
-              Contact :
-              {" "}
+              Contact :{" "}
               <a
                 href="mailto:contact@gmail.com"
                 className="text-[#CBA18B] hover:underline"
@@ -295,8 +288,8 @@ export default function Terms() {
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
               HEVIA ne pourra être tenue responsable en cas de mauvaise
-              utilisation des produits ou de circonstances indépendantes
-              de sa volonté.
+              utilisation des produits ou de circonstances indépendantes de sa
+              volonté.
             </p>
           </div>
 
@@ -318,16 +311,13 @@ export default function Terms() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Les présentes conditions sont soumises au droit français.
-              Une solution amiable sera privilégiée avant toute procédure
+              Les présentes conditions sont soumises au droit français. Une
+              solution amiable sera privilégiée avant toute procédure
               judiciaire.
             </p>
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

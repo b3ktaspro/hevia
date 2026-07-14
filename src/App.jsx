@@ -1,54 +1,44 @@
-import { useEffect } from "react"
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom"
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import { AnimatePresence } from "framer-motion"
-import Lenis from "lenis"
+import { AnimatePresence } from "framer-motion";
+import Lenis from "lenis";
 
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import ScrollToTop from "./components/ScrollToTop"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Collections from "./pages/Collections"
-import Contact from "./pages/Contact"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Collections from "./pages/Collections";
+import Contact from "./pages/Contact";
 
-import Legal from "./pages/legal/Legal"
-import Terms from "./pages/legal/Terms"
-import Privacy from "./pages/legal/Privacy"
+import Legal from "./pages/legal/Legal";
+import Terms from "./pages/legal/Terms";
+import Privacy from "./pages/legal/Privacy";
 
-import PageTransition from "./components/PageTransition"
+import PageTransition from "./components/PageTransition";
 
-import Inspiration from "./pages/Inspiration"
-import Realisations from "./pages/Realisations"
+import Inspiration from "./pages/Inspiration";
+import Realisations from "./pages/Realisations";
 
-import ImitBeton from "./pages/ImitBeton"
-import ImitBois from "./pages/ImitBois"
-import ImitPierre from "./pages/ImitPierre"
-import ImitMarbre from "./pages/ImitMarbre"
+import ImitBeton from "./pages/ImitBeton";
+import ImitBois from "./pages/ImitBois";
+import ImitPierre from "./pages/ImitPierre";
+import ImitMarbre from "./pages/ImitMarbre";
 
-import SalleDeBain from "./pages/SalleDeBain"
+import SalleDeBain from "./pages/SalleDeBain";
 
-import Exterieur from "./pages/Exterieur"
+import Exterieur from "./pages/Exterieur";
 
-export let lenisInstance = null
+export let lenisInstance = null;
 
 function AnimatedRoutes() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
-
-      <Routes
-        location={location}
-        key={location.pathname}
-      >
-
+      <Routes location={location} key={location.pathname}>
         <Route
           path="/"
           element={
@@ -76,41 +66,41 @@ function AnimatedRoutes() {
           }
         />
 
-<Route
-  path="/collections"
-  element={
-    <PageTransition>
-      <Collections />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections"
+          element={
+            <PageTransition>
+              <Collections />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/inspiration"
-  element={
-    <PageTransition>
-      <Inspiration />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/inspiration"
+          element={
+            <PageTransition>
+              <Inspiration />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/realisations"
-  element={
-    <PageTransition>
-      <Realisations />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/realisations"
+          element={
+            <PageTransition>
+              <Realisations />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/contact"
-  element={
-    <PageTransition>
-      <Contact />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <Contact />
+            </PageTransition>
+          }
+        />
 
         <Route
           path="/contact"
@@ -148,64 +138,62 @@ function AnimatedRoutes() {
           }
         />
 
-<Route
-  path="/collections/imitation-beton"
-  element={
-    <PageTransition>
-      <ImitBeton />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/imitation-beton"
+          element={
+            <PageTransition>
+              <ImitBeton />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/collections/imitation-bois"
-  element={
-    <PageTransition>
-      <ImitBois />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/imitation-bois"
+          element={
+            <PageTransition>
+              <ImitBois />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/collections/imitation-pierre"
-  element={
-    <PageTransition>
-      <ImitPierre />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/imitation-pierre"
+          element={
+            <PageTransition>
+              <ImitPierre />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/collections/imitation-marbre"
-  element={
-    <PageTransition>
-      <ImitMarbre />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/imitation-marbre"
+          element={
+            <PageTransition>
+              <ImitMarbre />
+            </PageTransition>
+          }
+        />
 
-<Route
-  path="/collections/salle-de-bain"
-  element={
-    <PageTransition>
-      <SalleDeBain />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/salle-de-bain"
+          element={
+            <PageTransition>
+              <SalleDeBain />
+            </PageTransition>
+          }
+        />
 
-
-<Route
-  path="/collections/exterieur"
-  element={
-    <PageTransition>
-      <Exterieur />
-    </PageTransition>
-  }
-/>
+        <Route
+          path="/collections/exterieur"
+          element={
+            <PageTransition>
+              <Exterieur />
+            </PageTransition>
+          }
+        />
       </Routes>
-
     </AnimatePresence>
-  )
+  );
 }
 
 export default function App() {
@@ -217,33 +205,31 @@ export default function App() {
       wheelMultiplier: 0.9,
       touchMultiplier: 0.9,
       infinite: false,
-    })
+    });
 
-    lenisInstance = lenis
+    lenisInstance = lenis;
 
-    let rafId
+    let rafId;
 
     function raf(time) {
-      lenis.raf(time)
-      rafId = requestAnimationFrame(raf)
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
     }
 
-    rafId = requestAnimationFrame(raf)
+    rafId = requestAnimationFrame(raf);
 
     return () => {
-      cancelAnimationFrame(rafId)
-      lenis.destroy()
-      lenisInstance = null
-    }
-  }, [])
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+      lenisInstance = null;
+    };
+  }, []);
 
   return (
     <BrowserRouter>
-
       <ScrollToTop />
 
       <div className="gradient-hevia min-h-screen">
-
         <Navbar />
 
         <main>
@@ -251,9 +237,7 @@ export default function App() {
         </main>
 
         <Footer />
-
       </div>
-
     </BrowserRouter>
-  )
+  );
 }

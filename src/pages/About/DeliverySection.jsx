@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const zones = [
   {
@@ -16,43 +16,36 @@ const zones = [
     title: "France",
     text: "Expédition nationale sur demande avec étude personnalisée.",
   },
-]
+];
 
 export default function DeliverySection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -66,9 +59,7 @@ export default function DeliverySection() {
           duration-1000
         "
       >
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -95,10 +86,7 @@ export default function DeliverySection() {
               leading-tight
             "
           >
-            Livraison &
-            <span className="text-[#CBA18B]">
-              {" "}disponibilité
-            </span>
+            Livraison &<span className="text-[#CBA18B]"> disponibilité</span>
           </h2>
 
           <p
@@ -114,11 +102,10 @@ export default function DeliverySection() {
               mx-auto
             "
           >
-            Chaque commande bénéficie d’un suivi rigoureux,
-            d’une préparation soignée et d’une logistique adaptée
-            afin de garantir une réception dans les meilleures conditions.
+            Chaque commande bénéficie d’un suivi rigoureux, d’une préparation
+            soignée et d’une logistique adaptée afin de garantir une réception
+            dans les meilleures conditions.
           </p>
-
         </div>
 
         <div
@@ -134,7 +121,6 @@ export default function DeliverySection() {
             lg:gap-8
           "
         >
-
           {zones.map((zone) => (
             <div
               key={zone.number}
@@ -157,7 +143,6 @@ export default function DeliverySection() {
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
-
               <div
                 className="
                   absolute
@@ -221,10 +206,8 @@ export default function DeliverySection() {
               >
                 {zone.text}
               </p>
-
             </div>
           ))}
-
         </div>
 
         <div
@@ -245,7 +228,6 @@ export default function DeliverySection() {
             text-center
           "
         >
-
           <span
             className="
               uppercase
@@ -288,16 +270,13 @@ export default function DeliverySection() {
               leading-relaxed
             "
           >
-            Préparation minutieuse, protection des matériaux,
-            suivi personnalisé et accompagnement jusqu’à la livraison :
-            nous accordons autant d’importance au transport qu’à la qualité
-            des collections que nous sélectionnons.
+            Préparation minutieuse, protection des matériaux, suivi personnalisé
+            et accompagnement jusqu’à la livraison : nous accordons autant
+            d’importance au transport qu’à la qualité des collections que nous
+            sélectionnons.
           </p>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

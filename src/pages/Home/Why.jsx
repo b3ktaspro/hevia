@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const features = [
   {
@@ -16,36 +16,35 @@ const features = [
     title: "Accompagnement sur mesure",
     text: "De la sélection des matériaux jusqu'à la concrétisation de votre projet, nous vous accompagnons avec attention et expertise.",
   },
-]
+];
 
 export default function Why() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-12");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -59,9 +58,7 @@ export default function Why() {
           duration-1000
         "
       >
-
         <div className="max-w-4xl mx-auto text-center">
-
           <span
             className="
               uppercase
@@ -89,11 +86,7 @@ export default function Why() {
             "
           >
             Plus qu'un simple
-
-            <span className="text-[#CBA18B]">
-              {" "}carrelage
-            </span>
-
+            <span className="text-[#CBA18B]"> carrelage</span>
           </h2>
 
           <p
@@ -112,7 +105,6 @@ export default function Why() {
             essentiel de l'identité d'un espace. Notre approche repose sur
             l'exigence, le design et l'accompagnement personnalisé.
           </p>
-
         </div>
 
         <div
@@ -129,7 +121,6 @@ export default function Why() {
             lg:gap-8
           "
         >
-
           {features.map((feature) => (
             <div
               key={feature.number}
@@ -151,7 +142,6 @@ export default function Why() {
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
-
               <div
                 className="
                   absolute
@@ -215,10 +205,8 @@ export default function Why() {
               >
                 {feature.text}
               </p>
-
             </div>
           ))}
-
         </div>
 
         <div
@@ -230,7 +218,6 @@ export default function Why() {
             justify-center
           "
         >
-
           <div
             className="
               grid
@@ -241,9 +228,7 @@ export default function Why() {
               text-center
             "
           >
-
             <div>
-
               <div
                 className="
                   text-3xl
@@ -266,11 +251,9 @@ export default function Why() {
               >
                 Références
               </p>
-
             </div>
 
             <div>
-
               <div
                 className="
                   text-3xl
@@ -293,11 +276,9 @@ export default function Why() {
               >
                 Collections
               </p>
-
             </div>
 
             <div>
-
               <div
                 className="
                   text-3xl
@@ -320,15 +301,10 @@ export default function Why() {
               >
                 Sélectionnées
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { FaInstagram, FaFacebookF } from "react-icons/fa"
-import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 
-import logo from "/images/logo/logo-hevia.jpg"
+import logo from "/images/logo/logo-hevia.jpg";
 
 const links = [
   { name: "Accueil", path: "/" },
@@ -11,54 +11,53 @@ const links = [
   { name: "Inspiration", path: "/inspiration" },
   { name: "Réalisations", path: "/realisations" },
   { name: "À propos", path: "/about" },
-]
+];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [showNavbar, setShowNavbar] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    let lastScroll = window.scrollY
+    let lastScroll = window.scrollY;
 
     const handleScroll = () => {
-      const currentScroll = window.scrollY
+      const currentScroll = window.scrollY;
 
-      setScrolled(currentScroll > 20)
+      setScrolled(currentScroll > 20);
 
       if (currentScroll > lastScroll && currentScroll > 100) {
-        setShowNavbar(false)
+        setShowNavbar(false);
       } else {
-        setShowNavbar(true)
+        setShowNavbar(true);
       }
 
-      lastScroll = currentScroll
-    }
+      lastScroll = currentScroll;
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  useEffect(() => {
-    setMenuOpen(false)
-  }, [location.pathname])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : ""
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
 
     return () => {
-      document.body.style.overflow = ""
-    }
-  }, [menuOpen])
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <>
       <header
-  className={`
+        className={`
     sticky
     top-0
     left-0
@@ -68,15 +67,11 @@ export default function Navbar() {
     transition-all
     duration-500
 
-    ${
-      showNavbar
-        ? "translate-y-0 opacity-100"
-        : "-translate-y-full opacity-0"
-    }
+    ${showNavbar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
   `}
->
-<nav
-  className={`
+      >
+        <nav
+          className={`
     w-full
     h-[90px]
 
@@ -96,62 +91,59 @@ export default function Navbar() {
         : "bg-[#F8F5F1] border-b border-[#CBA18B]/10"
     }
   `}
->
-  <Link
-    to="/"
-    className="flex items-center gap-4"
-  >
-    <img
-      src={logo}
-      alt="HEVIA"
-      className="
+        >
+          <Link to="/" className="flex items-center gap-4">
+            <img
+              src={logo}
+              alt="HEVIA"
+              className="
         w-14
         h-14
         rounded-xl
         object-cover
       "
-    />
+            />
 
-    <div>
-      <p
-        className="
+            <div>
+              <p
+                className="
           text-sm
           uppercase
           tracking-[0.28em]
           font-medium
           text-[#1E2A38]
         "
-      >
-        HEVIA
-      </p>
+              >
+                HEVIA
+              </p>
 
-      <p
-        className="
+              <p
+                className="
           text-[11px]
           uppercase
           tracking-[0.15em]
           text-[#1E2A38]/50
         "
-      >
-        Béziers - Maison, Vie & Extérieur
-      </p>
-    </div>
-  </Link>
+              >
+                Béziers - Maison, Vie & Extérieur
+              </p>
+            </div>
+          </Link>
 
-  <ul
-    className="
+          <ul
+            className="
       hidden
       xl:flex
       items-center
       gap-10
       text-[15px]
     "
-  >
-    {links.map((link) => (
-      <li key={link.path}>
-        <Link
-          to={link.path}
-          className={`
+          >
+            {links.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`
             transition-colors
             duration-300
 
@@ -161,26 +153,26 @@ export default function Navbar() {
                 : "text-[#1E2A38] hover:text-[#CBA18B]"
             }
           `}
-        >
-          {link.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-  <div
-    className="
+          <div
+            className="
       hidden
       xl:flex
       items-center
       gap-4
     "
-  >
-    <a
-      href="https://www.instagram.com/maison.hevia/"
-      target="_blank"
-      rel="noreferrer"
-      className="
+          >
+            <a
+              href="https://www.instagram.com/maison.hevia/"
+              target="_blank"
+              rel="noreferrer"
+              className="
         w-9
         h-9
 
@@ -198,15 +190,15 @@ export default function Navbar() {
 
         hover:bg-[#CBA18B]
       "
-    >
-      <FaInstagram size={14} />
-    </a>
+            >
+              <FaInstagram size={14} />
+            </a>
 
-    <a
-      href="https://www.facebook.com/profile.php?id=61580245243798"
-      target="_blank"
-      rel="noreferrer"
-      className="
+            <a
+              href="https://www.facebook.com/profile.php?id=61580245243798"
+              target="_blank"
+              rel="noreferrer"
+              className="
         w-9
         h-9
 
@@ -224,13 +216,13 @@ export default function Navbar() {
 
         hover:bg-[#CBA18B]
       "
-    >
-      <FaFacebookF size={13} />
-    </a>
+            >
+              <FaFacebookF size={13} />
+            </a>
 
-    <Link
-      to="/contact"
-      className="
+            <Link
+              to="/contact"
+              className="
         px-6
         py-3
 
@@ -247,35 +239,34 @@ export default function Navbar() {
 
         hover:scale-[1.03]
       "
-    >
-      Demander un devis
-    </Link>
-  </div>
+            >
+              Demander un devis
+            </Link>
+          </div>
 
-  <button
-    onClick={() => setMenuOpen(!menuOpen)}
-    className="
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="
       xl:hidden
 
       text-[#1E2A38]
 
       text-3xl
     "
-  >
-    {menuOpen ? "×" : "☰"}
-  </button>
-</nav>
-
+          >
+            {menuOpen ? "×" : "☰"}
+          </button>
+        </nav>
       </header>
 
       <AnimatePresence>
-  {menuOpen && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.25 }}
-      className="
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="
         fixed
         inset-0
         z-[1100]
@@ -283,24 +274,24 @@ export default function Navbar() {
         backdrop-blur-sm
         xl:hidden
       "
-    >
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{
-          duration: 0.45,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="
+          >
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{
+                duration: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="
           ml-auto
           h-full
           w-full
           bg-[#F8F5F1]
         "
-      >
-        <div
-          className="
+            >
+              <div
+                className="
             flex
             h-20
             items-center
@@ -309,61 +300,59 @@ export default function Navbar() {
             border-[#CBA18B]/10
             px-6
           "
-        >
-          <div className="flex items-center gap-3">
-
-            <img
-              src={logo}
-              alt="HEVIA"
-              className="
+              >
+                <div className="flex items-center gap-3">
+                  <img
+                    src={logo}
+                    alt="HEVIA"
+                    className="
                 w-12
                 h-12
                 rounded-xl
                 object-cover
               "
-            />
+                  />
 
-            <div>
-              <p
-                className="
+                  <div>
+                    <p
+                      className="
                   text-xs
                   uppercase
                   tracking-[0.28em]
                   font-medium
                   text-[#1E2A38]
                 "
-              >
-                HEVIA
-              </p>
+                    >
+                      HEVIA
+                    </p>
 
-              <p
-                className="
+                    <p
+                      className="
                   text-[10px]
                   uppercase
                   tracking-[0.15em]
                   text-[#1E2A38]/50
                 "
-              >
-                Béziers
-              </p>
-            </div>
+                    >
+                      Béziers
+                    </p>
+                  </div>
+                </div>
 
-          </div>
-
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="
               text-4xl
               font-light
               text-[#1E2A38]
             "
-          >
-            ×
-          </button>
-        </div>
+                >
+                  ×
+                </button>
+              </div>
 
-        <div
-          className="
+              <div
+                className="
             flex
             min-h-[calc(100dvh-80px)]
             flex-col
@@ -371,22 +360,21 @@ export default function Navbar() {
             p-6
             pb-20
           "
-        >
-          <nav className="flex flex-col">
-
-            {links.map((link, index) => (
-              <motion.div
-                key={link.path}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  delay: index * 0.08,
-                }}
               >
-                <Link
-                  to={link.path}
-                  onClick={() => setMenuOpen(false)}
-                  className="
+                <nav className="flex flex-col">
+                  {links.map((link, index) => (
+                    <motion.div
+                      key={link.path}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: index * 0.08,
+                      }}
+                    >
+                      <Link
+                        to={link.path}
+                        onClick={() => setMenuOpen(false)}
+                        className="
                     block
                     border-b
                     border-[#CBA18B]/10
@@ -398,24 +386,22 @@ export default function Navbar() {
                     duration-300
                     hover:text-[#CBA18B]
                   "
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35 }}
                 >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
-
-          </nav>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-          >
-
-<Link
-  to="/contact"
-  onClick={() => setMenuOpen(false)}
-  className="
+                  <Link
+                    to="/contact"
+                    onClick={() => setMenuOpen(false)}
+                    className="
     mb-12
     flex
     w-full
@@ -437,17 +423,16 @@ export default function Navbar() {
 
     hover:scale-[1.02]
   "
->
-  Demander un devis
-</Link>
+                  >
+                    Demander un devis
+                  </Link>
 
-            <div className="flex gap-3 mb-8">
-
-              <a
-                href="https://www.instagram.com/maison.hevia/"
-                target="_blank"
-                rel="noreferrer"
-                className="
+                  <div className="flex gap-3 mb-8">
+                    <a
+                      href="https://www.instagram.com/maison.hevia/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
                   w-11
                   h-11
                   rounded-full
@@ -458,15 +443,15 @@ export default function Navbar() {
                   justify-center
                   text-[#1E2A38]
                 "
-              >
-                <FaInstagram />
-              </a>
+                    >
+                      <FaInstagram />
+                    </a>
 
-              <a
-                href="https://www.facebook.com/profile.php?id=61580245243798"
-                target="_blank"
-                rel="noreferrer"
-                className="
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61580245243798"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
                   w-11
                   h-11
                   rounded-full
@@ -477,28 +462,22 @@ export default function Navbar() {
                   justify-center
                   text-[#1E2A38]
                 "
-              >
-                <FaFacebookF />
-              </a>
+                    >
+                      <FaFacebookF />
+                    </a>
+                  </div>
 
-            </div>
-
-            <div className="space-y-2 text-sm text-[#1E2A38]/60">
-              <p>Béziers • Occitanie</p>
-              <p>contact@hevia.fr</p>
-              <p>Maison, Vie & Extérieur</p>
-            </div>
-
+                  <div className="space-y-2 text-sm text-[#1E2A38]/60">
+                    <p>Béziers • Occitanie</p>
+                    <p>contact@hevia.fr</p>
+                    <p>Maison, Vie & Extérieur</p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
-
-        </div>
-
-      </motion.div>
-
-    </motion.div>
-  )}
-</AnimatePresence>
-
+        )}
+      </AnimatePresence>
     </>
-  )
+  );
 }

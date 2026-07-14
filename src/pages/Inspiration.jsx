@@ -1,4 +1,4 @@
-import InspirationSection from "./Inspiration/InspirationSection"
+import InspirationSection from "./Inspiration/InspirationSection";
 import CatalogueHighlight from "./Collections/CatalogueHighlight";
 
 export default function Inspiration() {
@@ -7,5 +7,5 @@ export default function Inspiration() {
       <InspirationSection />
       <CatalogueHighlight />
     </>
-  )
+  );
 }

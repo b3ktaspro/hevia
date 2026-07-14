@@ -1,29 +1,28 @@
-import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
-import { FaInstagram, FaFacebookF } from "react-icons/fa"
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
-import img1 from "/images/hero/acceuil_hero1.jpg"
-import img2 from "/images/hero/acceuil_hero2.jpg"
-import img3 from "/images/hero/acceuil_hero3.png"
-import img4 from "/images/hero/acceuil_hero4.png"
+import img1 from "/images/hero/acceuil_hero1.jpg";
+import img2 from "/images/hero/acceuil_hero2.jpg";
+import img3 from "/images/hero/acceuil_hero3.png";
+import img4 from "/images/hero/acceuil_hero4.png";
 
-const slides = [img1, img2, img3, img4]
+const slides = [img1, img2, img3, img4];
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length)
-    }, 7000)
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 7000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
-
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -48,11 +47,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       <div className="relative z-20 min-h-[100svh] max-w-7xl mx-auto px-5 sm:px-6">
-
         <div className="min-h-[100svh] flex items-center">
-
           <div className="max-w-[650px]">
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,7 +87,6 @@ export default function Hero() {
             >
               L'élégance des
               <br />
-
               <span className="text-[#CBA18B] font-medium">
                 matériaux nobles
               </span>
@@ -112,16 +107,16 @@ export default function Hero() {
               max-w-xl
               "
             >
-              Découvrez une sélection de carrelages et revêtements
-              haut de gamme conçus pour donner caractère, élégance
-              et durabilité à chaque espace.
+              Découvrez une sélection de carrelages et revêtements haut de gamme
+              conçus pour donner caractère, élégance et durabilité à chaque
+              espace.
             </motion.p>
 
             <motion.div
-  initial={{ opacity: 0, y: 35 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.25, duration: 0.9 }}
-  className="
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.9 }}
+              className="
   mt-8
   sm:mt-12
   flex
@@ -130,11 +125,10 @@ export default function Hero() {
   gap-3
   sm:gap-4
   "
->
-
-  <Link
-    to="/collections"
-    className="
+            >
+              <Link
+                to="/collections"
+                className="
     bg-[#CBA18B]
     text-black
 
@@ -160,13 +154,13 @@ export default function Hero() {
 
     w-fit
     "
-  >
-    Découvrir les collections
-  </Link>
+              >
+                Découvrir les collections
+              </Link>
 
-  <Link
-    to="/contact"
-    className="
+              <Link
+                to="/contact"
+                className="
     border
     border-white/20
 
@@ -197,22 +191,16 @@ export default function Hero() {
 
     w-fit
     "
-  >
-    Prendre rendez-vous
-  </Link>
-
-</motion.div>
-
-
-
+              >
+                Prendre rendez-vous
+              </Link>
+            </motion.div>
           </div>
-
         </div>
-
       </div>
 
       <div
-  className="
+        className="
   flex
   absolute
 
@@ -227,7 +215,7 @@ export default function Hero() {
   items-center
   gap-3
   "
->
+      >
         <a
           href="https://www.instagram.com/maison.hevia/"
           target="_blank"
@@ -311,7 +299,6 @@ export default function Hero() {
           />
         ))}
       </div>
-
     </section>
-  )
+  );
 }

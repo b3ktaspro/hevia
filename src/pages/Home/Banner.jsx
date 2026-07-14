@@ -1,30 +1,30 @@
-import { useEffect, useRef } from "react"
-import img from "/images/home/acceuil_home5.jpg"
+import { useEffect, useRef } from "react";
+import img from "/images/home/acceuil_home5.jpg";
 
 export default function Banner() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-12");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -47,7 +47,6 @@ export default function Banner() {
         duration-1000
       "
     >
-
       <img
         src={img}
         alt="HEVIA"
@@ -68,7 +67,6 @@ export default function Banner() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
-
         <span
           className="
             inline-block
@@ -100,13 +98,8 @@ export default function Banner() {
           "
         >
           Des matériaux conçus
-
           <br />
-
-          <span className="text-[#CBA18B]">
-            pour traverser le temps
-          </span>
-
+          <span className="text-[#CBA18B]">pour traverser le temps</span>
         </h2>
 
         <p
@@ -123,9 +116,9 @@ export default function Banner() {
             leading-relaxed
           "
         >
-          Chaque collection est sélectionnée pour son esthétique,
-          sa durabilité et sa capacité à sublimer les espaces
-          contemporains comme les projets les plus ambitieux.
+          Chaque collection est sélectionnée pour son esthétique, sa durabilité
+          et sa capacité à sublimer les espaces contemporains comme les projets
+          les plus ambitieux.
         </p>
 
         <div
@@ -137,7 +130,6 @@ export default function Banner() {
             justify-center
           "
         >
-
           <div
             className="
               w-16
@@ -147,11 +139,8 @@ export default function Banner() {
               bg-[#CBA18B]
             "
           />
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -7,7 +7,6 @@ import Faq from "./Home/Faq";
 import Hero from "./Home/Hero";
 import Reviews from "./Home/Reviews";
 
-
 export default function Home() {
   return (
     <>

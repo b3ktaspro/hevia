@@ -1,42 +1,35 @@
-import { useEffect, useRef } from "react"
-import imgMain from "/images/home/apropos_home2.jpg"
-import logo from "/images/logo/logo-hevia.jpg"
+import { useEffect, useRef } from "react";
+import imgMain from "/images/home/apropos_home2.jpg";
+import logo from "/images/logo/logo-hevia.jpg";
 
 export default function ExpertiseSection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -50,7 +43,6 @@ export default function ExpertiseSection() {
           duration-1000
         "
       >
-
         <div
           className="
             grid
@@ -60,9 +52,7 @@ export default function ExpertiseSection() {
             items-center
           "
         >
-
           <div className="order-2 lg:order-1">
-
             <span
               className="
                 uppercase
@@ -89,10 +79,7 @@ export default function ExpertiseSection() {
                 leading-tight
               "
             >
-              L’expertise &
-              <span className="text-[#CBA18B]">
-                {" "}l’innovation
-              </span>
+              L’expertise &<span className="text-[#CBA18B]"> l’innovation</span>
             </h2>
 
             <p
@@ -107,12 +94,10 @@ export default function ExpertiseSection() {
               "
             >
               Chez
-              <span className="font-semibold text-[#85796D]">
-                {" "}HEVIA
-              </span>,
-              nous mettons notre savoir-faire au service de projets
-              modernes et durables. Chaque choix, chaque matériau est
-              pensé pour allier qualité, esthétisme et innovation.
+              <span className="font-semibold text-[#85796D]"> HEVIA</span>, nous
+              mettons notre savoir-faire au service de projets modernes et
+              durables. Chaque choix, chaque matériau est pensé pour allier
+              qualité, esthétisme et innovation.
             </p>
 
             <p
@@ -126,10 +111,9 @@ export default function ExpertiseSection() {
                 leading-relaxed
               "
             >
-              Nos solutions vont au-delà du carrelage. Nous proposons
-              des inspirations, des conseils personnalisés et des
-              collections sélectionnées pour transformer durablement
-              vos espaces.
+              Nos solutions vont au-delà du carrelage. Nous proposons des
+              inspirations, des conseils personnalisés et des collections
+              sélectionnées pour transformer durablement vos espaces.
             </p>
 
             <div
@@ -142,9 +126,7 @@ export default function ExpertiseSection() {
                 sm:gap-6
               "
             >
-
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -166,11 +148,9 @@ export default function ExpertiseSection() {
                 >
                   Références
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -192,11 +172,9 @@ export default function ExpertiseSection() {
                 >
                   Collections
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -218,11 +196,8 @@ export default function ExpertiseSection() {
                 >
                   Sélection
                 </p>
-
               </div>
-
             </div>
-
           </div>
 
           <div
@@ -235,9 +210,7 @@ export default function ExpertiseSection() {
               lg:justify-end
             "
           >
-
             <div className="relative">
-
               <div
                 className="
                   absolute
@@ -302,15 +275,10 @@ export default function ExpertiseSection() {
                   bg-white
                 "
               />
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

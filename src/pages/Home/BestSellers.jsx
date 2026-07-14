@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const categories = [
   { id: "salle-bain", label: "Salle de bain" },
@@ -9,7 +9,7 @@ const categories = [
   { id: "bois", label: "Bois" },
   { id: "beton", label: "Béton" },
   { id: "marbre", label: "Marbre" },
-]
+];
 
 const collections = {
   "salle-bain": {
@@ -67,20 +67,17 @@ const collections = {
     description:
       "Des collections inspirées des marbres les plus prestigieux pour des espaces raffinés.",
   },
-}
+};
 
 export default function BestSellers() {
-  const [active, setActive] = useState("salle-bain")
+  const [active, setActive] = useState("salle-bain");
 
-  const current = collections[active]
+  const current = collections[active];
 
   return (
     <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-3xl mx-auto">
-
           <span
             className="
               uppercase
@@ -108,11 +105,7 @@ export default function BestSellers() {
             "
           >
             Nos collections
-
-            <span className="text-[#CBA18B]">
-              {" "}les plus appréciées
-            </span>
-
+            <span className="text-[#CBA18B]"> les plus appréciées</span>
           </h2>
 
           <p
@@ -125,15 +118,13 @@ export default function BestSellers() {
               leading-relaxed
             "
           >
-            Découvrez les univers qui inspirent
-            les architectes, décorateurs et particuliers.
+            Découvrez les univers qui inspirent les architectes, décorateurs et
+            particuliers.
           </p>
-
         </div>
 
-        
         <div
-  className="
+          className="
     mt-10
     sm:mt-14
     flex
@@ -142,14 +133,12 @@ export default function BestSellers() {
     gap-x-8
     gap-y-4
   "
->
-
-  {categories.map((cat) => (
-
-    <button
-      key={cat.id}
-      onClick={() => setActive(cat.id)}
-      className="
+        >
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActive(cat.id)}
+              className="
         relative
         pb-2
         text-sm
@@ -157,10 +146,9 @@ export default function BestSellers() {
         transition-all
         duration-300
       "
-    >
-
-      <span
-        className={`
+            >
+              <span
+                className={`
           transition-colors
           duration-300
 
@@ -170,12 +158,12 @@ export default function BestSellers() {
               : "text-[#1E2A38]/40 hover:text-[#1E2A38]/80"
           }
         `}
-      >
-        {cat.label}
-      </span>
+              >
+                {cat.label}
+              </span>
 
-      <span
-        className={`
+              <span
+                className={`
           absolute
           left-0
           -bottom-[2px]
@@ -184,22 +172,14 @@ export default function BestSellers() {
           transition-all
           duration-500
 
-          ${
-            active === cat.id
-              ? "w-full"
-              : "w-0"
-          }
+          ${active === cat.id ? "w-full" : "w-0"}
         `}
-      />
-
-    </button>
-
-  ))}
-
-</div>
+              />
+            </button>
+          ))}
+        </div>
 
         <AnimatePresence mode="wait">
-
           <motion.div
             key={active}
             initial={{
@@ -227,7 +207,6 @@ export default function BestSellers() {
               items-center
             "
           >
-
             <div
               className="
                 relative
@@ -240,7 +219,6 @@ export default function BestSellers() {
                 group
               "
             >
-
               <img
                 src={current.image}
                 alt={current.title}
@@ -269,7 +247,6 @@ export default function BestSellers() {
                   sm:right-10
                 "
               >
-
                 <span
                   className="
                     uppercase
@@ -295,13 +272,10 @@ export default function BestSellers() {
                 >
                   {current.title}
                 </h3>
-
               </div>
-
             </div>
 
             <div className="text-center lg:text-left">
-
               <span
                 className="
                   uppercase
@@ -348,7 +322,6 @@ export default function BestSellers() {
               </p>
 
               <div className="mt-8 sm:mt-10">
-
                 <button
                   className="
                     w-full
@@ -370,17 +343,11 @@ export default function BestSellers() {
                 >
                   Découvrir la collection
                 </button>
-
               </div>
-
             </div>
-
           </motion.div>
-
         </AnimatePresence>
-
       </div>
-
     </section>
-  )
+  );
 }

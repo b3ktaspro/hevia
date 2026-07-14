@@ -1,42 +1,34 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export default function Intro() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-16 sm:py-24 md:py-36 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div
           ref={ref}
           className="
@@ -51,7 +43,6 @@ export default function Intro() {
             duration-1000
           "
         >
-
           <div
             className="
               absolute
@@ -94,7 +85,6 @@ export default function Intro() {
               md:py-24
             "
           >
-
             <span
               className="
                 uppercase
@@ -124,9 +114,7 @@ export default function Intro() {
               "
             >
               L'excellence du
-              <span className="text-[#CBA18B]">
-                {" "}carrelage
-              </span>
+              <span className="text-[#CBA18B]"> carrelage</span>
               <br />
               au service de vos espaces
             </h2>
@@ -160,7 +148,6 @@ export default function Intro() {
                 sm:gap-10
               "
             >
-
               <div>
                 <div
                   className="
@@ -238,7 +225,6 @@ export default function Intro() {
                   Accompagnement personnalisé
                 </p>
               </div>
-
             </div>
 
             <div
@@ -251,13 +237,9 @@ export default function Intro() {
                 bg-[#CBA18B]
               "
             />
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

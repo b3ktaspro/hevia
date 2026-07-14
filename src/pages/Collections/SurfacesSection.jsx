@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -43,16 +43,13 @@ const items = [
     desc: "Des matériaux conçus pour résister durablement aux conditions extérieures.",
     img: "/images/home/acceuil_home3.jpg",
   },
-]
+];
 
 export default function SurfacesSection() {
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -79,9 +76,7 @@ export default function SurfacesSection() {
             "
           >
             Des collections pour
-            <span className="text-[#CBA18B]">
-              {" "}chaque projet
-            </span>
+            <span className="text-[#CBA18B]"> chaque projet</span>
           </h2>
 
           <p
@@ -99,7 +94,6 @@ export default function SurfacesSection() {
           >
             Découvrez les différentes matières qui composent notre sélection.
           </p>
-
         </div>
 
         <div
@@ -116,11 +110,10 @@ export default function SurfacesSection() {
             lg:gap-8
           "
         >
-
           {items.map((item) => (
-           <Link
-           to={item.path}
-           className="
+            <Link
+              to={item.path}
+              className="
              group
              relative
              overflow-hidden
@@ -132,9 +125,7 @@ export default function SurfacesSection() {
              lg:h-[580px]
              block
            "
-         >
-          
-
+            >
               <img
                 src={item.img}
                 alt={item.title}
@@ -182,7 +173,6 @@ export default function SurfacesSection() {
                   lg:p-8
                 "
               >
-
                 <span
                   className="
                     uppercase
@@ -224,7 +214,7 @@ export default function SurfacesSection() {
                 </p>
 
                 <div
-  className="
+                  className="
     inline-flex
     mt-6
     sm:mt-8
@@ -234,30 +224,23 @@ export default function SurfacesSection() {
     sm:text-base
     text-[#CBA18B]
   "
->
-  Découvrir
-
-  <span
-    className="
+                >
+                  Découvrir
+                  <span
+                    className="
       transition-transform
       duration-500
       group-hover:translate-x-2
     "
-  >
-    →
-  </span>
-
-</div>
-
+                  >
+                    →
+                  </span>
+                </div>
               </div>
-
-              </Link>
+            </Link>
           ))}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -4,8 +4,8 @@ import Intro from "./Home/Intro";
 export default function Contact() {
   return (
     <>
-    <ContactSection />
-    <Intro />
+      <ContactSection />
+      <Intro />
     </>
   );
 }

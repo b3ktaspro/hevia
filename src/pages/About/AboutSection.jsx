@@ -1,38 +1,32 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
-import image from "/images/logo/logo-hevia.jpg"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import image from "/images/logo/logo-hevia.jpg";
 
 export default function AboutSection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -55,9 +49,7 @@ transition-all
 duration-1000
 "
     >
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div
           className="
             grid
@@ -68,7 +60,6 @@ duration-1000
             items-center
           "
         >
-
           <div
             className="
               relative
@@ -80,10 +71,8 @@ duration-1000
               order-1
             "
           >
-
-
-<div
-  className="
+            <div
+              className="
     relative
     overflow-hidden
     rounded-[24px]
@@ -92,26 +81,24 @@ duration-1000
     bg-[#ECE6DF]
     order-1
   "
->
-  <img
-    src={image}
-    alt="HEVIA"
-    className="
+            >
+              <img
+                src={image}
+                alt="HEVIA"
+                className="
       w-full
       h-auto
       object-contain
     "
-  />
-</div>
+              />
+            </div>
 
             <div className="absolute inset-0 bg-black/15" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
           </div>
 
           <div className="order-2">
-
             <span
               className="
                 uppercase
@@ -139,9 +126,7 @@ duration-1000
               "
             >
               Une vision moderne du
-              <span className="text-[#CBA18B]">
-                {" "}carrelage
-              </span>
+              <span className="text-[#CBA18B]"> carrelage</span>
             </h2>
 
             <p
@@ -155,9 +140,9 @@ duration-1000
                 leading-relaxed
               "
             >
-              HEVIA réunit design, exigence et sélection
-              rigoureuse afin de proposer des collections
-              capables de répondre aux projets les plus ambitieux.
+              HEVIA réunit design, exigence et sélection rigoureuse afin de
+              proposer des collections capables de répondre aux projets les plus
+              ambitieux.
             </p>
 
             <p
@@ -170,10 +155,9 @@ duration-1000
                 leading-relaxed
               "
             >
-              Chaque matériau est choisi pour sa qualité,
-              sa durabilité et sa capacité à créer des espaces
-              élégants qui traversent les années sans perdre
-              leur caractère.
+              Chaque matériau est choisi pour sa qualité, sa durabilité et sa
+              capacité à créer des espaces élégants qui traversent les années
+              sans perdre leur caractère.
             </p>
 
             <p
@@ -186,9 +170,9 @@ duration-1000
                 leading-relaxed
               "
             >
-              Notre approche repose sur le conseil,
-              la proximité et une attention particulière
-              portée aux détails qui font toute la différence.
+              Notre approche repose sur le conseil, la proximité et une
+              attention particulière portée aux détails qui font toute la
+              différence.
             </p>
 
             <div
@@ -201,9 +185,7 @@ duration-1000
                 sm:gap-8
               "
             >
-
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -226,11 +208,9 @@ duration-1000
                 >
                   Références
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -253,11 +233,9 @@ duration-1000
                 >
                   Collections
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -280,9 +258,7 @@ duration-1000
                 >
                   Sélectionnées
                 </p>
-
               </div>
-
             </div>
 
             <div
@@ -296,7 +272,6 @@ duration-1000
                 sm:gap-4
               "
             >
-
               <Link
                 to="/collections"
                 className="
@@ -342,15 +317,10 @@ duration-1000
               >
                 Notre histoire
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

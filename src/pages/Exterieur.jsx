@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import hero from "/images/home/acceuil_home3.jpg"
+import hero from "/images/home/acceuil_home3.jpg";
 
 export default function Exterieur() {
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -32,9 +29,7 @@ export default function Exterieur() {
             "
           >
             Aménagement
-            <span className="text-[#CBA18B]">
-              {" "}Extérieur
-            </span>
+            <span className="text-[#CBA18B]"> Extérieur</span>
           </h1>
 
           <p
@@ -46,11 +41,10 @@ export default function Exterieur() {
               leading-relaxed
             "
           >
-            Des collections pensées pour les terrasses,
-            plages de piscine, jardins et espaces extérieurs
-            où design et résistance doivent cohabiter.
+            Des collections pensées pour les terrasses, plages de piscine,
+            jardins et espaces extérieurs où design et résistance doivent
+            cohabiter.
           </p>
-
         </div>
 
         <div
@@ -64,7 +58,6 @@ export default function Exterieur() {
             lg:h-[650px]
           "
         >
-
           <img
             src={hero}
             alt="Extérieur"
@@ -74,7 +67,6 @@ export default function Exterieur() {
               object-cover
             "
           />
-
         </div>
 
         <div
@@ -86,9 +78,7 @@ export default function Exterieur() {
             items-center
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -111,20 +101,18 @@ export default function Exterieur() {
             >
               Conçu pour durer
             </h2>
-
           </div>
 
           <div>
-
             <p
               className="
                 text-[#1E2A38]/70
                 leading-relaxed
               "
             >
-              Les revêtements extérieurs doivent faire face
-              aux intempéries, aux UV, aux variations de température
-              et à une utilisation intensive tout au long de l'année.
+              Les revêtements extérieurs doivent faire face aux intempéries, aux
+              UV, aux variations de température et à une utilisation intensive
+              tout au long de l'année.
             </p>
 
             <p
@@ -134,19 +122,14 @@ export default function Exterieur() {
                 leading-relaxed
               "
             >
-              Nos collections associent esthétique contemporaine
-              et résistance afin de créer des espaces extérieurs
-              élégants et durables.
+              Nos collections associent esthétique contemporaine et résistance
+              afin de créer des espaces extérieurs élégants et durables.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24 grid lg:grid-cols-2 gap-12">
-
           <div>
-
             <span
               className="
                 uppercase
@@ -168,35 +151,28 @@ export default function Exterieur() {
               "
             >
               Pourquoi choisir
-              <span className="text-[#CBA18B]">
-                {" "}nos solutions extérieures
-              </span>
+              <span className="text-[#CBA18B]"> nos solutions extérieures</span>
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             <p className="text-[#1E2A38]/70 leading-relaxed">
               Excellente résistance aux intempéries et aux UV.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Surface durable adaptée aux passages fréquents
-              et aux usages quotidiens.
+              Surface durable adaptée aux passages fréquents et aux usages
+              quotidiens.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Grand choix de finitions pour s'intégrer à tous
-              les styles architecturaux.
+              Grand choix de finitions pour s'intégrer à tous les styles
+              architecturaux.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -229,11 +205,8 @@ export default function Exterieur() {
               gap-6
             "
           >
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Terrasse
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Terrasse</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Un espace convivial pensé pour durer.
@@ -241,9 +214,7 @@ export default function Exterieur() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Piscine
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Piscine</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Résistance à l'eau et à l'exposition solaire.
@@ -251,9 +222,7 @@ export default function Exterieur() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Jardin
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Jardin</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Intégration harmonieuse dans les espaces verts.
@@ -261,17 +230,13 @@ export default function Exterieur() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Allée
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Allée</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Robustesse adaptée aux zones de passage.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div
@@ -286,7 +251,6 @@ export default function Exterieur() {
             border-[#CBA18B]/10
           "
         >
-
           <div
             className="
               grid
@@ -294,49 +258,33 @@ export default function Exterieur() {
               gap-8
             "
           >
-
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Résistant
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Résistant</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Conçu pour affronter les conditions extérieures.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Sécurisant
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Sécurisant</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Finitions adaptées aux zones extérieures.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Durable
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Durable</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Conserve son esthétique au fil des saisons.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -361,15 +309,14 @@ export default function Exterieur() {
           </h2>
 
           <div className="mt-12 space-y-6">
-
             <div className="bg-white p-8 rounded-[24px]">
               <h3 className="text-[#1E2A38]">
                 Les carrelages résistent-ils au gel ?
               </h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui, les collections extérieures sont conçues
-                pour supporter les variations climatiques.
+                Oui, les collections extérieures sont conçues pour supporter les
+                variations climatiques.
               </p>
             </div>
 
@@ -379,8 +326,8 @@ export default function Exterieur() {
               </h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui, ils sont parfaitement adaptés aux plages
-                de piscine et espaces aquatiques.
+                Oui, ils sont parfaitement adaptés aux plages de piscine et
+                espaces aquatiques.
               </p>
             </div>
 
@@ -390,17 +337,14 @@ export default function Exterieur() {
               </h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui, un entretien régulier suffit à conserver
-                leur aspect d'origine.
+                Oui, un entretien régulier suffit à conserver leur aspect
+                d'origine.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-20 text-center">
-
           <Link
             to="/collections"
             className="
@@ -420,11 +364,8 @@ export default function Exterieur() {
           >
             Retour aux collections
           </Link>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

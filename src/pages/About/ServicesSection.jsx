@@ -1,64 +1,57 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const services = [
   {
     number: "01",
     title: "Conseils personnalisés",
-    text: "Nos experts vous accompagnent dans le choix des matériaux, textures et couleurs afin de créer un projet cohérent, élégant et durable."
+    text: "Nos experts vous accompagnent dans le choix des matériaux, textures et couleurs afin de créer un projet cohérent, élégant et durable.",
   },
   {
     number: "02",
     title: "Solutions sur mesure",
-    text: "Du simple revêtement à l'aménagement complet, nous sélectionnons des collections adaptées à vos besoins et à votre budget."
+    text: "Du simple revêtement à l'aménagement complet, nous sélectionnons des collections adaptées à vos besoins et à votre budget.",
   },
   {
     number: "03",
     title: "Suivi & accompagnement",
-    text: "Nous restons à vos côtés à chaque étape afin de garantir la réussite de votre projet et une expérience sereine."
-  }
-]
+    text: "Nous restons à vos côtés à chaque étape afin de garantir la réussite de votre projet et une expérience sereine.",
+  },
+];
 
 export default function ServicesSection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
-    const items = el.querySelectorAll("[data-animate]")
+    const items = el.querySelectorAll("[data-animate]");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.remove(
-                "opacity-0",
-                "translate-y-12"
-              )
+              entry.target.classList.remove("opacity-0", "translate-y-12");
 
-              entry.target.classList.add(
-                "opacity-100",
-                "translate-y-0"
-              )
-            }, index * 120)
+              entry.target.classList.add("opacity-100", "translate-y-0");
+            }, index * 120);
           }
-        })
+        });
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    items.forEach((item) => observer.observe(item))
+    items.forEach((item) => observer.observe(item));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -68,7 +61,6 @@ export default function ServicesSection() {
           sm:px-6
         "
       >
-
         <div
           data-animate
           className="
@@ -81,7 +73,6 @@ export default function ServicesSection() {
             duration-1000
           "
         >
-
           <span
             className="
               uppercase
@@ -109,9 +100,7 @@ export default function ServicesSection() {
             "
           >
             Un accompagnement
-            <span className="text-[#CBA18B]">
-              {" "}sur mesure
-            </span>
+            <span className="text-[#CBA18B]"> sur mesure</span>
           </h2>
 
           <p
@@ -127,11 +116,10 @@ export default function ServicesSection() {
               mx-auto
             "
           >
-            Chez HEVIA, nous vous accompagnons dans chaque étape
-            de votre projet afin de vous proposer les meilleures
-            solutions en matière de design, de qualité et de durabilité.
+            Chez HEVIA, nous vous accompagnons dans chaque étape de votre projet
+            afin de vous proposer les meilleures solutions en matière de design,
+            de qualité et de durabilité.
           </p>
-
         </div>
 
         <div
@@ -147,7 +135,6 @@ export default function ServicesSection() {
             lg:gap-8
           "
         >
-
           {services.map((service) => (
             <div
               key={service.number}
@@ -171,7 +158,6 @@ export default function ServicesSection() {
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
-
               <div
                 className="
                   absolute
@@ -234,10 +220,8 @@ export default function ServicesSection() {
               >
                 {service.text}
               </p>
-
             </div>
           ))}
-
         </div>
 
         <div
@@ -259,7 +243,6 @@ export default function ServicesSection() {
             duration-1000
           "
         >
-
           <span
             className="
               uppercase
@@ -303,15 +286,12 @@ export default function ServicesSection() {
               leading-relaxed
             "
           >
-            Notre mission est de vous guider dans la sélection
-            des matériaux les plus adaptés à votre projet afin
-            de créer des espaces élégants, durables et intemporels.
+            Notre mission est de vous guider dans la sélection des matériaux les
+            plus adaptés à votre projet afin de créer des espaces élégants,
+            durables et intemporels.
           </p>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import hero from "/images/home/acceuil_home_1.jpg"
+import hero from "/images/home/acceuil_home_1.jpg";
 
 export default function ImitPierre() {
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -32,9 +29,7 @@ export default function ImitPierre() {
             "
           >
             Imitation
-            <span className="text-[#CBA18B]">
-              {" "}Pierre
-            </span>
+            <span className="text-[#CBA18B]"> Pierre</span>
           </h1>
 
           <p
@@ -46,10 +41,9 @@ export default function ImitPierre() {
               leading-relaxed
             "
           >
-            L'élégance intemporelle de la pierre naturelle associée
-            aux performances techniques du grès cérame moderne.
+            L'élégance intemporelle de la pierre naturelle associée aux
+            performances techniques du grès cérame moderne.
           </p>
-
         </div>
 
         <div
@@ -63,7 +57,6 @@ export default function ImitPierre() {
             lg:h-[650px]
           "
         >
-
           <img
             src={hero}
             alt="Imitation Pierre"
@@ -73,7 +66,6 @@ export default function ImitPierre() {
               object-cover
             "
           />
-
         </div>
 
         <div
@@ -85,9 +77,7 @@ export default function ImitPierre() {
             items-center
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -110,20 +100,18 @@ export default function ImitPierre() {
             >
               L'authenticité minérale
             </h2>
-
           </div>
 
           <div>
-
             <p
               className="
                 text-[#1E2A38]/70
                 leading-relaxed
               "
             >
-              Les collections imitation pierre reproduisent les
-              nuances, les textures et le caractère des pierres
-              naturelles les plus prestigieuses.
+              Les collections imitation pierre reproduisent les nuances, les
+              textures et le caractère des pierres naturelles les plus
+              prestigieuses.
             </p>
 
             <p
@@ -133,19 +121,14 @@ export default function ImitPierre() {
                 leading-relaxed
               "
             >
-              Elles permettent de créer des espaces élégants,
-              authentiques et intemporels tout en bénéficiant
-              d'une grande facilité d'entretien.
+              Elles permettent de créer des espaces élégants, authentiques et
+              intemporels tout en bénéficiant d'une grande facilité d'entretien.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24 grid lg:grid-cols-2 gap-12">
-
           <div>
-
             <span
               className="
                 uppercase
@@ -167,36 +150,29 @@ export default function ImitPierre() {
               "
             >
               Pourquoi choisir
-              <span className="text-[#CBA18B]">
-                {" "}l'imitation pierre
-              </span>
+              <span className="text-[#CBA18B]"> l'imitation pierre</span>
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              L'imitation pierre apporte le cachet des matériaux
-              naturels sans les contraintes d'entretien associées.
+              L'imitation pierre apporte le cachet des matériaux naturels sans
+              les contraintes d'entretien associées.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Elle résiste parfaitement aux taches, à l'humidité
-              et à l'usure quotidienne.
+              Elle résiste parfaitement aux taches, à l'humidité et à l'usure
+              quotidienne.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Son esthétique intemporelle s'adapte aussi bien aux
-              projets contemporains qu'aux ambiances plus traditionnelles.
+              Son esthétique intemporelle s'adapte aussi bien aux projets
+              contemporains qu'aux ambiances plus traditionnelles.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -229,11 +205,8 @@ export default function ImitPierre() {
               gap-6
             "
           >
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Salon
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Salon</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Pour créer une ambiance élégante et authentique.
@@ -241,9 +214,7 @@ export default function ImitPierre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Terrasse
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Terrasse</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Aspect naturel idéal pour les espaces extérieurs.
@@ -251,9 +222,7 @@ export default function ImitPierre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Salle de bain
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Salle de bain</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Ambiance spa inspirée des matières minérales.
@@ -261,17 +230,13 @@ export default function ImitPierre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Entrée
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Entrée</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Une première impression forte et raffinée.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div
@@ -286,7 +251,6 @@ export default function ImitPierre() {
             border-[#CBA18B]/10
           "
         >
-
           <div
             className="
               grid
@@ -294,49 +258,33 @@ export default function ImitPierre() {
               gap-8
             "
           >
-
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Naturel
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Naturel</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Fidèle aux plus belles pierres naturelles.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Durable
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Durable</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Conçu pour durer de nombreuses années.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Facile
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Facile</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Entretien simple au quotidien.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -361,15 +309,12 @@ export default function ImitPierre() {
           </h2>
 
           <div className="mt-12 space-y-6">
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Est-ce de la vraie pierre ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Est-ce de la vraie pierre ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Non, il s'agit d'un carrelage reproduisant l'apparence
-                et les textures de la pierre naturelle.
+                Non, il s'agit d'un carrelage reproduisant l'apparence et les
+                textures de la pierre naturelle.
               </p>
             </div>
 
@@ -379,27 +324,22 @@ export default function ImitPierre() {
               </h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui, certaines collections sont spécialement conçues
-                pour les terrasses et aménagements extérieurs.
+                Oui, certaines collections sont spécialement conçues pour les
+                terrasses et aménagements extérieurs.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Est-il facile à entretenir ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Est-il facile à entretenir ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Oui, il ne nécessite aucun traitement particulier.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-20 text-center">
-
           <Link
             to="/collections"
             className="
@@ -419,11 +359,8 @@ export default function ImitPierre() {
           >
             Retour aux collections
           </Link>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import hero from "/images/home/acceuil_home_2.png"
+import hero from "/images/home/acceuil_home_2.png";
 
 export default function SalleDeBain() {
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -32,9 +29,7 @@ export default function SalleDeBain() {
             "
           >
             Salle de
-            <span className="text-[#CBA18B]">
-              {" "}Bain
-            </span>
+            <span className="text-[#CBA18B]"> Bain</span>
           </h1>
 
           <p
@@ -46,10 +41,9 @@ export default function SalleDeBain() {
               leading-relaxed
             "
           >
-            Des collections conçues pour transformer chaque salle
-            de bain en un espace de détente, de confort et de bien-être.
+            Des collections conçues pour transformer chaque salle de bain en un
+            espace de détente, de confort et de bien-être.
           </p>
-
         </div>
 
         <div
@@ -63,7 +57,6 @@ export default function SalleDeBain() {
             lg:h-[650px]
           "
         >
-
           <img
             src={hero}
             alt="Salle de Bain"
@@ -73,7 +66,6 @@ export default function SalleDeBain() {
               object-cover
             "
           />
-
         </div>
 
         <div
@@ -85,9 +77,7 @@ export default function SalleDeBain() {
             items-center
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -108,23 +98,20 @@ export default function SalleDeBain() {
                 text-[#1E2A38]
               "
             >
-              Un espace pensé
-              pour la détente
+              Un espace pensé pour la détente
             </h2>
-
           </div>
 
           <div>
-
             <p
               className="
                 text-[#1E2A38]/70
                 leading-relaxed
               "
             >
-              La salle de bain est devenue une véritable pièce de vie.
-              Nos collections permettent de créer des espaces élégants,
-              chaleureux et adaptés à chaque style d'intérieur.
+              La salle de bain est devenue une véritable pièce de vie. Nos
+              collections permettent de créer des espaces élégants, chaleureux
+              et adaptés à chaque style d'intérieur.
             </p>
 
             <p
@@ -134,19 +121,15 @@ export default function SalleDeBain() {
                 leading-relaxed
               "
             >
-              Du minimalisme contemporain aux ambiances naturelles,
-              chaque projet bénéficie de matériaux résistants à
-              l'humidité et faciles à entretenir.
+              Du minimalisme contemporain aux ambiances naturelles, chaque
+              projet bénéficie de matériaux résistants à l'humidité et faciles à
+              entretenir.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24 grid lg:grid-cols-2 gap-12">
-
           <div>
-
             <span
               className="
                 uppercase
@@ -168,36 +151,28 @@ export default function SalleDeBain() {
               "
             >
               Pourquoi choisir
-              <span className="text-[#CBA18B]">
-                {" "}nos collections
-              </span>
+              <span className="text-[#CBA18B]"> nos collections</span>
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Résistance à l'eau, à l'humidité et aux variations
-              de température.
+              Résistance à l'eau, à l'humidité et aux variations de température.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Grand choix de formats, textures et finitions pour
-              personnaliser chaque espace.
+              Grand choix de formats, textures et finitions pour personnaliser
+              chaque espace.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Une combinaison parfaite entre esthétique,
-              durabilité et simplicité d'entretien.
+              Une combinaison parfaite entre esthétique, durabilité et
+              simplicité d'entretien.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -230,11 +205,8 @@ export default function SalleDeBain() {
               gap-6
             "
           >
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Douche
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Douche</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Revêtements adaptés aux espaces humides.
@@ -242,9 +214,7 @@ export default function SalleDeBain() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Sol
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Sol</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Résistance et sécurité au quotidien.
@@ -252,9 +222,7 @@ export default function SalleDeBain() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Mur
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Mur</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Création d'ambiances élégantes et modernes.
@@ -262,17 +230,13 @@ export default function SalleDeBain() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Spa
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Spa</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Inspiration bien-être et détente.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div
@@ -287,7 +251,6 @@ export default function SalleDeBain() {
             border-[#CBA18B]/10
           "
         >
-
           <div
             className="
               grid
@@ -295,49 +258,33 @@ export default function SalleDeBain() {
               gap-8
             "
           >
-
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Résistant
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Résistant</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Conçu pour les environnements humides.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Élégant
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Élégant</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Des finitions adaptées aux tendances actuelles.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Durable
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Durable</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Une qualité pensée pour durer.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -362,7 +309,6 @@ export default function SalleDeBain() {
           </h2>
 
           <div className="mt-12 space-y-6">
-
             <div className="bg-white p-8 rounded-[24px]">
               <h3 className="text-[#1E2A38]">
                 Ces carrelages résistent-ils à l'humidité ?
@@ -384,21 +330,16 @@ export default function SalleDeBain() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Sont-ils faciles à nettoyer ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Sont-ils faciles à nettoyer ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Oui, un entretien simple suffit au quotidien.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-20 text-center">
-
           <Link
             to="/collections"
             className="
@@ -418,11 +359,8 @@ export default function SalleDeBain() {
           >
             Retour aux collections
           </Link>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

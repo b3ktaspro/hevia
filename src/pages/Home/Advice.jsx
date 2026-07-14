@@ -1,48 +1,40 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import img from "/images/home/acceuil_home_2.png"
+import img from "/images/home/acceuil_home_2.png";
 
 export default function Advice() {
-  const imgRef = useRef(null)
-  const textRef = useRef(null)
+  const imgRef = useRef(null);
+  const textRef = useRef(null);
 
   useEffect(() => {
-    const elements = [imgRef.current, textRef.current]
+    const elements = [imgRef.current, textRef.current];
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.remove(
-              "opacity-0",
-              "translate-y-12"
-            )
+            entry.target.classList.remove("opacity-0", "translate-y-12");
 
-            entry.target.classList.add(
-              "opacity-100",
-              "translate-y-0"
-            )
+            entry.target.classList.add("opacity-100", "translate-y-0");
           }
-        })
+        });
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
     elements.forEach((el) => {
-      if (el) observer.observe(el)
-    })
+      if (el) observer.observe(el);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div
           className="
             grid
@@ -53,7 +45,6 @@ export default function Advice() {
             items-center
           "
         >
-
           <div
             ref={imgRef}
             className="
@@ -69,8 +60,6 @@ export default function Advice() {
               group
             "
           >
-
-
             <img
               src={img}
               alt="Conseil HEVIA"
@@ -89,7 +78,6 @@ export default function Advice() {
             <div className="absolute inset-0 bg-black/15" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
           </div>
 
           <div
@@ -101,7 +89,6 @@ export default function Advice() {
               duration-1000
             "
           >
-
             <span
               className="
                 uppercase
@@ -129,9 +116,7 @@ export default function Advice() {
               "
             >
               Trouvez le matériau
-              <span className="text-[#CBA18B]">
-                {" "}idéal
-              </span>
+              <span className="text-[#CBA18B]"> idéal</span>
             </h2>
 
             <p
@@ -145,9 +130,9 @@ export default function Advice() {
                 leading-relaxed
               "
             >
-              Choisir un carrelage ne se limite pas à une question
-              d’esthétique. Chaque espace possède ses contraintes,
-              ses usages et son identité propre.
+              Choisir un carrelage ne se limite pas à une question d’esthétique.
+              Chaque espace possède ses contraintes, ses usages et son identité
+              propre.
             </p>
 
             <p
@@ -160,10 +145,9 @@ export default function Advice() {
                 leading-relaxed
               "
             >
-              Notre équipe vous accompagne dans la sélection
-              des formats, textures, couleurs et finitions
-              afin de créer des espaces harmonieux,
-              durables et parfaitement adaptés à votre projet.
+              Notre équipe vous accompagne dans la sélection des formats,
+              textures, couleurs et finitions afin de créer des espaces
+              harmonieux, durables et parfaitement adaptés à votre projet.
             </p>
 
             <div
@@ -176,9 +160,7 @@ export default function Advice() {
                 sm:gap-8
               "
             >
-
               <div>
-
                 <div
                   className="
                     text-3xl
@@ -201,11 +183,9 @@ export default function Advice() {
                 >
                   Références disponibles
                 </p>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-3xl
@@ -228,13 +208,10 @@ export default function Advice() {
                 >
                   Accompagnement personnalisé
                 </p>
-
               </div>
-
             </div>
 
             <div className="mt-8 sm:mt-12">
-
               <Link
                 to="/contact"
                 className="
@@ -261,15 +238,10 @@ export default function Advice() {
               >
                 Prendre rendez-vous
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

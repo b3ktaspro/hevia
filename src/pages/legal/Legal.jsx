@@ -1,34 +1,33 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Legal() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-10");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="pt-28 sm:pt-36 lg:pt-44 pb-20 sm:pb-28 lg:pb-40 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -42,9 +41,7 @@ export default function Legal() {
           duration-700
         "
       >
-
         <div className="text-center">
-
           <span
             className="
               uppercase
@@ -71,9 +68,7 @@ export default function Legal() {
             "
           >
             Mentions
-            <span className="text-[#CBA18B]">
-              {" "}légales
-            </span>
+            <span className="text-[#CBA18B]"> légales</span>
           </h1>
 
           <p
@@ -93,18 +88,17 @@ export default function Legal() {
             pour la confiance dans l’économie numérique (LCEN), voici les
             informations légales relatives au site HEVIA.
           </p>
-
         </div>
 
         <div className="mt-10 sm:mt-16 space-y-5 sm:space-y-8">
-
           {[
             {
               title: "1. Éditeur du site",
               content: (
                 <>
                   Le site est édité par :
-                  <br /><br />
+                  <br />
+                  <br />
                   <strong>HEVIA</strong>
                   <br />
                   Siège social : 2 Rue ///, 34000 Montpellier
@@ -122,7 +116,8 @@ export default function Legal() {
               content: (
                 <>
                   Le site est hébergé par :
-                  <br /><br />
+                  <br />
+                  <br />
                   <strong>Netlify, Inc.</strong>
                   <br />
                   2325 3rd Street, Suite 215
@@ -147,8 +142,8 @@ export default function Legal() {
               title: "5. Données personnelles",
               content: (
                 <>
-                  Les informations collectées via le site font l’objet
-                  d’un traitement conforme au RGPD.
+                  Les informations collectées via le site font l’objet d’un
+                  traitement conforme au RGPD.
                   <br />
                   Consultez notre{" "}
                   <Link
@@ -156,7 +151,8 @@ export default function Legal() {
                     className="text-[#CBA18B] hover:underline"
                   >
                     politique de confidentialité
-                  </Link>.
+                  </Link>
+                  .
                 </>
               ),
             },
@@ -190,7 +186,6 @@ export default function Legal() {
                 shadow-[0_10px_40px_rgba(0,0,0,0.04)]
               "
             >
-
               <h2
                 className="
                   text-lg
@@ -214,14 +209,10 @@ export default function Legal() {
               >
                 {item.content}
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

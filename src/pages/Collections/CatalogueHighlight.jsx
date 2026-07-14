@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const collections = [
   {
@@ -22,43 +22,36 @@ const collections = [
       "Des matériaux conçus pour accompagner les projets résidentiels et professionnels les plus ambitieux.",
     image: "/images/home/catalogue_home1.jpg",
   },
-]
+];
 
 export default function CatalogueHighlight() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-24 md:py-32 lg:py-44 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -72,9 +65,7 @@ export default function CatalogueHighlight() {
           duration-1000
         "
       >
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -102,9 +93,7 @@ export default function CatalogueHighlight() {
             "
           >
             Des collections pensées
-            <span className="text-[#CBA18B]">
-              {" "}pour durer
-            </span>
+            <span className="text-[#CBA18B]"> pour durer</span>
           </h2>
 
           <p
@@ -124,11 +113,9 @@ export default function CatalogueHighlight() {
             architecturales les plus modernes tout en conservant leur élégance
             au fil du temps.
           </p>
-
         </div>
 
         <div className="mt-14 sm:mt-20 md:mt-24 space-y-14 sm:space-y-20 md:space-y-24">
-
           {collections.map((item, index) => (
             <div
               key={item.number}
@@ -139,14 +126,9 @@ export default function CatalogueHighlight() {
                 md:gap-12
                 lg:gap-16
                 items-center
-                ${
-                  index % 2 !== 0
-                    ? "lg:[&>*:first-child]:order-2"
-                    : ""
-                }
+                ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}
               `}
             >
-
               <div
                 className="
                   relative
@@ -157,7 +139,6 @@ export default function CatalogueHighlight() {
                   group
                 "
               >
-
                 <img
                   src={item.image}
                   alt={item.title}
@@ -177,11 +158,9 @@ export default function CatalogueHighlight() {
                 <div className="absolute inset-0 bg-black/20" />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-
               </div>
 
               <div className="text-center lg:text-left">
-
                 <div
                   className="
                     text-5xl
@@ -238,16 +217,11 @@ export default function CatalogueHighlight() {
                     lg:mx-0
                   "
                 />
-
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

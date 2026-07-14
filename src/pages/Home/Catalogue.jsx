@@ -1,31 +1,31 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
-import img from "/images/home/acceuil_home5.jpg"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import img from "/images/home/acceuil_home5.jpg";
 
 export default function Catalogue() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-12");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -41,11 +41,8 @@ export default function Catalogue() {
         duration-1000
       "
     >
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-3xl mx-auto">
-
           <span
             className="
               uppercase
@@ -73,11 +70,7 @@ export default function Catalogue() {
             "
           >
             Explorez notre
-
-            <span className="text-[#CBA18B]">
-              {" "}univers carrelage
-            </span>
-
+            <span className="text-[#CBA18B]"> univers carrelage</span>
           </h2>
 
           <p
@@ -93,7 +86,6 @@ export default function Catalogue() {
             Une sélection de collections inspirées par les matières naturelles,
             l’architecture contemporaine et l’excellence des finitions.
           </p>
-
         </div>
 
         <div
@@ -108,7 +100,6 @@ export default function Catalogue() {
             items-stretch
           "
         >
-
           <div
             className="
               relative
@@ -121,7 +112,6 @@ export default function Catalogue() {
               lg:min-h-[650px]
             "
           >
-
             <img
               src={img}
               alt="Catalogue HEVIA"
@@ -154,7 +144,6 @@ export default function Catalogue() {
                 lg:p-12
               "
             >
-
               <span
                 className="
                   uppercase
@@ -197,13 +186,11 @@ export default function Catalogue() {
                   leading-relaxed
                 "
               >
-                Des collections inspirées de la pierre,
-                du marbre, du bois et des matières
-                naturelles les plus élégantes.
+                Des collections inspirées de la pierre, du marbre, du bois et
+                des matières naturelles les plus élégantes.
               </p>
 
               <div className="mt-6 sm:mt-10">
-
                 <Link
                   to="/collections"
                   className="
@@ -229,11 +216,8 @@ export default function Catalogue() {
                 >
                   Découvrir le catalogue
                 </Link>
-
               </div>
-
             </div>
-
           </div>
 
           <div
@@ -252,7 +236,6 @@ export default function Catalogue() {
               justify-center
             "
           >
-
             <span
               className="
                 text-[#CBA18B]
@@ -279,8 +262,7 @@ export default function Catalogue() {
                 leading-tight
               "
             >
-              Des produits
-              d'exception
+              Des produits d'exception
             </h4>
 
             <p
@@ -293,14 +275,11 @@ export default function Catalogue() {
                 leading-relaxed
               "
             >
-              Chaque collection est sélectionnée
-              pour son esthétique, sa durabilité
-              et sa capacité à valoriser durablement
-              vos espaces.
+              Chaque collection est sélectionnée pour son esthétique, sa
+              durabilité et sa capacité à valoriser durablement vos espaces.
             </p>
 
             <div className="mt-8 sm:mt-10 space-y-4 sm:space-y-5">
-
               {[
                 "Carrelages intérieurs & extérieurs",
                 "Effets marbre, pierre, bois et béton",
@@ -319,7 +298,6 @@ export default function Catalogue() {
                     sm:gap-4
                   "
                 >
-
                   <div
                     className="
                       w-2
@@ -341,18 +319,12 @@ export default function Catalogue() {
                   >
                     {item}
                   </span>
-
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

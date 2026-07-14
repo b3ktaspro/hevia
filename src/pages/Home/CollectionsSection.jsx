@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import img1 from "/images/home/acceuil_home_1.jpg"
-import img2 from "/images/home/acceuil_home_2.png"
-import img3 from "/images/home/acceuil_home3.jpg"
-import img4 from "/images/home/acceuil_home_4.jpg"
+import img1 from "/images/home/acceuil_home_1.jpg";
+import img2 from "/images/home/acceuil_home_2.png";
+import img3 from "/images/home/acceuil_home3.jpg";
+import img4 from "/images/home/acceuil_home_4.jpg";
 
 const collections = [
   {
@@ -35,47 +35,38 @@ const collections = [
     img: img4,
     link: "/",
   },
-]
+];
 
 export default function CollectionsSection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-12"
-          )
+          el.classList.remove("opacity-0", "translate-y-12");
 
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-3xl mx-auto">
-
           <span
             className="
               uppercase
@@ -103,11 +94,7 @@ export default function CollectionsSection() {
             "
           >
             Explorez nos
-
-            <span className="text-[#CBA18B]">
-              {" "}collections
-            </span>
-
+            <span className="text-[#CBA18B]"> collections</span>
           </h2>
 
           <p
@@ -125,7 +112,6 @@ export default function CollectionsSection() {
             Une sélection pensée pour répondre aux projets les plus exigeants,
             entre design contemporain et qualité durable.
           </p>
-
         </div>
 
         <div
@@ -147,7 +133,6 @@ export default function CollectionsSection() {
             duration-1000
           "
         >
-
           {collections.map((item) => (
             <Link
               key={item.number}
@@ -164,7 +149,6 @@ export default function CollectionsSection() {
                 lg:h-[520px]
               "
             >
-
               <img
                 src={item.img}
                 alt={item.title}
@@ -213,7 +197,6 @@ export default function CollectionsSection() {
                   lg:p-8
                 "
               >
-
                 <span
                   className="
                     text-[#CBA18B]
@@ -277,7 +260,6 @@ export default function CollectionsSection() {
                   "
                 >
                   Découvrir
-
                   <span
                     className="
                       transition-transform
@@ -287,18 +269,12 @@ export default function CollectionsSection() {
                   >
                     →
                   </span>
-
                 </div>
-
               </div>
-
             </Link>
           ))}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

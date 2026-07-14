@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const inspirations = [
   {
@@ -25,46 +25,39 @@ const inspirations = [
     title: "Espaces de caractère",
     image: "/images/home/acceuil_home_1.jpg",
   },
-]
+];
 
 export default function InspirationSection() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
-  
-    if (!el) return
-  
+    const el = ref.current;
+
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove(
-            "opacity-0",
-            "translate-y-10"
-          )
-  
-          el.classList.add(
-            "opacity-100",
-            "translate-y-0"
-          )
-  
-          observer.unobserve(el)
+          el.classList.remove("opacity-0", "translate-y-10");
+
+          el.classList.add("opacity-100", "translate-y-0");
+
+          observer.unobserve(el);
         }
       },
       {
         threshold: 0,
-        rootMargin: "-100px 0px"
-      }
-    )
-  
-    observer.observe(el)
-  
-    return () => observer.disconnect()
-  }, [])
+        rootMargin: "-100px 0px",
+      },
+    );
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 lg:pb-40 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -78,9 +71,7 @@ export default function InspirationSection() {
           duration-1000
         "
       >
-
         <div className="max-w-3xl mx-auto text-center">
-
           <span
             className="
               uppercase
@@ -104,9 +95,7 @@ export default function InspirationSection() {
             "
           >
             Des idées pour
-            <span className="text-[#CBA18B]">
-              {" "}imaginer vos espaces
-            </span>
+            <span className="text-[#CBA18B]"> imaginer vos espaces</span>
           </h1>
 
           <p
@@ -121,9 +110,9 @@ export default function InspirationSection() {
             "
           >
             Découvrez une sélection d'ambiances, de matériaux et de projets
-            inspirants pour imaginer vos futurs espaces intérieurs et extérieurs.
+            inspirants pour imaginer vos futurs espaces intérieurs et
+            extérieurs.
           </p>
-
         </div>
 
         <div
@@ -136,9 +125,7 @@ export default function InspirationSection() {
             gap-6
           "
         >
-
           {inspirations.map((item) => (
-
             <div
               key={item.title}
               className="
@@ -150,7 +137,6 @@ export default function InspirationSection() {
                 sm:h-[500px]
               "
             >
-
               <img
                 src={item.image}
                 alt={item.title}
@@ -176,7 +162,6 @@ export default function InspirationSection() {
                   right-8
                 "
               >
-
                 <span
                   className="
                     uppercase
@@ -199,13 +184,9 @@ export default function InspirationSection() {
                 >
                   {item.title}
                 </h3>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
 
         <div
@@ -222,7 +203,6 @@ export default function InspirationSection() {
             border-[#CBA18B]/10
           "
         >
-
           <span
             className="
               uppercase
@@ -244,9 +224,7 @@ export default function InspirationSection() {
             "
           >
             Créez un intérieur
-            <span className="text-[#CBA18B]">
-              {" "}qui vous ressemble
-            </span>
+            <span className="text-[#CBA18B]"> qui vous ressemble</span>
           </h2>
 
           <p
@@ -258,15 +236,12 @@ export default function InspirationSection() {
               leading-relaxed
             "
           >
-            Nos collections sont sélectionnées pour répondre aux projets les plus exigeants,
-            qu'il s'agisse d'une rénovation complète, d'une construction neuve ou
-            simplement d'une recherche d'inspiration.
+            Nos collections sont sélectionnées pour répondre aux projets les
+            plus exigeants, qu'il s'agisse d'une rénovation complète, d'une
+            construction neuve ou simplement d'une recherche d'inspiration.
           </p>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-import { useEffect } from "react"
-import { motion } from "framer-motion"
-import { lenisInstance } from "../App"
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { lenisInstance } from "../App";
 
 export default function PageTransition({ children }) {
   useEffect(() => {
     if (lenisInstance) {
       lenisInstance.scrollTo(0, {
         immediate: true,
-      })
+      });
     } else {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     }
-  }, [])
+  }, []);
 
   return (
     <motion.div
@@ -30,5 +30,5 @@ export default function PageTransition({ children }) {
     >
       {children}
     </motion.div>
-  )
+  );
 }

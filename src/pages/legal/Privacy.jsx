@@ -1,33 +1,32 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export default function Privacy() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-10")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-10");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="pt-28 sm:pt-36 lg:pt-44 pb-20 sm:pb-28 lg:pb-40 bg-[#F8F5F1]">
-
       <div
         ref={ref}
         className="
@@ -41,9 +40,7 @@ export default function Privacy() {
           duration-700
         "
       >
-
         <div className="text-center">
-
           <span
             className="
               uppercase
@@ -70,9 +67,7 @@ export default function Privacy() {
             "
           >
             Politique de
-            <span className="text-[#CBA18B]">
-              {" "}confidentialité
-            </span>
+            <span className="text-[#CBA18B]"> confidentialité</span>
           </h1>
 
           <p
@@ -88,15 +83,13 @@ export default function Privacy() {
               mx-auto
             "
           >
-            Cette politique explique comment HEVIA collecte,
-            utilise et protège vos données personnelles conformément
-            au RGPD et à la législation française en vigueur.
+            Cette politique explique comment HEVIA collecte, utilise et protège
+            vos données personnelles conformément au RGPD et à la législation
+            française en vigueur.
           </p>
-
         </div>
 
         <div className="mt-10 sm:mt-16 space-y-5 sm:space-y-8">
-
           <div
             className="
               bg-white
@@ -115,7 +108,8 @@ export default function Privacy() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Lorsque vous nous contactez via notre site, nous pouvons recueillir :
+              Lorsque vous nous contactez via notre site, nous pouvons
+              recueillir :
             </p>
 
             <ul className="mt-4 pl-5 space-y-2 list-disc text-sm sm:text-base text-[#2B2B2B]/80">
@@ -220,9 +214,9 @@ export default function Privacy() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base text-[#2B2B2B]/80 leading-relaxed">
-              Vos données personnelles ne sont jamais revendues.
-              Elles peuvent être transmises uniquement aux prestataires
-              techniques nécessaires au fonctionnement du site.
+              Vos données personnelles ne sont jamais revendues. Elles peuvent
+              être transmises uniquement aux prestataires techniques nécessaires
+              au fonctionnement du site.
             </p>
           </div>
 
@@ -314,11 +308,8 @@ export default function Privacy() {
               Dernière mise à jour : Juin 2026
             </p>
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

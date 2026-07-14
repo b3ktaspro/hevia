@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import hero from "/images/home/catalogue_home1.jpg"
+import hero from "/images/home/catalogue_home1.jpg";
 
 export default function ImitMarbre() {
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -32,9 +29,7 @@ export default function ImitMarbre() {
             "
           >
             Imitation
-            <span className="text-[#CBA18B]">
-              {" "}Marbre
-            </span>
+            <span className="text-[#CBA18B]"> Marbre</span>
           </h1>
 
           <p
@@ -46,11 +41,9 @@ export default function ImitMarbre() {
               leading-relaxed
             "
           >
-            Le raffinement du marbre naturel revisité à travers
-            des collections contemporaines aux finitions élégantes
-            et intemporelles.
+            Le raffinement du marbre naturel revisité à travers des collections
+            contemporaines aux finitions élégantes et intemporelles.
           </p>
-
         </div>
 
         <div
@@ -64,7 +57,6 @@ export default function ImitMarbre() {
             lg:h-[650px]
           "
         >
-
           <img
             src={hero}
             alt="Imitation Marbre"
@@ -74,7 +66,6 @@ export default function ImitMarbre() {
               object-cover
             "
           />
-
         </div>
 
         <div
@@ -86,9 +77,7 @@ export default function ImitMarbre() {
             items-center
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -111,20 +100,18 @@ export default function ImitMarbre() {
             >
               Le luxe intemporel
             </h2>
-
           </div>
 
           <div>
-
             <p
               className="
                 text-[#1E2A38]/70
                 leading-relaxed
               "
             >
-              Les collections imitation marbre reproduisent avec
-              précision les veines, les nuances et la profondeur
-              visuelle des marbres les plus prestigieux.
+              Les collections imitation marbre reproduisent avec précision les
+              veines, les nuances et la profondeur visuelle des marbres les plus
+              prestigieux.
             </p>
 
             <p
@@ -134,19 +121,15 @@ export default function ImitMarbre() {
                 leading-relaxed
               "
             >
-              Elles permettent de créer des espaces sophistiqués
-              et lumineux tout en bénéficiant de la résistance
-              et de la simplicité d'entretien du grès cérame.
+              Elles permettent de créer des espaces sophistiqués et lumineux
+              tout en bénéficiant de la résistance et de la simplicité
+              d'entretien du grès cérame.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24 grid lg:grid-cols-2 gap-12">
-
           <div>
-
             <span
               className="
                 uppercase
@@ -168,36 +151,29 @@ export default function ImitMarbre() {
               "
             >
               Pourquoi choisir
-              <span className="text-[#CBA18B]">
-                {" "}l'imitation marbre
-              </span>
+              <span className="text-[#CBA18B]"> l'imitation marbre</span>
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Toute l'élégance du marbre sans les contraintes
-              d'entretien des pierres naturelles.
+              Toute l'élégance du marbre sans les contraintes d'entretien des
+              pierres naturelles.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Résistant aux taches, à l'humidité et à l'usure,
-              il conserve son apparence pendant de nombreuses années.
+              Résistant aux taches, à l'humidité et à l'usure, il conserve son
+              apparence pendant de nombreuses années.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Disponible dans de nombreux formats pour répondre
-              aux projets résidentiels comme professionnels.
+              Disponible dans de nombreux formats pour répondre aux projets
+              résidentiels comme professionnels.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -230,11 +206,8 @@ export default function ImitMarbre() {
               gap-6
             "
           >
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Salon
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Salon</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Ambiance élégante et lumineuse.
@@ -242,9 +215,7 @@ export default function ImitMarbre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Salle de bain
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Salle de bain</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Esprit hôtel haut de gamme.
@@ -252,9 +223,7 @@ export default function ImitMarbre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Cuisine
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Cuisine</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Élégance et facilité d'entretien.
@@ -262,17 +231,13 @@ export default function ImitMarbre() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl text-[#1E2A38]">
-                Commerce
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Commerce</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Une image prestigieuse et moderne.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div
@@ -287,7 +252,6 @@ export default function ImitMarbre() {
             border-[#CBA18B]/10
           "
         >
-
           <div
             className="
               grid
@@ -295,49 +259,33 @@ export default function ImitMarbre() {
               gap-8
             "
           >
-
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Luxueux
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Luxueux</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Inspiré des marbres les plus prestigieux.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Lumineux
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Lumineux</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Agrandit visuellement les espaces.
               </p>
-
             </div>
 
             <div>
-
-              <h3 className="text-xl text-[#1E2A38]">
-                Durable
-              </h3>
+              <h3 className="text-xl text-[#1E2A38]">Durable</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Conçu pour conserver sa beauté dans le temps.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -362,11 +310,8 @@ export default function ImitMarbre() {
           </h2>
 
           <div className="mt-12 space-y-6">
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Est-ce du vrai marbre ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Est-ce du vrai marbre ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Non, il s'agit d'un carrelage reproduisant fidèlement
@@ -393,13 +338,10 @@ export default function ImitMarbre() {
                 Oui, il convient parfaitement aux deux usages.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-20 text-center">
-
           <Link
             to="/collections"
             className="
@@ -419,11 +361,8 @@ export default function ImitMarbre() {
           >
             Retour aux collections
           </Link>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

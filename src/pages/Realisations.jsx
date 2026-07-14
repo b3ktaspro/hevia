@@ -1,4 +1,4 @@
-import RealisationsSection from "./Realisations/RealisationsSection"
+import RealisationsSection from "./Realisations/RealisationsSection";
 import Presentation from "./Home/Presentation";
 
 export default function Realisations() {
@@ -7,5 +7,5 @@ export default function Realisations() {
       <RealisationsSection />
       <Presentation />
     </>
-  )
+  );
 }

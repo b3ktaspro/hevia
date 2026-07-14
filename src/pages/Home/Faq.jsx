@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
   {
@@ -27,18 +27,15 @@ const faqs = [
     answer:
       "Nous proposons également des faïences, revêtements décoratifs, accessoires de finition, colles, joints et solutions d’entretien.",
   },
-]
+];
 
 export default function Faq() {
-  const [open, setOpen] = useState(null)
+  const [open, setOpen] = useState(null);
 
   return (
     <section className="py-20 sm:py-28 lg:py-40 bg-[#F8F5F1]">
-
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-3xl mx-auto">
-
           <span
             className="
               uppercase
@@ -66,11 +63,7 @@ export default function Faq() {
             "
           >
             Questions
-
-            <span className="text-[#CBA18B]">
-              {" "}fréquentes
-            </span>
-
+            <span className="text-[#CBA18B]"> fréquentes</span>
           </h2>
 
           <p
@@ -85,27 +78,20 @@ export default function Faq() {
               mx-auto
             "
           >
-            Retrouvez les réponses aux questions les plus courantes concernant nos produits,
-            notre accompagnement et le déroulement de votre projet.
+            Retrouvez les réponses aux questions les plus courantes concernant
+            nos produits, notre accompagnement et le déroulement de votre
+            projet.
           </p>
-
         </div>
 
         <div className="mt-10 sm:mt-16 lg:mt-20 border-t border-[#CBA18B]/15">
-
           {faqs.map((faq, index) => {
-            const isOpen = open === index
+            const isOpen = open === index;
 
             return (
-              <div
-                key={index}
-                className="border-b border-[#CBA18B]/15"
-              >
-
+              <div key={index} className="border-b border-[#CBA18B]/15">
                 <button
-                  onClick={() =>
-                    setOpen(isOpen ? null : index)
-                  }
+                  onClick={() => setOpen(isOpen ? null : index)}
                   className="
                     w-full
                     py-5
@@ -119,9 +105,7 @@ export default function Faq() {
                     text-left
                   "
                 >
-
                   <div className="flex items-start gap-3 sm:gap-6 flex-1">
-
                     <span
                       className="
                         text-[#CBA18B]
@@ -150,7 +134,6 @@ export default function Faq() {
                     >
                       {faq.question}
                     </span>
-
                   </div>
 
                   <div
@@ -180,21 +163,15 @@ export default function Faq() {
                         sm:text-xl
                         transition-colors
                         duration-300
-                        ${
-                          isOpen
-                            ? "text-white"
-                            : "text-[#CBA18B]"
-                        }
+                        ${isOpen ? "text-white" : "text-[#CBA18B]"}
                       `}
                     >
                       +
                     </span>
                   </div>
-
                 </button>
 
                 <AnimatePresence>
-
                   {isOpen && (
                     <motion.div
                       initial={{
@@ -213,7 +190,6 @@ export default function Faq() {
                         duration: 0.35,
                       }}
                     >
-
                       <div
                         className="
                           pb-5
@@ -230,20 +206,14 @@ export default function Faq() {
                       >
                         {faq.answer}
                       </div>
-
                     </motion.div>
                   )}
-
                 </AnimatePresence>
-
               </div>
-            )
+            );
           })}
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

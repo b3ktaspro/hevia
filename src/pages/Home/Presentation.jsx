@@ -1,32 +1,32 @@
-import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import img from "/images/home/acceuil_home4.jpg"
+import img from "/images/home/acceuil_home4.jpg";
 
 export default function Presentation() {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
 
-    if (!el) return
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove("opacity-0", "translate-y-12")
-          el.classList.add("opacity-100", "translate-y-0")
+          el.classList.remove("opacity-0", "translate-y-12");
+          el.classList.add("opacity-100", "translate-y-0");
         }
       },
       {
         threshold: 0.15,
-      }
-    )
+      },
+    );
 
-    observer.observe(el)
+    observer.observe(el);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -42,9 +42,7 @@ export default function Presentation() {
         duration-1000
       "
     >
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div
           className="
             grid
@@ -54,7 +52,6 @@ export default function Presentation() {
             items-center
           "
         >
-
           <div
             className="
               relative
@@ -65,9 +62,6 @@ export default function Presentation() {
               group
             "
           >
-
-            
-
             <img
               src={img}
               alt="Présentation HEVIA"
@@ -86,11 +80,9 @@ export default function Presentation() {
             <div className="absolute inset-0 bg-black/20" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
           </div>
 
           <div>
-
             <span
               className="
                 uppercase
@@ -118,11 +110,7 @@ export default function Presentation() {
               "
             >
               Sublimer les espaces
-
-              <span className="text-[#CBA18B]">
-                {" "}par la matière
-              </span>
-
+              <span className="text-[#CBA18B]"> par la matière</span>
             </h2>
 
             <p
@@ -135,10 +123,10 @@ export default function Presentation() {
                 leading-relaxed
               "
             >
-              Chez HEVIA, nous sélectionnons des matériaux capables
-              de transformer un simple espace en un lieu de caractère.
-              Chaque collection est choisie pour son esthétique,
-              sa durabilité et sa capacité à traverser le temps.
+              Chez HEVIA, nous sélectionnons des matériaux capables de
+              transformer un simple espace en un lieu de caractère. Chaque
+              collection est choisie pour son esthétique, sa durabilité et sa
+              capacité à traverser le temps.
             </p>
 
             <p
@@ -151,8 +139,8 @@ export default function Presentation() {
                 leading-relaxed
               "
             >
-              Notre mission est d'accompagner chaque projet avec
-              exigence, sens du détail et passion des belles matières.
+              Notre mission est d'accompagner chaque projet avec exigence, sens
+              du détail et passion des belles matières.
             </p>
 
             <div
@@ -165,9 +153,7 @@ export default function Presentation() {
                 sm:gap-8
               "
             >
-
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -189,11 +175,9 @@ export default function Presentation() {
                 >
                   Références
                 </div>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -215,11 +199,9 @@ export default function Presentation() {
                 >
                   Collections
                 </div>
-
               </div>
 
               <div>
-
                 <div
                   className="
                     text-2xl
@@ -241,13 +223,10 @@ export default function Presentation() {
                 >
                   Sélectionnées
                 </div>
-
               </div>
-
             </div>
 
             <div className="mt-8 sm:mt-12">
-
               <Link
                 to="/about"
                 className="
@@ -276,15 +255,10 @@ export default function Presentation() {
               >
                 Découvrir HEVIA
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

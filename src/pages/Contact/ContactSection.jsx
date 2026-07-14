@@ -4,14 +4,12 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaArrowRight,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 export default function ContactSection() {
   return (
     <section className="py-24 sm:py-32 lg:py-40 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div
           className="
             flex
@@ -23,9 +21,7 @@ export default function ContactSection() {
             lg:gap-20
           "
         >
-
           <div className="max-w-2xl">
-
             <span
               className="
                 uppercase
@@ -49,9 +45,7 @@ export default function ContactSection() {
               "
             >
               Parlons de votre
-              <span className="text-[#CBA18B]">
-                {" "}projet
-              </span>
+              <span className="text-[#CBA18B]"> projet</span>
             </h2>
 
             <p
@@ -64,12 +58,10 @@ export default function ContactSection() {
                 max-w-xl
               "
             >
-              Une rénovation, un aménagement intérieur ou un projet
-              extérieur ? Nous vous accompagnons dans le choix des
-              matériaux afin de créer des espaces élégants, durables
-              et adaptés à votre vision.
+              Une rénovation, un aménagement intérieur ou un projet extérieur ?
+              Nous vous accompagnons dans le choix des matériaux afin de créer
+              des espaces élégants, durables et adaptés à votre vision.
             </p>
-
           </div>
 
           <a
@@ -100,7 +92,6 @@ export default function ContactSection() {
             "
           >
             Demander un devis
-
             <FaArrowRight
               className="
                 transition-transform
@@ -109,7 +100,6 @@ export default function ContactSection() {
               "
             />
           </a>
-
         </div>
 
         <div
@@ -138,13 +128,9 @@ export default function ContactSection() {
             lg:gap-12
           "
         >
-
           <div>
-
             <div className="space-y-10">
-
               <div>
-
                 <span
                   className="
                     uppercase
@@ -172,11 +158,9 @@ export default function ContactSection() {
                 >
                   contact@hevia.fr
                 </a>
-
               </div>
 
               <div>
-
                 <span
                   className="
                     uppercase
@@ -203,9 +187,7 @@ export default function ContactSection() {
                   <br />
                   Occitanie, France
                 </p>
-
               </div>
-
             </div>
 
             <div
@@ -215,7 +197,6 @@ export default function ContactSection() {
                 mt-12
               "
             >
-
               <a
                 href="https://www.instagram.com/maison.hevia/"
                 target="_blank"
@@ -273,9 +254,7 @@ export default function ContactSection() {
               >
                 <FaFacebookF />
               </a>
-
             </div>
-
           </div>
 
           <div
@@ -292,7 +271,6 @@ export default function ContactSection() {
               shadow-[0_25px_80px_rgba(0,0,0,0.08)]
             "
           >
-
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.2808593245772!2d3.2491368!3d43.3293116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b10f31c4f3b415%3A0xd51acd6459037621!2sHEVIA%20B%C3%A9ziers%20-%20Maison%2C%20Vie%20%26%20Ext%C3%A9rieur!5e0!3m2!1sfr!2sfr!4v1780756872315!5m2!1sfr!2sfr"
               className="
@@ -303,13 +281,9 @@ export default function ContactSection() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }

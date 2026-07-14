@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import hero from "/images/home/catalogue_home2.jpg"
+import hero from "/images/home/catalogue_home2.jpg";
 
 export default function ImitBeton() {
   return (
     <section className="pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 bg-[#F8F5F1]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         <div className="text-center max-w-4xl mx-auto">
-
           <span
             className="
               uppercase
@@ -33,9 +30,7 @@ export default function ImitBeton() {
             "
           >
             Imitation
-            <span className="text-[#CBA18B]">
-              {" "}Béton
-            </span>
+            <span className="text-[#CBA18B]"> Béton</span>
           </h1>
 
           <p
@@ -50,7 +45,6 @@ export default function ImitBeton() {
             Des surfaces contemporaines inspirées de l’architecture moderne,
             pensées pour créer des espaces minimalistes, élégants et durables.
           </p>
-
         </div>
 
         <div
@@ -64,7 +58,6 @@ export default function ImitBeton() {
             lg:h-[650px]
           "
         >
-
           <img
             src={hero}
             alt="Imitation Béton"
@@ -74,7 +67,6 @@ export default function ImitBeton() {
               object-cover
             "
           />
-
         </div>
 
         <div
@@ -86,9 +78,7 @@ export default function ImitBeton() {
             items-center
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -111,21 +101,19 @@ export default function ImitBeton() {
             >
               L'esprit architectural
             </h2>
-
           </div>
 
           <div>
-
             <p
               className="
                 text-[#1E2A38]/70
                 leading-relaxed
               "
             >
-              Les collections imitation béton offrent un style épuré
-              et contemporain inspiré des réalisations architecturales
-              modernes. Elles s'intègrent parfaitement dans les espaces
-              résidentiels comme professionnels.
+              Les collections imitation béton offrent un style épuré et
+              contemporain inspiré des réalisations architecturales modernes.
+              Elles s'intègrent parfaitement dans les espaces résidentiels comme
+              professionnels.
             </p>
 
             <p
@@ -135,13 +123,10 @@ export default function ImitBeton() {
                 leading-relaxed
               "
             >
-              Disponibles dans différentes teintes et formats,
-              elles permettent de créer des ambiances sobres,
-              élégantes et intemporelles.
+              Disponibles dans différentes teintes et formats, elles permettent
+              de créer des ambiances sobres, élégantes et intemporelles.
             </p>
-
           </div>
-
         </div>
 
         <div
@@ -152,9 +137,7 @@ export default function ImitBeton() {
             gap-12
           "
         >
-
           <div>
-
             <span
               className="
                 uppercase
@@ -176,38 +159,31 @@ export default function ImitBeton() {
               "
             >
               Pourquoi choisir
-              <span className="text-[#CBA18B]">
-                {" "}l'imitation béton
-              </span>
+              <span className="text-[#CBA18B]"> l'imitation béton</span>
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Le carrelage imitation béton reproduit fidèlement
-              l'apparence du béton ciré tout en bénéficiant des
-              performances techniques du grès cérame.
+              Le carrelage imitation béton reproduit fidèlement l'apparence du
+              béton ciré tout en bénéficiant des performances techniques du grès
+              cérame.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Contrairement au béton traditionnel, il ne fissure pas,
-              résiste à l'humidité, aux rayures et demande très peu
-              d'entretien au quotidien.
+              Contrairement au béton traditionnel, il ne fissure pas, résiste à
+              l'humidité, aux rayures et demande très peu d'entretien au
+              quotidien.
             </p>
 
             <p className="text-[#1E2A38]/70 leading-relaxed">
-              Son esthétique minimaliste en fait une référence dans
-              les projets contemporains, industriels ou haut de gamme.
+              Son esthétique minimaliste en fait une référence dans les projets
+              contemporains, industriels ou haut de gamme.
             </p>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -240,11 +216,8 @@ export default function ImitBeton() {
               gap-6
             "
           >
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl font-light text-[#1E2A38]">
-                Salon
-              </h3>
+              <h3 className="text-xl font-light text-[#1E2A38]">Salon</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Une continuité visuelle parfaite pour les grands espaces.
@@ -252,9 +225,7 @@ export default function ImitBeton() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl font-light text-[#1E2A38]">
-                Cuisine
-              </h3>
+              <h3 className="text-xl font-light text-[#1E2A38]">Cuisine</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Résistant aux taches et facile à nettoyer.
@@ -272,17 +243,13 @@ export default function ImitBeton() {
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-xl font-light text-[#1E2A38]">
-                Commerce
-              </h3>
+              <h3 className="text-xl font-light text-[#1E2A38]">Commerce</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
                 Très apprécié dans les espaces professionnels.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div
@@ -297,7 +264,6 @@ export default function ImitBeton() {
             border-[#CBA18B]/10
           "
         >
-
           <div
             className="
               grid
@@ -305,9 +271,7 @@ export default function ImitBeton() {
               gap-8
             "
           >
-
             <div>
-
               <h3
                 className="
                   text-xl
@@ -321,11 +285,9 @@ export default function ImitBeton() {
               <p className="mt-3 text-[#1E2A38]/70">
                 Inspiré des tendances architecturales actuelles.
               </p>
-
             </div>
 
             <div>
-
               <h3
                 className="
                   text-xl
@@ -339,11 +301,9 @@ export default function ImitBeton() {
               <p className="mt-3 text-[#1E2A38]/70">
                 Adapté aux espaces à fort passage.
               </p>
-
             </div>
 
             <div>
-
               <h3
                 className="
                   text-xl
@@ -357,15 +317,11 @@ export default function ImitBeton() {
               <p className="mt-3 text-[#1E2A38]/70">
                 Une esthétique durable qui traverse les années.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-24">
-
           <span
             className="
               uppercase
@@ -390,16 +346,13 @@ export default function ImitBeton() {
           </h2>
 
           <div className="mt-12 space-y-6">
-
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Est-ce du vrai béton ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Est-ce du vrai béton ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Non. Il s'agit d'un carrelage reproduisant l'apparence
-                du béton tout en offrant une meilleure résistance et
-                un entretien simplifié.
+                Non. Il s'agit d'un carrelage reproduisant l'apparence du béton
+                tout en offrant une meilleure résistance et un entretien
+                simplifié.
               </p>
             </div>
 
@@ -409,28 +362,23 @@ export default function ImitBeton() {
               </h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui. Le carrelage imitation béton est parfaitement
-                adapté aux pièces humides comme les salles de bain.
+                Oui. Le carrelage imitation béton est parfaitement adapté aux
+                pièces humides comme les salles de bain.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-[24px]">
-              <h3 className="text-[#1E2A38]">
-                Est-il facile à entretenir ?
-              </h3>
+              <h3 className="text-[#1E2A38]">Est-il facile à entretenir ?</h3>
 
               <p className="mt-3 text-[#1E2A38]/70">
-                Oui. Un nettoyage classique suffit pour conserver son
-                aspect d'origine pendant de nombreuses années.
+                Oui. Un nettoyage classique suffit pour conserver son aspect
+                d'origine pendant de nombreuses années.
               </p>
             </div>
-
           </div>
-
         </div>
 
         <div className="mt-20 text-center">
-
           <Link
             to="/collections"
             className="
@@ -450,11 +398,8 @@ export default function ImitBeton() {
           >
             Retour aux collections
           </Link>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }
